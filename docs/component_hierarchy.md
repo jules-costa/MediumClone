@@ -54,3 +54,16 @@
 
 * SearchBar
 * AutoSearchResults
+
+
+| Routes       |                      |
+|--------------|----------------------|
+| path         | component            |
+| /sign-in     | AuthFormContainer    |
+| /sign-up     | AuthFormContainer    |
+| /home        | HomeContainer        |
+| /topics/:id  | TopicIndexItem       |
+| /stories/:id | StoryContainer       |
+| /new-story   | StoryInputContainer  |
+| /users/:id   | UserProfileContainer |
+| /search      | SearchContainer      |
