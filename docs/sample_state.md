@@ -43,6 +43,18 @@
       story_id: 2
     }
   },
+  topics: {
+    1 {
+      id: 1,
+      topic: "Something",
+      story_ids: [3, 5, 6]
+    },
+    2 {
+      id: 2,
+      topic: "Something else",
+      story_ids: [1, 4, 2]
+    }
+  },
   storyLikes: {
     1 {
       id: 1,

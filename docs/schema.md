@@ -30,6 +30,14 @@
 | comment_body | text      | not null              |
 
 
+| TOPICS     |           |                       |
+|--------------|-----------|-----------------------|
+| column name  | data type | details               |
+| id           | integer   | not null, primary key |
+| topic        | string    | not null, indexed     |
+| story_id     | integer   | not null, indexed     |
+
+
 | STORYLIKES  |           |                       |
 |-------------|-----------|-----------------------|
 | column name | data type | details               |
