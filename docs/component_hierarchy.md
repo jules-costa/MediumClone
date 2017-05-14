@@ -7,6 +7,8 @@
 
 ### HomeContainer
 
+* NavBar
+
 * StoriesFeed
   * StoriesFeedItem
 
@@ -17,8 +19,13 @@
 
 ### StoryContainer
 
+* StoryNavBar
+
 * StoryDetail
 * AuthorDetail
+
+* RelatedStories
+  * RelatedStory
 
 * CommentContainer
   * InputForm
@@ -43,7 +50,7 @@
 * EditForm
 * Errors
 
-### SearchResultsContainer
+### SearchContainer
 
 * SearchBar
 * AutoSearchResults
