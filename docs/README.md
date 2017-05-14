@@ -13,10 +13,10 @@ Ouija is a web application inspired by Medium built using Ruby on Rails and Reac
 
 ## Design Docs:
 
-* [View Wireframes](wireframes/all-frames.md)
-* [API endpoints](api-endpoints.md)
-* [React Components](component-hierarchy.md)
-* [Sample State](sample-state.md)
+* [View Wireframes](wireframes/all_frames.md)
+* [API endpoints](api_endpoints.md)
+* [React Components](component_hierarchy.md)
+* [Sample State](sample_state.md)
 * [DB Schema](schema.md)
 
 ## Implementation Timeline
