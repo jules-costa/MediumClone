@@ -6,7 +6,8 @@ Ouija is a web application inspired by Medium built using Ruby on Rails and Reac
 
 * Hosting on Heroku
 * New account creation, login, and guest/demo login
-* Stories
+* Feed of stories
+* Individual story
 * Comments and likes on stories
 * User follows and followers
 * Production README, replacing this README
@@ -23,21 +24,21 @@ Ouija is a web application inspired by Medium built using Ruby on Rails and Reac
 
 #### Phase 1: Backend setup and Front End User Authentication (2 days)
 
-Objective: Functioning rails project with front-end authentication
+Objective: Functioning rails project with front-end authentication. Demo login functionality and modals for logging in and signing up.
 
 #### Phase 2: Stories Model, API, and components (2 days)
 
 Objective: Stories can be created, read, updated and destroyed through the API. Adequately seeded.
 
-#### Phase 3: Comments (2 days)
+#### Phase 3: Comments (1 day)
 
 Objective: Comments belong to Stories. Comments can be created, read, edited and destroyed through the API. Adequately seeded.
 
-#### Phase 4: Login and signup pages (1 day)
+#### Phase 4: Follows & Feed (2 days)
 
-Objective: Demo login functionality and modals for logging in and signing up.
+Objective: Following and Follower counts are accurate and displayed on User profile. Feed is conditional based on topic_id coming through in params. Feeds are styled using masonry.
 
-#### Phase 5: Likes, Follows (2 days)
+#### Phase 5: Likes (1 day)
 
 Objective: Stories can be liked by multiple users. Users can follow other users, and have followers. Users can like/unlike, follow/unfollow. Adequately seeded.
 

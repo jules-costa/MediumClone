@@ -3,80 +3,90 @@
     id: 1,
     username: "sample_name",
     biography: "Born in NJ in 1992",
-    image_url: "http://some_url.com"
+    image_url: "http://some_url.com",
+    likes: {story_id, story_id...},
+    follows: {user_id, user_id...}
   },
-  forms: {
-    signup: {errors: []},
-    login: {errors: []},
-    createStory: {errors: []},
-    createComment: {errors: []}
+  userProfile: {
+    followers: 0,
+    following: 0,
+    username: "",
+    image_url: "",
+    biography: ""
+  }
+  errors: {
+    signup: [],
+    login: [],
+    createStory: [],
+    createComment: []
   }
   stories: {
     1 {
       id: 1,
       title: "How to make cat toys from toilet paper rolls",
-      body: "It's so fun, try it! Also this will be way longer IRL",
+      body_peek: "It's so fun, try it!...",
       image_url: "http://some_url.com",
       read_time: "5 minutes",
-      author_id: 5
+      author: {
+        name: "",
+        image_url: "",
+        short_bio: ""
+      }
     },
     2 {
       id: 2,
       title: "How to make cat toys from anything really",
-      body: "Cats won't like it anyway...",
+      body_peek: "Cats won't like it anyway...",
       image_url: "http://some_url.com",
       read_time: "3 minutes",
-      author_id: 4
+      author: {
+        name: "",
+        image_url: "",
+        short_bio: ""
+      }
     }
   },
-  comments: {
+  story: {
     1 {
       id: 1,
-      body: "OMG thanks for sharing!",
-      author_id: 5,
-      story_id: 3
-    },
-    2 {
-      id: 2,
-      body: "This is a sad story",
-      author_id: 1,
-      story_id: 2
+      title: "",
+      body: "",
+      image_url: "",
+      read_time: "",
+      author {
+        name: "",
+        image_url: "",
+        biography: "",
+        followers: 0
+      }
+      comments {
+        1 {
+          id: 1,
+          body: "OMG thanks for sharing!",
+          author: {
+            name: "",
+            image_url: "",
+          }
+        },
+        2 {
+          id: 2,
+          body: "This is a sad story",
+          author: {
+            name: "",
+            image_url: "",
+          }
+        }
+      }
     }
   },
   topics: {
     1 {
       id: 1,
-      topic: "Something",
-      story_ids: [3, 5, 6]
+      title: "Something",
     },
     2 {
       id: 2,
-      topic: "Something else",
-      story_ids: [1, 4, 2]
-    }
-  },
-  storyLikes: {
-    1 {
-      id: 1,
-      user_id: 3,
-      story_id: 4
-    },
-    2 {
-      id: 2,
-      user_id: 1,
-      story_id: 5
-    }
-  },
-  writerFollows: {
-    1 {
-      id: 1,
-      follower_id: 2,
-      followee_id: 3
-    },
-    2 {
-      id: 2,
-      follower_id: 3,
-      followee_id: 2
+      title: "Something else",
     }
   }
 }

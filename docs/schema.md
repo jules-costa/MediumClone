@@ -15,10 +15,11 @@
 | column name | data type | details               |
 | id          | integer   | not null, primary key |
 | title       | string    | not null, unique      |
-| story_body  | text      | not null              |
+| body        | text      | not null              |
 | author_id   | integer   | not null, indexed     |
 | image_url   | string    | not null              |
 | read_time   | string    | not null              |
+| topic_id    | integer   | not null, indexed     |
 
 
 | COMMENTS     |           |                       |
@@ -27,18 +28,17 @@
 | id           | integer   | not null, primary key |
 | author_id    | integer   | not null, indexed     |
 | story_id     | integer   | not null, indexed     |
-| comment_body | text      | not null              |
+| body         | text      | not null              |
 
 
 | TOPICS     |           |                       |
 |--------------|-----------|-----------------------|
 | column name  | data type | details               |
 | id           | integer   | not null, primary key |
-| topic        | string    | not null, indexed     |
-| story_id     | integer   | not null, indexed     |
+| title        | string    | not null, indexed     |
 
 
-| STORYLIKES  |           |                       |
+| LIKES       |           |                       |
 |-------------|-----------|-----------------------|
 | column name | data type | details               |
 | id          | integer   | not null, primary key |
@@ -47,7 +47,7 @@
 
 
 
-| WRITERFOLLOWS |           |                       |
+| FOLLOWS       |           |                       |
 |---------------|-----------|-----------------------|
 | column name   | data type | details               |
 | id            | integer   | not null, primary key |

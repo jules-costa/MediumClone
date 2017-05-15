@@ -27,8 +27,7 @@
 * RelatedStories
   * RelatedStory
 
-* CommentContainer
-  * InputForm
+  * CommentInputForm
   * Errors
   * CommentFeed
     * CommentFeedItem
@@ -44,8 +43,7 @@
 
 * UserDetail
 
-* FollowsContainer
-  * FollowData
+* FollowsData
 
 * EditForm
 * Errors
