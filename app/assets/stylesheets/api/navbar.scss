@@ -1,0 +1,17 @@
+.navbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo {
+  font-size: 36px;
+}
+
+
+.login-signup {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+}

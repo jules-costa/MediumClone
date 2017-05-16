@@ -6,9 +6,9 @@ import { AuthRoute } from '../util/route_util';
 
 const App = () => (
   <div>
-    <header>
-      <h1>Ouija homepage</h1>
-      <NavbarContainer />
+    <header className="navbar">
+      <h1 className="site-logo">Ouija homepage</h1>
+      <NavbarContainer/>
     </header>
 
     <AuthRoute path="/login" component={SessionFormContainer} />
