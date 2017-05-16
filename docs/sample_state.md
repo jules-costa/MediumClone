@@ -21,7 +21,7 @@
     createComment: []
   }
   stories: {
-    1 {
+    1: {
       id: 1,
       title: "How to make cat toys from toilet paper rolls",
       body_peek: "It's so fun, try it!...",
@@ -33,7 +33,7 @@
         short_bio: ""
       }
     },
-    2 {
+    2: {
       id: 2,
       title: "How to make cat toys from anything really",
       body_peek: "Cats won't like it anyway...",
@@ -47,7 +47,7 @@
     }
   },
   story: {
-    1 {
+    1: {
       id: 1,
       title: "",
       body: "",
@@ -59,8 +59,8 @@
         biography: "",
         followers: 0
       }
-      comments {
-        1 {
+      comments: {
+        1: {
           id: 1,
           body: "OMG thanks for sharing!",
           author: {
@@ -68,7 +68,7 @@
             image_url: "",
           }
         },
-        2 {
+        2: {
           id: 2,
           body: "This is a sad story",
           author: {
@@ -80,11 +80,11 @@
     }
   },
   topics: {
-    1 {
+    1: {
       id: 1,
       title: "Something",
     },
-    2 {
+    2: {
       id: 2,
       title: "Something else",
     }
