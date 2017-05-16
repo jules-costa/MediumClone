@@ -14,7 +14,7 @@ window.signup = signup;
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
-    const preloadedState = { session: { currentUser: window.currentUser } };
+    const preloadedState = { currentUser: window.currentUser };
     store = configureStore(preloadedState);
     delete window.currentUser;
   } else {
@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   const root = document.getElementById('root');
   Modal.setAppElement(document.body);
+
+  //remove after testing
   window.store = store;
   ReactDOM.render(<Root store={ store } />, root);
 });

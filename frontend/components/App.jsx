@@ -6,7 +6,7 @@ import { AuthRoute } from '../util/route_util';
 const App = () => (
   <div>
     <header>
-      Ouija
+      <h1>Ouija homepage</h1>
     </header>
 
     <AuthRoute path="/login" component={SessionFormContainer} />
