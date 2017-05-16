@@ -16,11 +16,7 @@
     image_url: "",
     biography: ""
   }
-  errors: {
-    auth: [],
-    createStory: [],
-    createComment: []
-  }
+  errors: [],
   stories: {
     1: {
       id: 1,
