@@ -14,8 +14,9 @@ const App = () => (
 
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
-    <Route path="/guest" component={StoriesFeedContainer} />
   </div>
 );
 
 export default App;
+
+// <Route path="/guest" component={StoriesFeedContainer} />

@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
   const root = document.getElementById('root');
+  //disables content
   Modal.setAppElement(document.body);
 
   //remove after testing
