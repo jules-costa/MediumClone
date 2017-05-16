@@ -1,6 +1,6 @@
 import React from 'react';
 import merge from 'lodash/merge';
-
+import { withRouter } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -35,9 +35,6 @@ class SessionForm extends React.Component {
           <h1>
             {this.props.formType === 'login' ? "Log in" : "Sign up"}
           </h1>
-          <ul>
-            {this.props.errors}
-          </ul>
           <input
             type="text"
             value={this.state.username}
@@ -55,4 +52,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);

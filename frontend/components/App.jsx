@@ -1,8 +1,15 @@
 import React from 'react';
+import SessionFormContainer from './session/session_form_container';
+import { Route } from 'react-router-dom';
 
 const App = () => (
   <div>
-    <h1>App</h1>
+    <header>
+      Ouija
+    </header>
+
+    <Route path="/login" component={SessionFormContainer} />
+    <Route path="/signup" component={SessionFormContainer} />
   </div>
 );
 
