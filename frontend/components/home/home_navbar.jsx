@@ -1,24 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-// add link and route to sign in as guest
+import { Link, withRouter } from 'react-router-dom';
 
 const sessionLinks = () => (
   <nav className="login-signup">
     <Link to='/login'>Sign in</Link>
     <Link to='/signup'>Sign up</Link>
-    <Link to='/'>Sign in as Guest</Link>
+    <Link to='/guest'>Sign in as Guest</Link>
   </nav>
 );
 
-const personalGreeting = (currentUser, logout) => (
+const handleLogout = (logout, history) => e => {
+  e.preventDefault();
+  logout().then(user => history.push('/guest'));
+};
+
+const personalGreeting = (currentUser, logout, history) => (
   <div className="header-group">
     <img className="user-image-small" src={ currentUser.image_url } />
-    <button className="header-button" onClick={ logout }>Log Out</button>
+    <button className="header-button" onClick={ handleLogout(logout, history) }>Log Out</button>
   </div>
 );
 
-const HomeNavbar = ({ currentUser, logout }) => (
-  currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
+const HomeNavbar = ({ currentUser, logout, history }) => (
+  currentUser && currentUser.username ? personalGreeting(currentUser, logout, history) : sessionLinks()
 );
 
-export default HomeNavbar;
+export default withRouter(HomeNavbar);
