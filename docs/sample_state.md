@@ -5,9 +5,11 @@
     biography: "Born in NJ in 1992",
     image_url: "http://some_url.com",
     likes: {story_id, story_id...},
+    <!-- who this user follows -->
     follows: {user_id, user_id...}
   },
   userProfile: {
+    id:
     followers: 0,
     following: 0,
     username: "",
@@ -15,8 +17,7 @@
     biography: ""
   }
   errors: {
-    signup: [],
-    login: [],
+    auth: [],
     createStory: [],
     createComment: []
   }

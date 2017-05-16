@@ -1,6 +1,6 @@
 import React from 'react';
 import merge from 'lodash/merge';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -11,6 +11,12 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.loggedIn) {
+      this.props.history.push('/');
+    }
   }
 
   handleSubmit(e) {
@@ -28,24 +34,49 @@ class SessionForm extends React.Component {
     return (e) => this.setState({ [field] : e.target.value });
   }
 
+  renderErrors() {
+    debugger;
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
+  navLink() {
+    if (this.props.formType === 'login') {
+      return <Link to='/signup'>Sign up instead</Link>;
+    } else {
+      return <Link to='/login'>Log in instead</Link>;
+    }
+  }
+
   render () {
     return (
-      <div>
-        <form className="auth-form" >
-          <h1>
-            {this.props.formType === 'login' ? "Log in" : "Sign up"}
-          </h1>
-          <input
-            type="text"
-            value={this.state.username}
-            placeholder="username"
-            onChange={this.update('username')} />
-          <input
-            type="text"
-            value={this.state.password}
-            placeholder="password"
-            onChange={this.update('password')} />
-          <input type="submit" onClick={this.handleSubmit}/>
+      <div className="login-form-container">
+        <form className="login-form-box">
+          Welcome to Ouija!
+          Please {this.props.formType} or {this.navLink()}
+          {this.renderErrors()}
+          <div className="login-form">
+            <label>Username:
+              <input type="text"
+                className="login-input"
+                value={this.state.username}
+                onChange={this.update('username')} />
+            </label>
+            <label>Password:
+              <input type="password"
+                className="login-input"
+                value={this.state.password}
+                onChange={this.update('password')} />
+              <input type="submit" onClick={this.handleSubmit}/>
+            </label>
+          </div>
         </form>
       </div>
     );
