@@ -6,9 +6,21 @@
   border-bottom: 1px solid grey;
 }
 
+.full-logo {
+  display: flex;
+  align-items: center;
+}
+
 .site-logo {
   width: 60px;
   height: 60px;
+}
+
+.logo-text {
+  font-family: 'Rufina', serif;
+  font-size: 20px;
+  margin-left: 18px;
+  letter-spacing: 1.5px;
 }
 
 .login-signup {
