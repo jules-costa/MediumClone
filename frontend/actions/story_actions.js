@@ -12,3 +12,23 @@ export const receiveAllStories = stories => ({
   type: RECEIVE_STORIES,
   stories
 });
+
+export const createStory = story => dispatch => (
+  APIUtil.createStory(story).then(newStory => dispatch(receiveSingleStory(newStory)))
+);
+
+export const fetchStories = topicId => dispatch => (
+  APIUtil.fetchStories(topicId).then(stories => dispatch(receiveAllStories(stories)))
+);
+
+export const fetchStory = id => dispatch => (
+  APIUtil.fetchStory(id).then(story => dispatch(receiveSingleStory(story)))
+);
+
+export const updateStory = story => dispatch => (
+  APIUtil.updateStory(story).then(updatedStory => dispatch(receiveSingleStory(updatedStory)))
+);
+
+export const destroyStory = id => dispatch => (
+  APIUtil.destroyStory(id).then(story => dispatch(receiveSingleStory(null)))
+);

@@ -40,7 +40,12 @@ class Api::StoriesController < ApplicationController
   end
 
   def index
-    @stories = Story.all
+    if params["topicId"]
+      @stories = Story.where(topic_id: params["topicId"])
+    else
+      @stories = Story.all
+    end
+
     #create stories index jbuilder
     # if topic_id comes through with ajax payload, filter by topic
   end
