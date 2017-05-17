@@ -11,6 +11,7 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -28,6 +29,11 @@ class SessionForm extends React.Component {
         password: ""
       })
     );
+  }
+
+  demoLogin(e) {
+    e.preventDefault();
+    this.props.login({username: "Guest", password: "password"});
   }
 
   update(field) {
@@ -60,6 +66,7 @@ class SessionForm extends React.Component {
         <form className="login-form-box">
           Welcome to Ouija!
           Please {this.props.formType} or {this.navLink()}
+          <button className="demo-user" onClick={ this.demoLogin }>Demo Login!</button>
           {this.renderErrors()}
           <div className="login-form">
             <label>Username:
