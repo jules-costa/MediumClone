@@ -20,9 +20,10 @@ const StoriesReducer = (state = defaultStories, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_STORIES:
-
+      return merge({}, action.stories);
     case RECEIVE_STORY:
-
+      const newStory = {[action.story.id]: action.story};
+      return merge({}, state, newStory);
     default:
       return state;
   }

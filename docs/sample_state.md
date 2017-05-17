@@ -24,8 +24,9 @@
       body_peek: "It's so fun, try it!...",
       image_url: "http://some_url.com",
       read_time: "5 minutes",
+      topic_id: 1,
       author: {
-        name: "",
+        username: "",
         image_url: "",
         short_bio: ""
       }
@@ -36,8 +37,9 @@
       body_peek: "Cats won't like it anyway...",
       image_url: "http://some_url.com",
       read_time: "3 minutes",
+      topic_id: 1,
       author: {
-        name: "",
+        username: "",
         image_url: "",
         short_bio: ""
       }
@@ -50,8 +52,9 @@
       body: "",
       image_url: "",
       read_time: "",
+      topic_id: 1,
       author {
-        name: "",
+        username: "",
         image_url: "",
         biography: "",
         followers: 0
