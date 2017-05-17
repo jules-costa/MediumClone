@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/Root';
 
+import { destroyStory } from './util/story_api_util';
+
+window.destroyStory = destroyStory;
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {

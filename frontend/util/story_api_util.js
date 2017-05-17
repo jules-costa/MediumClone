@@ -27,3 +27,10 @@ export const updateStory = story => (
     data: {story}
   })
 );
+
+export const destroyStory = id => (
+  $.ajax({
+    method: 'DELETE',
+    url: `api/stories/${id}`
+  })
+);
