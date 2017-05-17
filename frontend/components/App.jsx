@@ -8,7 +8,9 @@ import { AuthRoute } from '../util/route_util';
 const App = () => (
   <div>
     <header className="navbar">
-      <img className="site-logo" src="/assets/ouija_logo.png" alt="Ouija logo" />
+      <a href="/">
+        <img className="site-logo" src="/assets/ouija_logo.png" alt="Ouija logo" />
+      </a>
       <NavbarContainer/>
     </header>
 

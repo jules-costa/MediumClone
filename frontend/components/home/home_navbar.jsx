@@ -17,7 +17,7 @@ const handleLogout = (logout, history) => e => {
 const personalGreeting = (currentUser, logout, history) => (
   <div className="header-group">
     <img className="user-image-small" src={ currentUser.image_url } />
-    <button className="header-button" onClick={ handleLogout(logout, history) }>Log Out</button>
+    <button className="logout-button" onClick={ handleLogout(logout, history) }>Log Out</button>
   </div>
 );
 

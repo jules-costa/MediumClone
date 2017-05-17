@@ -14,6 +14,23 @@
 .login-signup {
   display: flex;
   width: 30%;
-  justify-content: space-around;
+  justify-content: space-between;
+  font-family: 'Sintony', sans-serif;
+}
+
+.header-group {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.user-image-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  order: 2;
+}
+.logout-button {
+  width: 6%;
   font-family: 'Sintony', sans-serif;
 }
