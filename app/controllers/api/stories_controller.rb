@@ -37,6 +37,7 @@ class Api::StoriesController < ApplicationController
 
   def show
     @story = Story.find(params[:id])
+
     #create stories show jbuilder
   end
 

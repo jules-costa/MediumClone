@@ -1,2 +1,1 @@
-<h1>Stories#show</h1>
-<p>Find me in app/views/stories/show.html.erb</p>
+json.extract! @story, :title, :body, :image_url, :read_time, :author

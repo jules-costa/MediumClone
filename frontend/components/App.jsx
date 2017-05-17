@@ -10,7 +10,7 @@ const App = () => (
     <header className="navbar">
       <a className="full-logo" href="/">
         <img className="site-logo" src="/assets/ouija_logo.png" alt="Ouija logo" />
-        <h4 className="logo-text">Quija</h4>
+        <h4 className="logo-text">Ouija</h4>
       </a>
       <NavbarContainer/>
     </header>
