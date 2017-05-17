@@ -36,11 +36,14 @@
   justify-content: flex-end;
 }
 
+.user-logo {
+  order: 2;
+}
+
 .user-image-small {
   width: 40px;
   height: 40px;
   border-radius: 100px;
-  order: 2;
 }
 
 .logout-button {
