@@ -68,19 +68,26 @@ class SessionForm extends React.Component {
           <div className="login-or-signup">Please {this.props.formType} or {this.navLink()}</div>
           <button className="demo-user" onClick={ this.demoLogin }>Demo Login!</button>
           {this.renderErrors()}
+
           <div className="login-form">
-            <label>Username:
-              <input type="text"
-                className="login-input"
-                value={this.state.username}
-                onChange={this.update('username')} />
-            </label>
-            <label>Password:
-              <input type="password"
-                className="login-input"
-                value={this.state.password}
-                onChange={this.update('password')} />
-            </label>
+            <section className="content bgcolor-8">
+              <span className="input input--isao">
+                <input className="input__field input__field--isao" type="text" id="input-38" value={this.state.username}
+                  onChange={this.update('username')} />
+                <label className="input__label input__label--isao" data-content="First Name">
+                  <span className="input__label-content input__label-content--isao">First Name</span>
+                </label>
+              </span>
+            </section>
+            <section className="content bgcolor-8">
+              <span className="input input--isao">
+                <input className="input__field input__field--isao" type="password" id="input-38" value={this.state.password}
+                  onChange={this.update('password')} />
+                <label className="input__label input__label--isao" data-content="Password">
+                  <span className="input__label-content input__label-content--isao">Password</span>
+                </label>
+              </span>
+            </section>
               <input type="submit" className="submit-button" onClick={this.handleSubmit}/>
           </div>
         </form>
@@ -88,5 +95,7 @@ class SessionForm extends React.Component {
     );
   }
 }
+
+
 
 export default withRouter(SessionForm);

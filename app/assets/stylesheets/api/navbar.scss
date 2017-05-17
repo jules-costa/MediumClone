@@ -14,7 +14,7 @@
 .login-signup {
   display: flex;
   width: 30%;
-  justify-content: space-between;
+  justify-content: flex-end;
   font-family: 'Sintony', sans-serif;
 }
 
@@ -30,6 +30,7 @@
   border-radius: 100px;
   order: 2;
 }
+
 .logout-button {
   width: 6%;
   font-family: 'Sintony', sans-serif;

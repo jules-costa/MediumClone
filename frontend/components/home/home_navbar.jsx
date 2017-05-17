@@ -3,9 +3,8 @@ import { Link, withRouter } from 'react-router-dom';
 
 const sessionLinks = () => (
   <nav className="login-signup">
-    <Link to='/login'>Sign in</Link>
-    <Link to='/signup'>Sign up</Link>
-    <Link to='/login'>Sign in as Guest</Link>
+    <Link to='/login' className="auth-link">Sign in</Link>
+    <Link to='/signup' className="auth-link">Sign up</Link>
   </nav>
 );
 
