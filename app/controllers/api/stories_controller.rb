@@ -42,7 +42,7 @@ class Api::StoriesController < ApplicationController
   end
 
   def index
-
+    @stories = Story.all
     #create stories index jbuilder
     # if topic_id comes through with ajax payload, filter by topic
   end
