@@ -7,6 +7,19 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <link href="https://fonts.googleapis.com/css?family=Rufina|Sintony" rel="stylesheet">
     <%= javascript_include_tag 'application' %>
+
+    <div class="homepage-hero-module">
+        <div class="video-container">
+            <div class="filter"></div>
+            <video autoplay loop class="fillWidth">
+                <source src="/assets/Clouds_Lapse.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                <source src="/assets/Clouds_Lapse.mp4" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
+            <div class="poster hidden">
+                <img src="/assets/still_cloud.jpeg" alt="clouds">
+            </div>
+        </div>
+    </div>
   </head>
 
   <body>

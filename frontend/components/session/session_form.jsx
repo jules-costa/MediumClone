@@ -64,8 +64,8 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form className="login-form-box">
-          Welcome to Ouija!
-          Please {this.props.formType} or {this.navLink()}
+          <div className="welcome">Welcome to Ouija!</div>
+          <div className="login-or-signup">Please {this.props.formType} or {this.navLink()}</div>
           <button className="demo-user" onClick={ this.demoLogin }>Demo Login!</button>
           {this.renderErrors()}
           <div className="login-form">
@@ -80,8 +80,8 @@ class SessionForm extends React.Component {
                 className="login-input"
                 value={this.state.password}
                 onChange={this.update('password')} />
-              <input type="submit" onClick={this.handleSubmit}/>
             </label>
+              <input type="submit" className="submit-button" onClick={this.handleSubmit}/>
           </div>
         </form>
       </div>
