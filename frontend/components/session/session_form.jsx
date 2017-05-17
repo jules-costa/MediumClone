@@ -54,48 +54,40 @@ class SessionForm extends React.Component {
 
   navLink() {
     if (this.props.formType === 'login') {
-      return <Link to='/signup'>Sign up instead</Link>;
+      return <Link to='/signup'>sign up instead</Link>;
     } else {
-      return <Link to='/login'>Log in instead</Link>;
+      return <Link to='/login'>log in instead</Link>;
     }
   }
 
   render () {
     return (
-      <div className="login-form-container">
-        <form className="login-form-box">
-          <div className="welcome">Welcome to Ouija!</div>
-          <div className="login-or-signup">Please {this.props.formType} or {this.navLink()}</div>
-          <button className="demo-user" onClick={ this.demoLogin }>Demo Login!</button>
-          {this.renderErrors()}
+      <form className="login-form-container">
+        <h1 className="welcome">Ouija</h1>
+        <h2 className="stories-that-move">Stories that move with you.</h2>
+        <h3 className="login-or-signup">Please {this.props.formType} or {this.navLink()}</h3>
+        {this.renderErrors()}
 
-          <div className="login-form">
-            <section className="content bgcolor-8">
-              <span className="input input--isao">
-                <input className="input__field input__field--isao" type="text" id="input-38" value={this.state.username}
-                  onChange={this.update('username')} />
-                <label className="input__label input__label--isao" data-content="First Name">
-                  <span className="input__label-content input__label-content--isao">First Name</span>
-                </label>
-              </span>
-            </section>
-            <section className="content bgcolor-8">
-              <span className="input input--isao">
-                <input className="input__field input__field--isao" type="password" id="input-38" value={this.state.password}
-                  onChange={this.update('password')} />
-                <label className="input__label input__label--isao" data-content="Password">
-                  <span className="input__label-content input__label-content--isao">Password</span>
-                </label>
-              </span>
-            </section>
-              <input type="submit" className="submit-button" onClick={this.handleSubmit}/>
-          </div>
-        </form>
-      </div>
+        <div className="login-form">
+          <input type="text"
+            className="login-input"
+            value={this.state.username}
+            placeholder="username"
+            onChange={this.update('username')} />
+          <input type="password"
+            className="login-input"
+            value={this.state.password}
+            placeholder="password"
+            onChange={this.update('password')} />
+        </div>
+        <div className="login-button">
+          <button className="button submit-button" onClick={this.handleSubmit}>Submit</button>
+          <h4 className="or">or</h4>
+          <button className="button demo-user" onClick={ this.demoLogin }>Demo Login!</button>
+        </div>
+      </form>
     );
   }
 }
-
-
 
 export default withRouter(SessionForm);
