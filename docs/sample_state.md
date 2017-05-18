@@ -28,7 +28,6 @@
       author: {
         username: "",
         image_url: "",
-        short_bio: ""
       }
     },
     2: {
@@ -41,7 +40,6 @@
       author: {
         username: "",
         image_url: "",
-        short_bio: ""
       }
     }
   },

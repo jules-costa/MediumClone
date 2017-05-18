@@ -1,3 +1,5 @@
-json.extract! @story, :title, :body, :image_url, :read_time, :author_id, :topic_id
-
-# how to extract author information?
+json.title @story.title
+json.body @story.body
+json.image_url @story.image_url
+json.read_time @story.read_time
+json.author @story.author

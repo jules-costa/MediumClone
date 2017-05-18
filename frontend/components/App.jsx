@@ -1,7 +1,7 @@
 import React from 'react';
 import SessionFormContainer from './session/session_form_container';
 import NavbarContainer from './home/navbar_container';
-import StoriesFeedContainer from './home/stories_feed_container';
+import StoriesFeedContainer from './stories/stories_feed_container';
 import { Route } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 
@@ -15,6 +15,7 @@ const App = () => (
       <NavbarContainer/>
     </header>
 
+    <Route path="/" component={StoriesFeedContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
   </div>

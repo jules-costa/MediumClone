@@ -23,7 +23,6 @@ class Api::StoriesController < ApplicationController
     if @story.update_attributes(story_params)
       # change to stories show page
       render 'api/stories/'
-      #create stories index jbuilder
     else
       render json: @story.errors.full_messages, status: 422
     end
@@ -35,7 +34,6 @@ class Api::StoriesController < ApplicationController
 
   def show
     @story = Story.find(params[:id])
-
     #create stories show jbuilder
   end
 
@@ -45,9 +43,6 @@ class Api::StoriesController < ApplicationController
     else
       @stories = Story.all
     end
-
-    #create stories index jbuilder
-    # if topic_id comes through with ajax payload, filter by topic
   end
 
   private

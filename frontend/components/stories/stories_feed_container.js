@@ -1,15 +1,15 @@
 import { connect } from 'react-redux';
 import StoriesFeed from './stories_feed';
-// import { signup, login } from '../../actions/session_actions';
+import { fetchStories } from '../../actions/story_actions';
+import values from 'lodash/values';
 
-// for now, just pass in props to render home navbar in storiesFeed
 
-const mapStateToProps = (state, { currentUser }) => ({
-
+const mapStateToProps = (state) => ({
+  stories: values(state.stories)
 });
 
 const mapDispatchToProps = dispatch => ({
-
+  fetchStories: () => dispatch(fetchStories())
 });
 
 export default connect(

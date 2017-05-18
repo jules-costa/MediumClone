@@ -17,7 +17,7 @@
 * TopicsIndex
   * TopicIndexItem
 
-### StoryContainer
+### StoryFeedContainer
 
 * StoryNavBar
 
