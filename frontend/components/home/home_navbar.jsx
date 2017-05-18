@@ -10,7 +10,7 @@ const sessionLinks = () => (
 
 const handleLogout = (logout, history) => e => {
   e.preventDefault();
-  logout().then(user => history.push('/stories'));
+  logout().then(user => history.push('/'));
 };
 
 const personalGreeting = (currentUser, logout, history) => (

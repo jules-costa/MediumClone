@@ -4,6 +4,11 @@ html {
 	height: 100%;
 }
 
+.hero {
+  width: 100%;
+  background-image: url(https://unsplash.com/photos/7Y-uK6m-8Ss);
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -27,7 +32,7 @@ div {
 }
 
 button:hover {
-	background-color: lightgrey;
+	background-color: $coral;
 }
 
 a:hover {

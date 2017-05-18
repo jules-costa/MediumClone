@@ -62,30 +62,32 @@ class SessionForm extends React.Component {
 
   render () {
     return (
-      <form className="login-form-container">
-        <h1 className="welcome">Ouija</h1>
-        <h2 className="stories-that-move">Stories that move with you.</h2>
-        <h3 className="login-or-signup">Please {this.props.formType} or {this.navLink()}</h3>
-        <h4 className="login-errors">{this.renderErrors()}</h4>
+      <div className="hero">
+        <form className="login-form-container">
+          <h1 className="welcome">Ouija</h1>
+          <h2 className="stories-that-move">Stories that move with you.</h2>
+          <h3 className="login-or-signup">Please {this.props.formType} or {this.navLink()}</h3>
+          <h4 className="login-errors">{this.renderErrors()}</h4>
 
-        <div className="login-form">
-          <input type="text"
-            className="login-input"
-            value={this.state.username}
-            placeholder="username"
-            onChange={this.update('username')} />
-          <input type="password"
-            className="login-input"
-            value={this.state.password}
-            placeholder="password"
-            onChange={this.update('password')} />
-        </div>
-        <div className="login-button">
-          <button className="button submit-button" onClick={this.handleSubmit}>Submit</button>
-          <h4 className="or">or</h4>
-          <button className="button demo-user" onClick={ this.demoLogin }>Demo Login!</button>
-        </div>
-      </form>
+          <div className="login-form">
+            <input type="text"
+              className="login-input"
+              value={this.state.username}
+              placeholder="username"
+              onChange={this.update('username')} />
+            <input type="password"
+              className="login-input"
+              value={this.state.password}
+              placeholder="password"
+              onChange={this.update('password')} />
+          </div>
+          <div className="login-button">
+            <button className="button submit-button" onClick={this.handleSubmit}>Submit</button>
+            <h4 className="or">or</h4>
+            <button className="button demo-user" onClick={ this.demoLogin }>Demo Login!</button>
+          </div>
+        </form>
+      </div>
     );
   }
 }
