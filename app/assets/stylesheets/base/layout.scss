@@ -4,10 +4,6 @@ html {
 	height: 100%;
 }
 
-.hero {
-  width: 100%;
-  background-image: url(https://unsplash.com/photos/7Y-uK6m-8Ss);
-}
 
 body {
   display: flex;
@@ -16,6 +12,15 @@ body {
   margin: 0 auto;
   font-size: 14px;
 }
+
+// .hero {
+//   border: 1px solid black;
+//   width: 100%;
+//   height: auto;
+//   padding-bottom: 120px;
+//   margin-top: 80px;
+//   background-image: url("https://unsplash.com/photos/7Y-uK6m-8Ss");
+// }
 
 div {
   width: 100%;

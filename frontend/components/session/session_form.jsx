@@ -62,7 +62,7 @@ class SessionForm extends React.Component {
 
   render () {
     return (
-      <div className="hero">
+      // <div className="hero">
         <form className="login-form-container">
           <h1 className="welcome">Ouija</h1>
           <h2 className="stories-that-move">Stories that move with you.</h2>
@@ -87,7 +87,7 @@ class SessionForm extends React.Component {
             <button className="button demo-user" onClick={ this.demoLogin }>Demo Login!</button>
           </div>
         </form>
-      </div>
+      // </div>
     );
   }
 }
