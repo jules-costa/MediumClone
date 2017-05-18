@@ -6,7 +6,7 @@ import { Route } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 
 const App = () => (
-  <div>
+  <section className="main-section">
     <header className="navbar">
       <a className="full-logo" href="/">
         <img className="site-logo" src="/assets/ouija_logo.png" alt="Ouija logo" />
@@ -18,7 +18,7 @@ const App = () => (
     <Route exact path="/" component={StoriesFeedContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
-  </div>
+  </section>
 );
 
 export default App;

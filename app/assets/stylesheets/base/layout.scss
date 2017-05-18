@@ -1,35 +1,51 @@
 html {
   display: flex;
-  justify-content: center;
 	height: 100%;
 }
 
 
 body {
-  display: flex;
-  justify-content: center;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   font-size: 14px;
 }
 
-// .hero {
-//   border: 1px solid black;
-//   width: 100%;
-//   height: auto;
-//   padding-bottom: 120px;
-//   margin-top: 80px;
-//   background-image: url("https://unsplash.com/photos/7Y-uK6m-8Ss");
-// }
+.main-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+}
 
-div {
+.behind-hero {
   width: 100%;
   height: 100%;
+  padding-bottom: 120px;
+  margin-top: 80px;
 }
 
-#root {
+.hero {
+  display: block;
   width: 100%;
+  height: 100%;
+  padding-bottom: 120px;
+  margin-top: 80px;
+  background-image: url('login-hero.jpg');
+  background-position: center;
+  background-size: cover;
+  opacity: 0.6;
+  z-index: -1;
+
 }
+// div {
+//   width: 100%;
+//   height: 100%;
+// }
+//
+// #root {
+//   width: 100%;
+// }
 
 .auth-link {
   font-size: 12px;
