@@ -1,10 +1,16 @@
 import React from 'react';
 
 const StoryFeedItem = ({ story }) => (
-  <li>
-    <span>{story.title}</span>
-    <span>{story.truncatedBody}</span>
-  </li>
+  <div className="masonry-layout__panel">
+    <div className="masonry-layout__panel-content">
+      {story.image}
+      {story.title}
+      {story.truncatedBody}
+      {story.author_image}
+      {story.author_name}
+      {story.read_time}
+    </div>
+  </div>
 );
 
 export default StoryFeedItem;

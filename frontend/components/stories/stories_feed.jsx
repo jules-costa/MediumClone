@@ -8,11 +8,8 @@ class StoriesFeed extends React.Component {
 
   render() {
     return(
-      <div>
-        <h1>In the stories feed</h1>
-        <ul>
-          {this.props.stories.map(story => <StoryFeedItem key={story.id} story={story} />)}
-        </ul>
+      <div className="masonry-layout">
+        {this.props.stories.map((story, i) => <StoryFeedItem key={story.id} story={story} />)}
       </div>
     );
   }

@@ -1,3 +1,32 @@
 // Place all the styles related to the Stories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// .masonry-layout {
+//   width: 80%;
+//   margin: 0 auto;
+//   column-count: 3;
+//   column-gap: 0;
+// }
+// .masonry-layout__panel {
+//   flex-direction: column;
+//   align-items: center;
+// }
+// .masonry-layout__panel-content {
+//   padding: 10px;
+//   border-radius: 10px;
+// }
+
+.masonry-layout {
+  column-count: 3;
+  column-gap: 0;
+  width: 80%;
+}
+.masonry-layout__panel {
+  break-inside: avoid;
+  padding: 5px;
+}
+.masonry-layout__panel-content {
+  padding: 10px;
+  border-radius: 10px;
+}
