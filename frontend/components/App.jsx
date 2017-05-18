@@ -15,7 +15,7 @@ const App = () => (
       <NavbarContainer/>
     </header>
 
-    <Route path="/" component={StoriesFeedContainer} />
+    <Route exact path="/" component={StoriesFeedContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
   </div>
