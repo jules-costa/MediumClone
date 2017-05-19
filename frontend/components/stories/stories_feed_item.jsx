@@ -15,7 +15,7 @@ const StoryFeedItem = ({ story }) => (
       <h5>{story.author_name}</h5>
       <h6>{story.read_time}</h6>
     </div>
-    <Route path="/api/stories/:storyId" component={StoryDetailContainer} story={ story } />
+    
   </div>
 );
 

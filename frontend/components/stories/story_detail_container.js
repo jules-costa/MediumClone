@@ -2,8 +2,13 @@ import { connect } from 'react-redux';
 import StoryDetail from './story_detail';
 import { fetchStory, updateStory, destroyStory } from '../../actions/story_actions';
 
-const mapStateToProps = state => ({
-  story: state.story
+const selectStory = ({ stories }, storyId) => {
+  const foundStory = stories[storyId];
+  return foundStory || {};
+};
+
+const mapStateToProps = (state, { match }) => ({
+  story: selectStory(state, parseInt(match.params.storyId))
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -7,7 +7,8 @@ class Api::StoriesController < ApplicationController
     @story.author.image_url = current_user.image_url
     @story.author.biography = current_user.biography
     if @story.save
-      render "api/stories/#{@story.id}"
+      # render "api/stories/#{@story.id}"
+      render :show
     else
       render json: @story.errors.full_messages, status: 422
     end
@@ -20,7 +21,8 @@ class Api::StoriesController < ApplicationController
   def update
     @story = Story.find(params[:id])
     if @story.update_attributes(story_params)
-      render "api/stories/#{@story.id}"
+      # render "api/stories/#{@story.id}"
+      render :show
     else
       render json: @story.errors.full_messages, status: 422
     end
