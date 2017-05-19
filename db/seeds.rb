@@ -15,7 +15,7 @@
 
 # USERS
 
-demoUser = User.create({username: "Guest", password: "password", biography: "Thank you for checking out Ouija! This Medium clone was built in 10 days using Ruby on Rails, React, Redux, Javascript and HTML/CSS.", image_url: "assets/demo_user.png"})
+demoUser = User.create(username: "Guest", password: "password", biography: "Thank you for checking out Ouija! This Medium clone was built in 10 days using Ruby on Rails, React, Redux, Javascript and HTML/CSS.", image_url: "assets/demo_user.png")
 user2 = User.create(username: "Thomas Oppong", password: "password", biography: "Founder @Alltopstartups. Curator at postanly.com. Columnist at Inc. Featured at HuffPost, Entrepreneur, Thought Catalog, Quartz, CNBC, Observer, and The Muse.", image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495152511/habits_author_gekdrd.jpg")
 user3 = User.create(username: "Josh Elman", password: "password", biography: "Product Guy. I have worked on Twitter, Facebook Connect, Zazzle, LinkedIn, RealPlayer. Partner at Greylock, looking for crazy new things.", image_url: "
 http://res.cloudinary.com/jules-costa/image/upload/c_thumb,g_face,w_130/v1495152511/fomo_author_d2ddvu.jpg")
