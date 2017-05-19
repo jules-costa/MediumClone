@@ -10,10 +10,7 @@ class StoriesFeed extends React.Component {
   render() {
     return(
       <section className="feed">
-        <div className="masonry-layout">
-          {this.props.stories.map((story, i) => <StoryFeedItem key={story.id} story={story} />)}
-        </div>
-
+        {this.props.stories.map((story, i) => <StoryFeedItem key={story.id} story={story} />)}
       </section>
     );
   }

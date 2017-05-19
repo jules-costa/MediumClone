@@ -45,10 +45,11 @@ Time is the raw material of productivity and creativity. We are not taught to sa
 You are not good enough! You can’t do it! Don’t even bother trying! It’s too late for you! Nobody will share it, like it, recommend it or even see it! Don’t waste your time! You have no writing credentials. You’re terrible at grammar, punctuation, and using parentheses. No one wants to read your opinions — everyone has their own opinions to sort through. Psychological research shows that success and wellbeing are associated with high self-esteem, and that people with lower self-esteem suffer a disproportionate share of emotional and behavioural problems.
 
 The truth is…
+<br>
 
 Nobody is perfect enough to begin anything! You will never be ready for anything..ever! I love to write and share. I’m not a professional writer. I have no writing credentials. I am not Stephen King. I have no technique, and I am not trained. But I write anyway. It matters that I show up everyday. I can only get better with practice. My inner critic has gotten weaker with time.
 
-The more you desperately want to be like someone else, the more unworthy you feel. The more you desperately want to be happier, the lonelier you become, despite the awseome people surrounding you. Mental toughness, happiness and living life to the fullest come from knowing what to care about–and most importantly, what not to care about.", author_id: 2, image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495152510/habits_m0wvcj.jpg", read_time: "10 min", topic_id: 1)
+The more you desperately want to be like someone else, the more unworthy you feel. The more you desperately want to be happier, the lonelier you become, despite the awseome people surrounding you. Mental toughness, happiness and living life to the fullest come from knowing what to care about–and most importantly, what not to care about.", author_id: 2, image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495152510/habits_m0wvcj.jpg", read_time: "10 min read", topic_id: 1, size: 2)
 
 
 
@@ -93,7 +94,7 @@ If Oprah had come out endorsing the Volkswagon cars with faulty emissions reader
 
 When I learned that Oprah was coming out with a rousing endorsement of Weight Watchers I felt outraged, but more than that I felt and still feel utterly heartbroken by the incredible missed opportunity that Oprah represents. I’m pained by the incredible number of women who will, I believe, thanks to Oprah, feel a green light to diet. If you feel drawn to dieting because you feel out of control with food and unhappy with your body please know there is another way. A more effective way. It’s entirely possible to make peace with food and your flesh without the “help” of rigid rules.
 
-Dieting might be the only way you’ve ever known to relate to food and your body, but it’s a violent way and peace is available, this much I know.", author_id: 4, image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495152510/dieting_fn5y62.jpg", read_time: "5 min", topic_id: 1)
+Dieting might be the only way you’ve ever known to relate to food and your body, but it’s a violent way and peace is available, this much I know.", author_id: 4, image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495152510/dieting_fn5y62.jpg", read_time: "5 min read", topic_id: 1, size: 1)
 
 
 
@@ -128,7 +129,7 @@ My story of abuse is part of a much larger narrative that a third of the world�
 Until I met him, our culture gave me a few inches, enough success to keep me from becoming angry or disillusioned. I was happy with that for a long time. My privilege made me ignorant, especially of other women-identifying people’s struggles. But my eyes are open now, and I can never shut them tight again.
 
 Lay your bruises down next to mine, and let’s love and hope and live again. Or, perhaps, you can take my hand and we can learn together how to love, hope, and live for the very first time.", author_id: 5, image_url: "
-http://res.cloudinary.com/jules-costa/image/upload/v1495152509/abuse_k7sdcx.jpg", read_time: "8 min", topic_id: 1)
+http://res.cloudinary.com/jules-costa/image/upload/v1495152509/abuse_k7sdcx.jpg", read_time: "8 min read", topic_id: 1, size: 1)
 
 
 
@@ -143,7 +144,7 @@ During a run the week before the trip, the frustration finally built up to the p
 Anxiety had always been an adjacent goal. One that never took center stage. When I hit the tipping point on that run, I realized that if I was ever going to achieve any external success, I had to first achieve internal healing. From that moment forward, I became a military strategist, planning my moves according to a constant focus on a single goal, victory. For me, victory was healing my anxiety. And after a couple of months, I won. You can achieve almost anything in life if you militantly prioritize. You can’t be an author, businessman, marathoner, adventurist, and politician all this year, but you may be able to be all of those things in a decade or two.
 
 Realize that the real opportunity cost is not committing. When you haphazardly go after things in life, and I am as guilty as the next guy, you fail to achieve anything of great stature. As Confucius said, “He who chases two rabbits, catches none,” What follows are the things that I had to give up to heal. Some I have reintroduced into my life because they add value, but I have left most out. You can see tremendous results by adjusting the knobs in your life.", author_id: 6, image_url: "
-http://res.cloudinary.com/jules-costa/image/upload/v1495152509/anxiety_ngds3w.jpg", read_time: "6 min", topic_id: 1)
+http://res.cloudinary.com/jules-costa/image/upload/v1495152509/anxiety_ngds3w.jpg", read_time: "6 min read", topic_id: 1, size: 1)
 
 
 
@@ -155,7 +156,7 @@ until you’re buried
 under a mountain
 of feathers,
 suffocating", author_id: 7, image_url: "
-http://res.cloudinary.com/jules-costa/image/upload/v1495152511/loneliness_byk0lj.jpg", read_time: "2 min", topic_id: 1)
+http://res.cloudinary.com/jules-costa/image/upload/v1495152511/loneliness_byk0lj.jpg", read_time: "2 min read", topic_id: 1, size: 1)
 
 
 
@@ -176,4 +177,4 @@ That makes me keep thinking about the complex role society and environment plays
 I think of all the work I’ve accomplished for the past three years, and all the potential we’re missing out from the world, because we have not succeeded in making this world empowering and livable for all of our own species.
 
 ", author_id: 8, image_url: "
-http://res.cloudinary.com/jules-costa/image/upload/v1495152509/depression_nnqxjx.jpg", read_time: "4 min", topic_id: 1)
+http://res.cloudinary.com/jules-costa/image/upload/v1495152509/depression_nnqxjx.jpg", read_time: "4 min read", topic_id: 1, size: 2)

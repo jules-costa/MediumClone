@@ -2,18 +2,45 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.masonry-layout {
-  column-count: 3;
-  column-gap: 0;
+// .masonry-layout {
+//   column-count: 3;
+//   column-gap: 0;
+//   width: 80%;
+// }
+// .masonry-layout__panel {
+//   break-inside: avoid;
+//   padding: 5px;
+// }
+// .masonry-layout__panel-content {
+//   padding: 10px;
+//   border-radius: 10px;
+// }
+
+.feed {
+  display: flex;
   width: 80%;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.masonry-layout__panel {
-  break-inside: avoid;
-  padding: 5px;
+
+.story-square-2 {
+  display: flex;
+  border: 1px solid black;
+  width: 66%;
 }
-.masonry-layout__panel-content {
-  padding: 10px;
-  border-radius: 10px;
+
+.story-square-1 {
+  display: flex;
+  border: 1px solid black;
+  width: 33%;
+}
+
+.feed-item-image {
+  height: 100%;
+}
+
+.feed-item-content {
+  width: 66%;
 }
 
 .author-small {
