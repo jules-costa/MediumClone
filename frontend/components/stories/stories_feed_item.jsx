@@ -12,9 +12,9 @@ const StoryFeedItem = ({ story }) => (
     </section>
     <section className="feed-item-content">
       <Link to={`/api/stories/${story.id}`}>
-        <h1>{story.title}</h1>
+        <h1 className="item-title">{story.title}</h1>
       </Link>
-      <h4>{story.truncatedBody}</h4>
+      <h4 className="item-truncatedBody">{story.truncatedBody}</h4>
       <img src={story.author_image} className="author-small"></img>
       <h5>{story.author_name}</h5>
       <h6>{story.read_time}</h6>

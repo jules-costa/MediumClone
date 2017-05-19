@@ -18,29 +18,42 @@
 
 .feed {
   display: flex;
-  width: 80%;
+  width: 58%;
+  margin-top: 25px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .story-square-2 {
   display: flex;
+  justify-content: space-between;
   border: 1px solid black;
   width: 66%;
 }
 
 .story-square-1 {
   display: flex;
+  justify-content: space-between;
   border: 1px solid black;
   width: 33%;
 }
 
 .feed-item-image {
-  height: 100%;
+  width: 33%;
 }
 
 .feed-item-content {
   width: 66%;
+}
+
+.item-title {
+  font-size: 20px;
+}
+
+.item-truncatedBody {
+  font-size: 14px;
+  color: $grey;
+
 }
 
 .author-small {
