@@ -14,5 +14,3 @@ const StoryFeedItem = ({ story }) => (
 );
 
 export default StoryFeedItem;
-
-// do these image imports work?
