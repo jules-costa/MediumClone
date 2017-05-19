@@ -1,0 +1,36 @@
+.story-show-page {
+  display: flex;
+  flex-direction: column;
+  width: 42%;
+  margin-top: 40px;
+}
+
+.story-author-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.story-details {
+}
+
+.story-title {
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+
+.author-info {
+  padding-left: 20px;
+  width: 75%;
+}
+
+h5.author-name {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+h6 {
+  margin: 0;
+}

@@ -1,4 +1,3 @@
-# json.set! @story.id do
   json.id @story.id
   json.title @story.title
   json.body @story.body
@@ -8,4 +7,3 @@
   json.author_image @story.author.image_url
   json.author_biography @story.author.biography
   # json.followers @story.author.followers
-# end

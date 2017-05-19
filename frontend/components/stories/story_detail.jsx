@@ -15,15 +15,23 @@ class StoryDetail extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>{this.props.story.title}</h1>
-        <h4>{this.props.story.body}</h4>
-        <img src={this.props.story.image}></img>
-        <h6>{this.props.story.read_time}</h6>
-        <h5>{this.props.story.author_name}</h5>
-        <img src={this.props.story.author_image} className="author-small"></img>
-        <h6>{this.props.story.author_biography}</h6>
-      </div>
+      <section className="story-show-page">
+        <section className="story-author-details">
+          <div className="author-logo-show">
+            <img src={this.props.story.author_image} className="author-small"></img>
+          </div>
+          <div className="author-info">
+            <h5 className="author-name">{this.props.story.author_name}</h5>
+            <h6 className="author-bio">{this.props.story.author_biography}</h6>
+            <h6>{this.props.story.read_time}</h6>
+          </div>
+        </section>
+        <section className="story-details">
+          <h1 className="story-title">{this.props.story.title}</h1>
+          <img src={this.props.story.image}></img>
+          <p>{this.props.story.body}</p>
+        </section>
+      </section>
     );
   }
 }
