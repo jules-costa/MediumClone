@@ -53,6 +53,10 @@
   text-align: center;
   margin-right: 16px;
   padding: 3px;
+  background-color: $lightgrey;
+  box-shadow: 0 2px 8px $grey;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
 .auth-link {
