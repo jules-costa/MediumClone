@@ -6,7 +6,7 @@ const StoryFeedItem = ({ story }) => (
       <img src={story.image}></img>
       <h1>{story.title}</h1>
       <h4>{story.truncatedBody}</h4>
-      <img src={story.author_image}></img>
+      <img src={story.author_image} className="author-small"></img>
       <h5>{story.author_name}</h5>
       <h6>{story.read_time}</h6>
     </div>
