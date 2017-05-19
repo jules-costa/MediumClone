@@ -3,13 +3,21 @@ import { Link } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import StoryDetailContainer from './story_detail_container';
 
+const filterContent = story => {
+  if (story.size !== 0) {
+    return (
+      <section className="feed-item-image">
+        <Link to={`/api/stories/${story.id}`}>
+          <img src={story.image}></img>
+        </Link>
+      </section>
+    );
+  }
+};
+
 const StoryFeedItem = ({ story }) => (
   <div className={`story-square-${story.size}`}>
-    <section className="feed-item-image">
-      <Link to={`/api/stories/${story.id}`}>
-        <img src={story.image}></img>
-      </Link>
-    </section>
+      {filterContent(story)}
     <section className="feed-item-content">
       <Link to={`/api/stories/${story.id}`}>
         <h1 className="item-title">{story.title}</h1>

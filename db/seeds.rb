@@ -63,7 +63,7 @@ I also struggle with FOMO constantly in my job as an investor. A big part of inv
 
 FOMO is a powerful emotion. I think it’s a key driver that social networks have tapped to encourage people to sign up. If you aren’t on the right network, you will miss out on what your friends are saying, sharing, enjoying and talking about. In some ways this is powerful and good — we are much more connected as a society and overall humanity than ever before. But if we become trapped in this FOMO and stop enjoying the moments that matter, then FOMO turns bad.
 
-So this year I’m resolved to focus on NO FOMO. I wish everyone a healthy, happy, and impactful 2015. May you make the most of the moments you are in, and have NO FOMO for the ones you are not in.", author_id: 3, image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495153650/fomo_kx6upi.jpg", read_time: "3 min", topic_id: 1)
+So this year I’m resolved to focus on NO FOMO. I wish everyone a healthy, happy, and impactful 2015. May you make the most of the moments you are in, and have NO FOMO for the ones you are not in.", author_id: 3, image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495153650/fomo_kx6upi.jpg", read_time: "3 min", topic_id: 1, size: 0)
 
 
 
@@ -156,7 +156,7 @@ until you’re buried
 under a mountain
 of feathers,
 suffocating", author_id: 7, image_url: "
-http://res.cloudinary.com/jules-costa/image/upload/v1495152511/loneliness_byk0lj.jpg", read_time: "2 min read", topic_id: 1, size: 1)
+http://res.cloudinary.com/jules-costa/image/upload/v1495152511/loneliness_byk0lj.jpg", read_time: "2 min read", topic_id: 1, size: 0)
 
 
 
