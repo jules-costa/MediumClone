@@ -3,14 +3,16 @@ import React from 'react';
 const StoryFeedItem = ({ story }) => (
   <div className="masonry-layout__panel">
     <div className="masonry-layout__panel-content">
-      {story.image}
-      {story.title}
-      {story.truncatedBody}
-      {story.author_image}
-      {story.author_name}
-      {story.read_time}
+      <img src={story.image}></img>
+      <h1>{story.title}</h1>
+      <h4>{story.truncatedBody}</h4>
+      <img src={story.author_image}></img>
+      <h5>{story.author_name}</h5>
+      <h6>{story.read_time}</h6>
     </div>
   </div>
 );
 
 export default StoryFeedItem;
+
+// do these image imports work?
