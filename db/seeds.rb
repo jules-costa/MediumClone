@@ -13,16 +13,22 @@
 # yes = Topic.create(title: "yes")
 # no = Topic.create(title: "no")
 
-# USERS 
+# USERS
 
 demoUser = User.create({username: "Guest", password: "password", biography: "Thank you for checking out Ouija! This Medium clone was built in 10 days using Ruby on Rails, React, Redux, Javascript and HTML/CSS.", image_url: "assets/demo_user.png"})
-user2 = User.create(username: "Thomas Oppong", password: "password", biography: "Founder @Alltopstartups. Curator at postanly.com. Columnist at Inc. Featured at HuffPost, Entrepreneur, Thought Catalog, Quartz, CNBC, Observer, and The Muse.", image_url: "")
-user3 = User.create(username: "Josh Elman", password: "password", biography: "Product Guy. I have worked on Twitter, Facebook Connect, Zazzle, LinkedIn, RealPlayer. Partner at Greylock, looking for crazy new things.", image_url: "")
-user4 = User.create(username: "Rachel W Cole", password: "password", biography: "Wisdom for women living well-fed lives.", image_url: "")
-user5 = User.create(username: "Carrie Melissa Jones", password: "password", biography: "Founding Partner/COO of CMX. Passionate advocate for women and girls. Obsessive dog parent. In love with Seattle, WA.", image_url: "")
-user6 = User.create(username: "Benjamin Foley", password: "password", biography: "Writer. Thinker. Strategist. Founder of http://www.fullyrichlife.com/", image_url: "")
-user7 = User.create(username: "Marika Bianca", password: "password", biography: "vixen with a pen.", image_url: "")
-user8 = User.create(username: "Winnie Lim", password: "password", biography: "I seek and tell stories", image_url: "")
+user2 = User.create(username: "Thomas Oppong", password: "password", biography: "Founder @Alltopstartups. Curator at postanly.com. Columnist at Inc. Featured at HuffPost, Entrepreneur, Thought Catalog, Quartz, CNBC, Observer, and The Muse.", image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495152511/habits_author_gekdrd.jpg")
+user3 = User.create(username: "Josh Elman", password: "password", biography: "Product Guy. I have worked on Twitter, Facebook Connect, Zazzle, LinkedIn, RealPlayer. Partner at Greylock, looking for crazy new things.", image_url: "
+http://res.cloudinary.com/jules-costa/image/upload/c_thumb,g_face,w_130/v1495152511/fomo_author_d2ddvu.jpg")
+user4 = User.create(username: "Rachel W Cole", password: "password", biography: "Wisdom for women living well-fed lives.", image_url: "
+http://res.cloudinary.com/jules-costa/image/upload/c_thumb,g_face,w_100/v1495152510/dieting_author_bvkx2d.jpg")
+user5 = User.create(username: "Carrie Melissa Jones", password: "password", biography: "Founding Partner/COO of CMX. Passionate advocate for women and girls. Obsessive dog parent. In love with Seattle, WA.", image_url: "
+http://res.cloudinary.com/jules-costa/image/upload/g_face/v1495152509/abuse_author_ai28et.jpg")
+user6 = User.create(username: "Benjamin Foley", password: "password", biography: "Writer. Thinker. Strategist.", image_url: "
+http://res.cloudinary.com/jules-costa/image/upload/c_thumb,g_face,w_100/v1495152509/anxiety_author_lywwsn.jpg")
+user7 = User.create(username: "Marika Bianca", password: "password", biography: "vixen with a pen.", image_url: "
+http://res.cloudinary.com/jules-costa/image/upload/c_thumb,g_face,w_99/v1495152511/loneliness_author_dt5vg5.jpg")
+user8 = User.create(username: "Winnie Lim", password: "password", biography: "I seek and tell stories", image_url: "
+http://res.cloudinary.com/jules-costa/image/upload/g_face/v1495152509/depression_author_lkpeib.jpg")
 
 # STORIES
 
@@ -42,7 +48,7 @@ The truth is…
 
 Nobody is perfect enough to begin anything! You will never be ready for anything..ever! I love to write and share. I’m not a professional writer. I have no writing credentials. I am not Stephen King. I have no technique, and I am not trained. But I write anyway. It matters that I show up everyday. I can only get better with practice. My inner critic has gotten weaker with time.
 
-The more you desperately want to be like someone else, the more unworthy you feel. The more you desperately want to be happier, the lonelier you become, despite the awseome people surrounding you. Mental toughness, happiness and living life to the fullest come from knowing what to care about–and most importantly, what not to care about.", author_id: 2, image_url: "", read_time: "10 min", topic_id: 1)
+The more you desperately want to be like someone else, the more unworthy you feel. The more you desperately want to be happier, the lonelier you become, despite the awseome people surrounding you. Mental toughness, happiness and living life to the fullest come from knowing what to care about–and most importantly, what not to care about.", author_id: 2, image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495152510/habits_m0wvcj.jpg", read_time: "10 min", topic_id: 1)
 
 
 
@@ -56,7 +62,7 @@ I also struggle with FOMO constantly in my job as an investor. A big part of inv
 
 FOMO is a powerful emotion. I think it’s a key driver that social networks have tapped to encourage people to sign up. If you aren’t on the right network, you will miss out on what your friends are saying, sharing, enjoying and talking about. In some ways this is powerful and good — we are much more connected as a society and overall humanity than ever before. But if we become trapped in this FOMO and stop enjoying the moments that matter, then FOMO turns bad.
 
-So this year I’m resolved to focus on NO FOMO. I wish everyone a healthy, happy, and impactful 2015. May you make the most of the moments you are in, and have NO FOMO for the ones you are not in.", author_id: 3, image_url: "", read_time: "3 min", topic_id: 1)
+So this year I’m resolved to focus on NO FOMO. I wish everyone a healthy, happy, and impactful 2015. May you make the most of the moments you are in, and have NO FOMO for the ones you are not in.", author_id: 3, image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495153650/fomo_kx6upi.jpg", read_time: "3 min", topic_id: 1)
 
 
 
@@ -87,7 +93,7 @@ If Oprah had come out endorsing the Volkswagon cars with faulty emissions reader
 
 When I learned that Oprah was coming out with a rousing endorsement of Weight Watchers I felt outraged, but more than that I felt and still feel utterly heartbroken by the incredible missed opportunity that Oprah represents. I’m pained by the incredible number of women who will, I believe, thanks to Oprah, feel a green light to diet. If you feel drawn to dieting because you feel out of control with food and unhappy with your body please know there is another way. A more effective way. It’s entirely possible to make peace with food and your flesh without the “help” of rigid rules.
 
-Dieting might be the only way you’ve ever known to relate to food and your body, but it’s a violent way and peace is available, this much I know.", author_id: 4, image_url: "", read_time: "5 min", topic_id: 1)
+Dieting might be the only way you’ve ever known to relate to food and your body, but it’s a violent way and peace is available, this much I know.", author_id: 4, image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495152510/dieting_fn5y62.jpg", read_time: "5 min", topic_id: 1)
 
 
 
@@ -121,7 +127,8 @@ My story of abuse is part of a much larger narrative that a third of the world�
 
 Until I met him, our culture gave me a few inches, enough success to keep me from becoming angry or disillusioned. I was happy with that for a long time. My privilege made me ignorant, especially of other women-identifying people’s struggles. But my eyes are open now, and I can never shut them tight again.
 
-Lay your bruises down next to mine, and let’s love and hope and live again. Or, perhaps, you can take my hand and we can learn together how to love, hope, and live for the very first time.", author_id: 5, image_url: "", read_time: "8 min", topic_id: 1)
+Lay your bruises down next to mine, and let’s love and hope and live again. Or, perhaps, you can take my hand and we can learn together how to love, hope, and live for the very first time.", author_id: 5, image_url: "
+http://res.cloudinary.com/jules-costa/image/upload/v1495152509/abuse_k7sdcx.jpg", read_time: "8 min", topic_id: 1)
 
 
 
@@ -135,7 +142,8 @@ During a run the week before the trip, the frustration finally built up to the p
 
 Anxiety had always been an adjacent goal. One that never took center stage. When I hit the tipping point on that run, I realized that if I was ever going to achieve any external success, I had to first achieve internal healing. From that moment forward, I became a military strategist, planning my moves according to a constant focus on a single goal, victory. For me, victory was healing my anxiety. And after a couple of months, I won. You can achieve almost anything in life if you militantly prioritize. You can’t be an author, businessman, marathoner, adventurist, and politician all this year, but you may be able to be all of those things in a decade or two.
 
-Realize that the real opportunity cost is not committing. When you haphazardly go after things in life, and I am as guilty as the next guy, you fail to achieve anything of great stature. As Confucius said, “He who chases two rabbits, catches none,” What follows are the things that I had to give up to heal. Some I have reintroduced into my life because they add value, but I have left most out. You can see tremendous results by adjusting the knobs in your life.", author_id: 6, image_url: "", read_time: "6 min", topic_id: 1)
+Realize that the real opportunity cost is not committing. When you haphazardly go after things in life, and I am as guilty as the next guy, you fail to achieve anything of great stature. As Confucius said, “He who chases two rabbits, catches none,” What follows are the things that I had to give up to heal. Some I have reintroduced into my life because they add value, but I have left most out. You can see tremendous results by adjusting the knobs in your life.", author_id: 6, image_url: "
+http://res.cloudinary.com/jules-costa/image/upload/v1495152509/anxiety_ngds3w.jpg", read_time: "6 min", topic_id: 1)
 
 
 
@@ -146,7 +154,8 @@ wistful thoughts
 until you’re buried
 under a mountain
 of feathers,
-suffocating", author_id: 7, image_url: "", read_time: "2 min", topic_id: 1)
+suffocating", author_id: 7, image_url: "
+http://res.cloudinary.com/jules-costa/image/upload/v1495152511/loneliness_byk0lj.jpg", read_time: "2 min", topic_id: 1)
 
 
 
@@ -166,4 +175,5 @@ That makes me keep thinking about the complex role society and environment plays
 
 I think of all the work I’ve accomplished for the past three years, and all the potential we’re missing out from the world, because we have not succeeded in making this world empowering and livable for all of our own species.
 
-", author_id: 8, image_url: "", read_time: "4 min", topic_id: 1)
+", author_id: 8, image_url: "
+http://res.cloudinary.com/jules-costa/image/upload/v1495152509/depression_nnqxjx.jpg", read_time: "4 min", topic_id: 1)
