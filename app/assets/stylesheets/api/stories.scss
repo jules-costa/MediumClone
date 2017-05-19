@@ -2,20 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// .masonry-layout {
-//   column-count: 3;
-//   column-gap: 0;
-//   width: 80%;
-// }
-// .masonry-layout__panel {
-//   break-inside: avoid;
-//   padding: 5px;
-// }
-// .masonry-layout__panel-content {
-//   padding: 10px;
-//   border-radius: 10px;
-// }
-
 .feed {
   display: flex;
   width: 58%;
@@ -24,11 +10,16 @@
   flex-wrap: wrap;
 }
 
-.story-square-2 {
+.story-square-0 {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   border: 1px solid black;
-  width: 66%;
+  width: 33%;
+  height: 100%;
+  .feed-item-content-0 {
+    padding: 16px 20px;
+  }
 }
 
 .story-square-1 {
@@ -39,25 +30,64 @@
   width: 33%;
 }
 
-.feed-item-image {
-  height: 240px;
-  width: auto;
+.story-square-2 {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  width: 66%;
 }
 
-.feed-item-content {
-  width: 88%;
-  padding: 24px 20px;
+.feed-item-content-2 {
+  flex: 2;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.feed-item-image-2 {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.feed-item-content-1 {
+  flex: 1;
+}
+
+.feed-item-image-1 {
+  flex: 1;
+}
+
+.item-body-0 {
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 65px;
+  color: $grey;
+}
+
+.item-body-1 {
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 65px;
+  color: $grey;
+}
+
+.item-body-2 {
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 40px;
+  color: $grey;
+}
+
+.item-author {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .item-title {
   font-size: 20px;
 }
 
-.item-truncatedBody {
-  font-size: 14px;
-  color: $grey;
-
-}
 
 .author-small {
   width: 50px;
@@ -69,10 +99,16 @@
   padding: 0;
   margin: 0;
 }
+
+.item-author-name-read-time {
+  padding-left: 10px;
+}
+
 .item-author-name {
   padding: 0;
   margin: 0;
 }
+
 .item-read-time {
   padding: 0;
   margin: 0;

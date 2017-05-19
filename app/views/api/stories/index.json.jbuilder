@@ -2,7 +2,7 @@
   json.set! story.id do
     json.id story.id
     json.title story.title
-    json.truncatedBody "#{story.body[0..95]}..."
+    json.truncatedBody "#{story.body[0..60]}..."
     json.image story.image_url
     json.size story.size
     json.read_time story.read_time

@@ -45,7 +45,7 @@ Time is the raw material of productivity and creativity. We are not taught to sa
 You are not good enough! You can’t do it! Don’t even bother trying! It’s too late for you! Nobody will share it, like it, recommend it or even see it! Don’t waste your time! You have no writing credentials. You’re terrible at grammar, punctuation, and using parentheses. No one wants to read your opinions — everyone has their own opinions to sort through. Psychological research shows that success and wellbeing are associated with high self-esteem, and that people with lower self-esteem suffer a disproportionate share of emotional and behavioural problems.
 
 The truth is…
-<br>
+
 
 Nobody is perfect enough to begin anything! You will never be ready for anything..ever! I love to write and share. I’m not a professional writer. I have no writing credentials. I am not Stephen King. I have no technique, and I am not trained. But I write anyway. It matters that I show up everyday. I can only get better with practice. My inner critic has gotten weaker with time.
 
