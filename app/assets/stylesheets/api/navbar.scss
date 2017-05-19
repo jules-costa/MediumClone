@@ -34,6 +34,7 @@
   display: flex;
   width: 100%;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .user-logo {
@@ -46,16 +47,13 @@
   border-radius: 100px;
 }
 
-.logout-button {
+.logout-link {
   width: 7%;
   font-family: 'Sintony', sans-serif;
-  border-radius: 4px;
   text-align: center;
   margin-right: 16px;
   padding: 3px;
-  background-color: $lightgrey;
-  box-shadow: 0 2px 8px $grey;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 1px;
 }
 

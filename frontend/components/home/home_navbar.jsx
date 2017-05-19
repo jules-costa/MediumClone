@@ -18,7 +18,7 @@ const personalGreeting = (currentUser, logout, history) => (
     <a className="user-logo" href='/'>
       <img className="user-image-small" src={ currentUser.image_url } />
     </a>
-    <button className="logout-button" onClick={ handleLogout(logout, history) }>Log Out</button>
+    <a href='' className="logout-link" onClick={ handleLogout(logout, history) }>Log Out</a>
   </div>
 );
 

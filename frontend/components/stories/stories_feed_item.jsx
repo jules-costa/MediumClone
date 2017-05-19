@@ -19,10 +19,12 @@ const StoryFeedItem = ({ story }) => (
   <div className={`story-square-${story.size}`}>
       {filterContent(story)}
     <section className={`feed-item-content-${story.size}`}>
-      <Link to={`/api/stories/${story.id}`}>
-        <h1 className="item-title">{story.title}</h1>
-      </Link>
-      <h4 className={`item-body-${story.size}`}>{story.truncatedBody}</h4>
+      <section>
+        <Link to={`/api/stories/${story.id}`}>
+          <h1 className="item-title">{story.title}</h1>
+        </Link>
+        <h4 className={`item-body-${story.size}`}>{story.truncatedBody}</h4>
+      </section>
       <section className="item-author">
         <img src={story.author_image} className="item-author-img"></img>
         <div className="item-author-name-read-time">
