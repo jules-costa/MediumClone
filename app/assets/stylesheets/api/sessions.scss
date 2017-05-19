@@ -11,7 +11,8 @@
 
 .welcome {
   font-family: 'Rufina', serif;
-  font-size: 56px;
+  font-size: 62px;
+  text-shadow: 0 0 2px black;
   letter-spacing: 4px;
   color: white;
 }
@@ -19,15 +20,17 @@
 .stories-that-move {
   color: white;
   margin-top: 20px;
+  text-shadow: 0 0 2px black;
   margin-bottom: 25px;
-  font-size: 24px;
+  font-size: 30px;
   font-family: 'Sintony', sans-serif;
 }
 
 .login-or-signup {
   color: white;
+  text-shadow: 0 0 2px black;
   font-family: 'Sintony', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 3px;
 }
 
@@ -36,8 +39,9 @@
   font-size: 16px;
   margin-bottom: 10px;
   color: white;
+  text-shadow: 0 0 2px black;
+  letter-spacing: 1px;
   font-family: 'Sintony', sans-serif;
-  font-style: italic;
 }
 
 .login-form {
@@ -62,7 +66,7 @@
 }
 
 ::placeholder {
-  color: lightgrey;
+  color: $grey;
 }
 
 .login-button {
@@ -74,8 +78,10 @@
   font-family: 'Sintony', sans-serif;
   font-weight: bold;
   transition: background-color 0.3s;
-  font-size: 12px;
+  font-size: 15px;
   text-align: center;
+  letter-spacing: 1px;
+  color: $darkgrey;
 }
 
 .button {
@@ -87,11 +93,12 @@
 .or {
   font-size: 16px;
   color: white;
+  text-shadow: 0 0 2px black;
+  letter-spacing: 1px;
 }
 
 .demo-user {
   margin-top: -4px;
-  font-size: 15px;
   box-shadow: 0 2px 8px $grey;
   background-color: $lightgrey;
   width: 120%;
@@ -99,7 +106,6 @@
 
 .submit-button {
   width: 395%;
-  font-size: 15px;
   background-color: $lightgrey;
   box-shadow: 0 2px 8px $grey;
 }

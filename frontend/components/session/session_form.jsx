@@ -83,7 +83,7 @@ class SessionForm extends React.Component {
                 onChange={this.update('password')} />
             </div>
             <div className="login-button">
-              <button className="button submit-button" onClick={this.handleSubmit}>Submit</button>
+              <button className="button submit-button" onClick={this.handleSubmit}>{this.props.location.pathname === '/login' ? "Log In" : "Sign Up"}</button>
               <h4 className="or">or</h4>
               <button className="button demo-user" onClick={ this.demoLogin }>Demo Login!</button>
             </div>
