@@ -5,10 +5,10 @@
 .feed {
   display: flex;
   // flex-direction: column;
-  width: 58%;
+  width: 742px;
   margin-top: 25px;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
 }
 
 .story-square-0 {
@@ -17,7 +17,10 @@
   align-items: center;
   box-shadow: 4px 4px 4px $lightgrey;
   margin-bottom: 20px;
-  flex: 0 0 355px;
+  flex-basis: 33.33%;
+  flex-grow: 1;
+  // flex: 0 0 355px;
+  // max-width: 234px ==> 247.33;
 }
 
 .story-square-1 {
@@ -26,7 +29,11 @@
   align-items: center;
   box-shadow: 4px 4px 4px $lightgrey;
   margin-bottom: 20px;
-  flex: 0 0 355px;
+  // flex: 0 0 355px;
+  flex-basis: 33.33%;
+  flex-grow: 1;
+  // max-width: 234px ==> 247.33;
+
 }
 
 .story-square-2 {
@@ -34,8 +41,13 @@
   justify-content: space-between;
   box-shadow: 4px 4px 4px $lightgrey;
   margin-bottom: 20px;
-  flex: 0 0 730px;
+  // flex: 0 0 730px;
+  flex-basis: 66.66%;
+  flex-grow: 2;
+  // max-width: 488px + 26.66 = 514.66;
 }
+
+//remaining space / 3 = 13.3333
 
 .feed-item-content-0 {
   display: flex;
@@ -63,11 +75,10 @@
 
 .feed-item-image-1 {
   flex: 1;
-  height: 47%;
+  height: 46%;
 }
 .feed-item-image-2 {
   flex: 1;
-  padding-right: 20px;
 }
 
 
