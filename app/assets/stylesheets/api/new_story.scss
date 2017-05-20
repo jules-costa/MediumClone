@@ -1,0 +1,52 @@
+.story-form-container {
+  display: flex;
+  flex-direction: column;
+  width: 742px;
+  align-items: flex-start;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 35px;
+  margin-bottom: 30px;
+}
+
+.author-name {
+  padding-left: 8px;
+}
+
+.new-story-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.title {
+  font-size: 42px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family: 'Sintony', sans-serif;
+}
+
+.body {
+  font-size: 22px;
+  font-family: 'Sintony', sans-serif;
+  height: 400px;
+}
+
+::placeholder {
+  font-family: 'Sintony', sans-serif;
+}
+
+.submit-story {
+  font-family: 'Sintony', sans-serif;
+  font-size: 14px;
+  width: 40%;
+  text-align: center;
+  border-radius: 4px;
+  background-color: $lightgrey;
+  padding: 8px 0;
+  margin-top: 15px;
+  align-self: center;
+}

@@ -3,11 +3,12 @@ class Api::StoriesController < ApplicationController
   def create
     @story = Story.new(story_params)
     @story.read_time = read_time(@story)
-    @story.author.name = current_user.username
-    @story.author.image_url = current_user.image_url
-    @story.author.biography = current_user.biography
+    # change author id to be current user's id
+    @story.author_id = 1
+    @story.topic_id = 1
+    # change to default url in schema
+    @story.image_url = "some_url"
     if @story.save
-      # render "api/stories/#{@story.id}"
       render :show
     else
       render json: @story.errors.full_messages, status: 422
@@ -51,7 +52,7 @@ class Api::StoriesController < ApplicationController
   end
 
   def read_time(story)
-    words = story.body.split(" ")
-    "#{words / 200} minutes"
+    wordcount = story.body.split(" ").length
+    "#{(wordcount / 200.0).ceil + 2} min read"
   end
 end
