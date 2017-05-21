@@ -6,8 +6,6 @@ class Api::StoriesController < ApplicationController
     # change author id to be current user's id
     @story.author_id = 1
     @story.topic_id = 1
-    # change to default url in schema
-    @story.image_url = "http://www.vnutz.com/attachments/20130103/A2BA8A2AFE2CA6634FEDF42475D479D0_20130103_120349_UTC"
     if @story.save
       render :show
     else
