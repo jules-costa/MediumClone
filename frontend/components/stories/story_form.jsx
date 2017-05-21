@@ -1,5 +1,6 @@
 import React from 'react';
 import merge from 'lodash/merge';
+import { withRouter } from 'react-router-dom';
 
 class StoryForm extends React.Component {
   constructor(props) {
@@ -15,14 +16,7 @@ class StoryForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const story = merge({}, this.state);
-    this.props.createStory(story).then(
-      this.setState({
-        title: "",
-        body: "",
-        // image_url: ""
-      })
-    );
+    this.props.createStory(this.state).then(data => this.props.history.push(`/stories/${data.id}`));
   }
 
   update(field) {
@@ -66,4 +60,4 @@ class StoryForm extends React.Component {
   }
 }
 
-export default StoryForm;
+export default withRouter(StoryForm);

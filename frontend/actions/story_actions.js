@@ -1,7 +1,10 @@
 import * as APIUtil from '../util/story_api_util';
+import { history } from 'react-router-dom';
 
 export const RECEIVE_STORY = "RECEIVE_STORY";
 export const RECEIVE_STORIES = "RECEIVE_STORIES";
+export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
 
 export const receiveSingleStory = story => ({
   type: RECEIVE_STORY,
@@ -13,8 +16,34 @@ export const receiveAllStories = stories => ({
   stories
 });
 
+export const receiveErrors = errors => ({
+  type: RECEIVE_ERRORS,
+  errors
+});
+export const clearErrors = () => ({
+  type: CLEAR_ERRORS
+});
+
+// export const redirectToStoryShow = (id) => (
+//   this.props.history.push(`stories/${id}`)
+// );
+//
+// export const createStory = story => dispatch => (
+//   APIUtil.createStory(story)
+//     .then(newStory => {
+//       dispatch(receiveSingleStory(newStory));
+//       dispatch(clearErrors());
+//       dispatch(redirectToStoryShow(newStory.id));
+//   }, err => (
+//     dispatch(receiveErrors(err.responseJSON))
+//   ))
+// );
+
 export const createStory = story => dispatch => (
-  APIUtil.createStory(story).then(newStory => dispatch(receiveSingleStory(newStory)))
+  APIUtil.createStory(story).then(story => {
+    dispatch(receiveSingleStory(story));
+    return story;
+  }).fail(err => dispatch(receiveErrors(err.responseJSON)))
 );
 
 export const fetchStories = topicId => dispatch => (
@@ -26,7 +55,12 @@ export const fetchStory = id => dispatch => (
 );
 
 export const updateStory = story => dispatch => (
-  APIUtil.updateStory(story).then(updatedStory => dispatch(receiveSingleStory(updatedStory)))
+  APIUtil.updateStory(story).then(updatedStory => {
+    dispatch(receiveSingleStory(updatedStory));
+    dispatch(clearErrors());
+  }, err => (
+    dispatch(receiveErrors(err.responseJSON))
+  ))
 );
 
 export const destroyStory = id => dispatch => (

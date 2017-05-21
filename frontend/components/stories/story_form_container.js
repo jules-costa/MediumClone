@@ -3,10 +3,11 @@ import StoryForm from './story_form';
 import { createStory } from '../../actions/story_actions';
 
 const mapStateToProps = state => ({
-  currentUser: state.currentUser
+  currentUser: state.currentUser,
+  story: state.story
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   createStory: story => dispatch(createStory(story))
 });
 
