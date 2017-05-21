@@ -3,8 +3,6 @@ class Api::StoriesController < ApplicationController
   def create
     @story = Story.new(story_params)
     @story.read_time = read_time(@story)
-    # change author id to be current user's id
-    @story.author_id = 1
     @story.topic_id = 1
     if @story.save
       render :show
@@ -45,7 +43,7 @@ class Api::StoriesController < ApplicationController
   private
 
   def story_params
-    params.require(:story).permit(:title, :body, :image_url)
+    params.require(:story).permit(:title, :body, :image_url, :author_id)
   end
 
   def read_time(story)

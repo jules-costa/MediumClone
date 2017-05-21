@@ -148,14 +148,7 @@ http://res.cloudinary.com/jules-costa/image/upload/v1495152509/anxiety_ngds3w.jp
 
 
 
-goodbye6 = Story.create(title: "loneliness", body: "loneliness comes
-in waves of
-softly subtle,
-wistful thoughts
-until you’re buried
-under a mountain
-of feathers,
-suffocating", author_id: 7, image_url: "
+goodbye6 = Story.create(title: "loneliness", body: "loneliness comes\nin waves of\nsoftly subtle,\nwistful thoughts\nuntil you’re buried\nunder a mountain\nof feathers,\nsuffocating", author_id: 7, image_url: "
 http://res.cloudinary.com/jules-costa/image/upload/v1495152511/loneliness_byk0lj.jpg", read_time: "2 min read", topic_id: 1, size: 0)
 
 

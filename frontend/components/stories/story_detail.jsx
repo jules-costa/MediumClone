@@ -29,7 +29,7 @@ class StoryDetail extends React.Component {
         <section className="story-details">
           <h1 className="story-title">{this.props.story.title}</h1>
           <img src={this.props.story.image}></img>
-          <p>{this.props.story.body}</p>
+          <p className="body-text">{this.props.story.body}</p>
         </section>
       </section>
     );
