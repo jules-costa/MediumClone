@@ -20,7 +20,6 @@ class Api::StoriesController < ApplicationController
   def update
     @story = Story.find(params[:id])
     if @story.update_attributes(story_params)
-      # render "api/stories/#{@story.id}"
       render :show
     else
       render json: @story.errors.full_messages, status: 422

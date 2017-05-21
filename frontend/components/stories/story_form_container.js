@@ -4,7 +4,8 @@ import { createStory } from '../../actions/story_actions';
 
 const mapStateToProps = state => ({
   currentUser: state.currentUser,
-  story: state.story
+  story: state.story,
+  errors: state.errors
 });
 
 const mapDispatchToProps = (dispatch) => ({
