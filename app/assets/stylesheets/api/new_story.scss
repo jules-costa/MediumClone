@@ -1,7 +1,7 @@
 .story-form-container {
   display: flex;
   flex-direction: column;
-  width: 742px;
+  width: 750px;
   align-items: flex-start;
 }
 
@@ -10,7 +10,6 @@
   flex-direction: row;
   align-items: center;
   margin-top: 35px;
-  margin-bottom: 6px;
 }
 
 .author-name-new-story {
@@ -23,14 +22,14 @@
   width: 100%;
 }
 .title {
-  font-size: 42px;
+  font-size: 38px;
   margin-bottom: 15px;
   font-weight: bold;
   font-family: 'Sintony', sans-serif;
 }
 
 .body {
-  font-size: 22px;
+  font-size: 18px;
   font-family: 'Sintony', sans-serif;
   height: 400px;
 }
