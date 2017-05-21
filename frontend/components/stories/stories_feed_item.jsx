@@ -7,7 +7,7 @@ const filterContent = story => {
   if (story.size !== 0) {
     return (
       <section className={`feed-item-image-${story.size}`}>
-        <Link to={`/api/stories/${story.id}`}>
+        <Link to={`/stories/${story.id}`}>
           <img src={story.image}></img>
         </Link>
       </section>
@@ -20,7 +20,7 @@ const StoryFeedItem = ({ story }) => (
       {filterContent(story)}
     <section className={`feed-item-content-${story.size}`}>
       <section>
-        <Link to={`/api/stories/${story.id}`}>
+        <Link to={`/stories/${story.id}`}>
           <h1 className="item-title">{story.title}</h1>
         </Link>
         <h4 className={`item-body-${story.size}`}>{story.truncatedBody}</h4>
