@@ -8,5 +8,12 @@
       json.author_name @story.author.username
       json.author_image @story.author.image_url
       json.author_biography @story.author.biography
-    # json.followers @story.author.followers
-  end
+    end
+    json.set! "comments" do
+      @story.comments.each do |comment|
+        json.set! comment.id do
+          json.body comment.body
+          json.author comment.author_id
+        end
+      end
+    end

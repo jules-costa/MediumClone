@@ -1,4 +1,4 @@
-class CommentsController < ApplicationController
+class Api::CommentsController < ApplicationController
   def edit
     @comment = Comment.find(params[:id])
   end
@@ -6,7 +6,8 @@ class CommentsController < ApplicationController
   def update
     @comment = Comment.find(params[:id])
     if @comment.update_attributes(comment_params)
-      render #?????
+      @story = @comment.story
+      render "/api/stories/show"
     else
       render json: @comment.errors.full_messages, status: 422
     end
@@ -15,7 +16,8 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
-      render #?????
+      @story = @comment.story
+      render "/api/stories/show"
     else
       render json: @comment.errors.full_messages, status: 422
     end

@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import Comments from './comments';
 
 const mapStateToProps = state => ({
-  story: state.story,
+  comments: state.story.comments,
   currentUser: state.currentUser
 });
 

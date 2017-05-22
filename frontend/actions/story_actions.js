@@ -1,4 +1,6 @@
 import * as APIUtil from '../util/story_api_util';
+import * as CommentAPIUtil from '../util/comment_api_util';
+
 import { history } from 'react-router-dom';
 
 export const RECEIVE_STORY = "RECEIVE_STORY";
@@ -65,4 +67,24 @@ export const updateStory = story => dispatch => (
 
 export const destroyStory = id => dispatch => (
   APIUtil.destroyStory(id).then(story => dispatch(receiveSingleStory(null)))
+);
+
+export const createComment = (comment, storyId) => dispatch => (
+  CommentAPIUtil.createComment(comment, storyId).then(story => {
+    dispatch(receiveSingleStory(story));
+    return story;
+  }).fail(err => dispatch(receiveErrors(err.responseJSON)))
+);
+
+export const updateComment = comment => dispatch => (
+  CommentAPIUtil.updateComment(comment).then(story => {
+    dispatch(receiveSingleStory(story));
+    dispatch(clearErrors());
+  }, err => (
+    dispatch(receiveErrors(err.responseJSON))
+  ))
+);
+
+export const destroyComment = id => dispatch => (
+  CommentAPIUtil.destroyComment(id).then(story => dispatch(receiveSingleStory(null)))
 );

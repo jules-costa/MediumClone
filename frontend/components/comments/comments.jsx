@@ -1,18 +1,17 @@
 import React from 'react';
 
+import CommentItem from './comment_item';
+
 class Comments extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  // componentDidMount() {
-  //   this.props.fetchStory()
-  // }
 
   render() {
     return(
       <section className="comments-list">
-        <h1>comments feed</h1>
+        {Object.keys(this.props.comments).map((key, i) => <CommentItem key={this.props.comments[key].id} comment={this.props.comments[key]} />)}
       </section>
     );
   }

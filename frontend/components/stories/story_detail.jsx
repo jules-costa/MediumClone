@@ -20,11 +20,11 @@ class StoryDetail extends React.Component {
       <section className="story-show-page">
         <section className="story-author-details">
           <div className="author-logo-show">
-            <img src={this.props.story.author_image} className="author-small"></img>
+            {this.props.story.author ? <img src={this.props.story.author.author_image} className="author-small"></img> : ""}
           </div>
           <div className="author-info">
-            <h5 className="author-name">{this.props.story.author_name}</h5>
-            <h6 className="author-bio">{this.props.story.author_biography}</h6>
+            {this.props.story.author ? <h5 className="author-name">{this.props.story.author.author_name}</h5> : ""}
+            {this.props.story.author ? <h6 className="author-bio">{this.props.story.author.author_biography}</h6> : ""}
             <h6>{this.props.story.read_time}</h6>
           </div>
         </section>
@@ -35,8 +35,8 @@ class StoryDetail extends React.Component {
           <p className="body-text">{this.props.story.body}</p>
         </section>
 
-        <CommentFormContainer story={this.props.story} />
-        <CommentsContainer story={this.props.story} />
+        <CommentFormContainer />
+        {this.props.story.comments ? <CommentsContainer comments={this.props.story.comments}/> : ""}
       </section>
     );
   }

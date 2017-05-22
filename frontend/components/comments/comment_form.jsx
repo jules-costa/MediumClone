@@ -3,11 +3,9 @@ import React from 'react';
 class CommentForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
     this.state = {
       body: '',
       author_id: this.props.currentUser.id,
-      story_id: this.props.story.id
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,8 +14,7 @@ class CommentForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
-    this.props.createComment(this.state, this.state.story_id);
+    this.props.createComment({body: this.state.body, author_id: this.state.author_id, story_id: this.props.story.id}, this.props.story.id);
   }
 
   update(field) {
