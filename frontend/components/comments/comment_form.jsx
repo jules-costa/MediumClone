@@ -38,18 +38,20 @@ class CommentForm extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="comment-form-container">
         <h4 className="comment-errors">{this.renderErrors()}</h4>
         <label className="responses">Responses
           <section className="response-form-container">
-            <input type="text"
+            <textarea type="text"
               className="response-body"
               placeholder="Write a response..."
               value={this.state.body}
-              onChange={this.update('body')} />
-            <button className="submit-comment" onClick={this.handleSubmit}>Publish</button>
+              onChange={this.update('body')}></textarea>
           </section>
         </label>
+        <div className="publish-button">
+          <button className="submit-comment" onClick={this.handleSubmit}>Publish</button>
+        </div>
       </div>
     );
   }
