@@ -1,7 +1,3 @@
-// html {
-//   display: flex;
-// 	height: 100%;
-// }
 
 body {
   font-size: 14px;
@@ -17,7 +13,17 @@ body {
 
 .behind-hero {
   width: 100%;
-  height: 800px;
+  height: 830px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  color: $grey;
+  font-family: 'Sintony', sans-serif;
+  font-size: 13px;
+  margin-top: 368px;
+  margin-bottom: 25px;
 }
 
 .hero {

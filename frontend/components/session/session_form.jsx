@@ -88,6 +88,16 @@ class SessionForm extends React.Component {
               <button className="button demo-user" onClick={ this.demoLogin }>Demo Login!</button>
             </div>
           </form>
+          <footer className="footer">
+            <div><a href=''>Getting started</a></div>
+            <div><a href=''>Help</a></div>
+            <div><a href=''>Status</a></div>
+            <div><a href=''>Blog</a></div>
+            <div><a href=''>Careers</a></div>
+            <div><a href=''>Privacy</a></div>
+            <div><a href=''>Terms</a></div>
+            <div><a href=''>About</a></div>
+          </footer>
         </section>
       </div>
     );
