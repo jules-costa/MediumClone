@@ -4,11 +4,11 @@ class Comment < ApplicationRecord
   belongs_to :author,
     primary_key: :id,
     foreign_key: :author_id,
-    classname: "User"
+    class_name: "User"
 
   belongs_to :story,
     primary_key: :id,
     foreign_key: :story_id,
-    classname: "Story"
+    class_name: "Story"
 
 end

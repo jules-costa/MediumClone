@@ -12,6 +12,30 @@
 # yes = Topic.create(title: "yes")
 # no = Topic.create(title: "no")
 
+# COMMENTS
+
+comment2 = Comment.create!(author_id: 2, story_id: 21, body: "This poem is truly beautiful. Thank you so much for sharing.")
+comment3 = Comment.create!(author_id: 3, story_id: 20, body: "You have no idea how much this poem has impacted me. Thanks a million.")
+comment4 = Comment.create!(author_id: 4, story_id: 19, body: "Posts like these remind me why I love Ouija. It's such a great place to connect with people!")
+comment5 = Comment.create!(author_id: 5, story_id: 18, body: "Wow. So powerful!")
+comment6 = Comment.create!(author_id: 6, story_id: 17, body: "You have such a unique writing style. I hope one day to be able to express my thoughts and emotions half as eloquently as you.")
+comment7 = Comment.create!(author_id: 7, story_id: 16, body: "Such a sweet way to start my day. Thanks for sharing!")
+comment8 = Comment.create!(author_id: 8, story_id: 15, body: "This poem is exquisite!")
+comment9 = Comment.create!(author_id: 9, story_id: 14, body: "Where on earth did you come up with this?! You have a brilliant mind.")
+comment10 = Comment.create!(author_id: 10, story_id: 13, body: "I'm going to share this with my friends and family! You've truly touched me.")
+comment11 = Comment.create!(author_id: 11, story_id: 12, body: "I am so happy I stumbled across your work. Lovely.")
+comment12 = Comment.create!(author_id: 12, story_id: 11, body: "I'm not usually one to leave comments, but this poem has compelled me to encourage other readers to stop and read. Really read it guys...there are so many layers here.")
+comment13 = Comment.create!(author_id: 13, story_id: 10, body: "I don't understand this at all and I love it.")
+comment14 = Comment.create!(author_id: 1, story_id: 9, body: "I can't get enough of your poetry! Very thought-provoking and impactful.")
+comment15 = Comment.create!(author_id: 2, story_id: 8, body: "Today, I am grateful for this poem. I am grateful for Ouija!  It will be a glorious day!")
+comment16 = Comment.create!(author_id: 3, story_id: 7, body: "The Ouija community is so inviting and comforting. Poems like this keep me going!")
+comment1 = Comment.create!(author_id: 4, story_id: 6, body: "I rarely find poems that I like, and yours is just remarkable. Looking forward to reading more of your work.")
+comment1 = Comment.create!(author_id: 5, story_id: 5, body: "How lucky am I to have poems like this at my fingertips?! I just can't get enough!")
+comment1 = Comment.create!(author_id: 6, story_id: 4, body: "Poetry bores me, but THIS poetry moves me. Thank you for sharing.")
+comment1 = Comment.create!(author_id: 7, story_id: 3, body: "I hope to be brave enough to share my own poetry with the world one day... If I ever do, trust that it'll be on Ouija first!")
+comment1 = Comment.create!(author_id: 8, story_id: 2, body: "I disagree with the underlying message, but appreciate your style of prose.")
+comment1 = Comment.create!(author_id: 9, story_id: 1, body: "Powerful! Intriguing! Impressive! Just wow!")
+
 # USERS
 
 user1 = User.create!(username: "Guest", password: "password", biography: "Thank you for checking out Ouija! This Medium clone was built in 10 days using Ruby on Rails, React, Redux, Javascript and HTML/CSS.", image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495413134/user-2ef10cd87167a7021991eaaf0fb688ea1fda37f520b069b2b523d3a8e399473d_jphioe.png")
