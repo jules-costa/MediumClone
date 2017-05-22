@@ -48,4 +48,4 @@ Objective: User has a profile page that can be read and edited. Adequately seede
 
 #### Phase 7: Topics
 
-Objective: Generate 5 topics that contain relevant stories, and link to topic pages from nav bar. Adequately seeded.
+Objective: Generate 3 topics that contain relevant stories, and link to topic pages from nav bar. Adequately seeded.
