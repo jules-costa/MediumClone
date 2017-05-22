@@ -2,17 +2,44 @@ import React from 'react';
 import merge from 'lodash/merge';
 import { withRouter } from 'react-router-dom';
 
+import Dropzone from 'react-dropzone';
+import request from 'superagent';
+
+const CLOUDINARY_UPLOAD_PRESET = 'xvw4jhjc';
+const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/jules-costa/image/upload';
+
 class StoryForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       title: "",
       body: "",
-      author_id: this.props.currentUser.id
-      // image_url: ""
+      author_id: this.props.currentUser.id,
+      image_url: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+  }
+
+  onImageDrop(files) {
+    this.handleImageUpload(files[0]);
+  }
+
+  handleImageUpload(file) {
+    let upload = request.post(CLOUDINARY_UPLOAD_URL)
+      .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
+      .field('file', file);
+
+    upload.end((err, response) => {
+      if (err) {
+        console.error(err);
+      }
+      if (response.body.secure_url !== '') {
+        this.setState({
+          image_url: response.body.secure_url
+        });
+      }
+    });
   }
 
   handleSubmit(e) {
@@ -39,6 +66,12 @@ class StoryForm extends React.Component {
   render() {
     return (
       <section className="story-form-container">
+        <Dropzone
+          multiple={false}
+          accept="image/*"
+          onDrop={this.onImageDrop.bind(this)}>
+          <p>Drop an image or click to select a file to upload</p>
+        </Dropzone>
         <section className="user-info">
           <img src={this.props.currentUser.image_url} className="author-small"></img>
           <h5 className="author-name-new-story">{this.props.currentUser.username}</h5>
@@ -60,6 +93,17 @@ class StoryForm extends React.Component {
             placeholder="Tell your story..."
             value={this.state.body}
             onChange={this.update('body')} />
+          <div>
+            <div className="FileUpload">
+            </div>
+            <div>
+              {this.state.image_url === '' ? null :
+              <div>
+                <p>{this.state.image_url.name}</p>
+                <img src={this.state.image_url} />
+              </div>}
+            </div>
+          </div>
           <button className="submit-story" onClick={this.handleSubmit}>Publish</button>
         </form>
       </section>

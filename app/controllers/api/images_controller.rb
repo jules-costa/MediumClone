@@ -17,5 +17,5 @@ class Api::ImagesController < ApplicationController
   def image_params
     params.require(:image).permit(:url)
   end
-  
+
 end
