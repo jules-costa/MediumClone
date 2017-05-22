@@ -32,7 +32,14 @@
   font-size: 22px;
   font-weight: bold;
   font-family: 'Sintony', sans-serif;
-  margin-bottom: 15px;
+}
+
+i {
+  border: 1px solid $grey;
+  border-radius: 300px;
+  padding: 8px 10px;
+  color: $grey;
+  float: right;
 }
 
 .body {
@@ -41,6 +48,7 @@
   height: 400px;
   padding: 20px;
   padding-left: 0;
+  padding-top: 6px;
 }
 
 ::placeholder {

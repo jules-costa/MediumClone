@@ -66,12 +66,6 @@ class StoryForm extends React.Component {
   render() {
     return (
       <section className="story-form-container">
-        <Dropzone
-          multiple={false}
-          accept="image/*"
-          onDrop={this.onImageDrop.bind(this)}>
-          <p>Drop an image or click to select a file to upload</p>
-        </Dropzone>
         <section className="user-info">
           <img src={this.props.currentUser.image_url} className="author-small"></img>
           <h5 className="author-name-new-story">{this.props.currentUser.username}</h5>
@@ -88,6 +82,13 @@ class StoryForm extends React.Component {
             placeholder="description"
             value={this.state.decsription}
             onChange={this.update('description')} />
+          <Dropzone
+            className="drop-box"
+            multiple={false}
+            accept="image/*"
+            onDrop={this.onImageDrop.bind(this)}>
+            <i className="fa fa-plus" aria-hidden="true"></i>
+          </Dropzone>
           <textarea type="text"
             className="body"
             placeholder="Tell your story..."

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170522032718) do
+ActiveRecord::Schema.define(version: 20170522160528) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20170522032718) do
     t.integer  "topic_id",                                                                                                                                                             null: false
     t.datetime "created_at",                                                                                                                                                           null: false
     t.datetime "updated_at",                                                                                                                                                           null: false
-    t.integer  "size",        default: 1
+    t.integer  "size",        default: 2
     t.string   "description", default: "Knowledge, like air, is vital to life. Like air, no one should be denied it.",                                                                 null: false
     t.index ["author_id"], name: "index_stories_on_author_id", using: :btree
     t.index ["topic_id"], name: "index_stories_on_topic_id", using: :btree
