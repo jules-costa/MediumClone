@@ -16,8 +16,8 @@ export const clearErrors = () => ({
   type: CLEAR_ERRORS
 });
 
-export const createComment = comment => dispatch => (
-  APIUtil.createComment(comment).then(newComment => {
+export const createComment = (comment, storyId) => dispatch => (
+  APIUtil.createComment(comment, storyId).then(newComment => {
     dispatch(receiveComment(newComment));
     return newComment;
   }).fail(err => dispatch(receiveErrors(err.responseJSON)))

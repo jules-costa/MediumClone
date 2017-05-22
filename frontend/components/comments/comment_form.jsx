@@ -3,6 +3,7 @@ import React from 'react';
 class CommentForm extends React.Component {
   constructor(props) {
     super(props);
+    console.log(this.props);
     this.state = {
       body: '',
       author_id: this.props.currentUser.id,
@@ -15,7 +16,8 @@ class CommentForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createComment(this.state);
+    console.log(this.state);
+    this.props.createComment(this.state, this.state.story_id);
   }
 
   update(field) {
