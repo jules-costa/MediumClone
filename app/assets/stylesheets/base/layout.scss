@@ -5,6 +5,7 @@
 
 body {
   font-size: 14px;
+  color: $darkgrey;
 }
 
 .main-section {
@@ -32,6 +33,7 @@ body {
 .auth-link {
   font-size: 12px;
   padding: 0 0 0 30px;
+  color: $darkgrey;
 }
 
 button:hover {
@@ -43,7 +45,7 @@ a:hover {
 }
 
 .full-logo:hover {
-  color: black;
+  color: $darkgrey;
 }
 
 .hidden {
@@ -54,19 +56,27 @@ h1 {
 	font-size: 28px;
 	font-weight: bold;
   font-family: 'Sintony', sans-serif;
+  color: $darkgrey;
+
 }
 h2 {
 	text-align: center;
 	font-weight: bold;
+  color: $darkgrey;
+
 }
 h4 {
   font-size: 1.2em;
   font-family: 'Sintony', sans-serif;
+  color: $darkgrey;
+
 }
 h5 {
   font-size: 1.0em;
   font-family: 'Sintony', sans-serif;
   letter-spacing: 0.5px;
+  color: $darkgrey;
+
 }
 h6 {
   font-size: 0.8em;

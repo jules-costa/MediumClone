@@ -29,6 +29,7 @@ export const clearErrors = () => ({
 export const createStory = story => dispatch => (
   APIUtil.createStory(story).then(newStory => {
     dispatch(receiveSingleStory(newStory));
+    dispatch(clearErrors());
     return newStory;
   }).fail(err => dispatch(receiveErrors(err.responseJSON)))
 );
