@@ -43,7 +43,7 @@ class Api::StoriesController < ApplicationController
   private
 
   def story_params
-    params.require(:story).permit(:title, :body, :image_url, :author_id)
+    params.require(:story).permit(:title, :body, :description, :image_url, :author_id)
   end
 
   def read_time(story)

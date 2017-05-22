@@ -24,8 +24,19 @@
 }
 
 .story-title {
-  margin-bottom: 50px;
+  color: $darkgrey;
+  margin-bottom: 20px;
   font-size: 36px;
+}
+
+.story-description {
+  font-weight: normal;
+  text-align: left;
+  margin-bottom: 28px;
+  font-style: italic;
+  font-size: 24px;
+  color: $grey;
+  font-family: 'Sintony', sans-serif;
 }
 
 .author-info {

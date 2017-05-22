@@ -1,6 +1,7 @@
   json.id @story.id
   json.title @story.title
   json.body @story.body
+  json.description @story.description
   json.image @story.image_url
   json.read_time @story.read_time
     json.set! "author" do

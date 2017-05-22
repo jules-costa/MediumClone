@@ -50,6 +50,11 @@ class StoryForm extends React.Component {
             placeholder="Title"
             value={this.state.title}
             onChange={this.update('title')} />
+          <input type="text"
+            className="description"
+            placeholder="description"
+            value={this.state.decsription}
+            onChange={this.update('description')} />
           <textarea type="text"
             className="body"
             placeholder="Tell your story..."

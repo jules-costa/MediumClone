@@ -28,6 +28,7 @@ class StoryDetail extends React.Component {
         </section>
         <section className="story-details">
           <h1 className="story-title">{this.props.story.title}</h1>
+          <h2 className="story-description">{this.props.story.description}</h2>
           <img src={this.props.story.image}></img>
           <p className="body-text">{this.props.story.body}</p>
         </section>

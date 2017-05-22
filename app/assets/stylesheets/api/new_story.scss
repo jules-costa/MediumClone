@@ -28,10 +28,19 @@
   font-family: 'Sintony', sans-serif;
 }
 
+.description {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Sintony', sans-serif;
+  margin-bottom: 15px;
+}
+
 .body {
   font-size: 18px;
-  font-family: 'Sintony', sans-serif;
+  font-family: 'Rufina', serif;
   height: 400px;
+  padding: 20px;
+  padding-left: 0;
 }
 
 ::placeholder {

@@ -10,21 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170521191752) do
+ActiveRecord::Schema.define(version: 20170522032718) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "stories", force: :cascade do |t|
-    t.string   "title",                                                                                                                                                               null: false
-    t.text     "body",                                                                                                                                                                null: false
-    t.integer  "author_id",                                                                                                                                                           null: false
-    t.string   "image_url",  default: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_568/v1495394471/A2BA8A2AFE2CA6634FEDF42475D479D0_20130103_120349_UTC_tz6jwc.jpg", null: false
-    t.string   "read_time",                                                                                                                                                           null: false
-    t.integer  "topic_id",                                                                                                                                                            null: false
-    t.datetime "created_at",                                                                                                                                                          null: false
-    t.datetime "updated_at",                                                                                                                                                          null: false
-    t.integer  "size",       default: 1
+    t.string   "title",                                                                                                                                                                null: false
+    t.text     "body",                                                                                                                                                                 null: false
+    t.integer  "author_id",                                                                                                                                                            null: false
+    t.string   "image_url",   default: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_568/v1495394471/A2BA8A2AFE2CA6634FEDF42475D479D0_20130103_120349_UTC_tz6jwc.jpg", null: false
+    t.string   "read_time",                                                                                                                                                            null: false
+    t.integer  "topic_id",                                                                                                                                                             null: false
+    t.datetime "created_at",                                                                                                                                                           null: false
+    t.datetime "updated_at",                                                                                                                                                           null: false
+    t.integer  "size",        default: 1
+    t.string   "description", default: "Knowledge, like air, is vital to life. Like air, no one should be denied it.",                                                                 null: false
     t.index ["author_id"], name: "index_stories_on_author_id", using: :btree
     t.index ["topic_id"], name: "index_stories_on_topic_id", using: :btree
   end
