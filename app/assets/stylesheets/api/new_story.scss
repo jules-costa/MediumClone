@@ -48,6 +48,13 @@ i {
   float: right;
 }
 
+i:hover {
+  cursor: pointer;
+  background-color: $coral;
+  color: $darkgrey;
+  border: 1px solid $darkgrey;
+}
+
 .body {
   font-size: 18px;
   font-family: 'Rufina', serif;
@@ -55,6 +62,7 @@ i {
   padding: 20px;
   padding-left: 0;
   padding-top: 6px;
+  letter-spacing: 0.5px;
 }
 
 ::placeholder {

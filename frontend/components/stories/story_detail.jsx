@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import CommentsContainer from '../comments/comments_container';
+import CommentFormContainer from '../comments/comment_form_container';
 
 class StoryDetail extends React.Component {
 
@@ -32,6 +34,9 @@ class StoryDetail extends React.Component {
           <img src={this.props.story.image}></img>
           <p className="body-text">{this.props.story.body}</p>
         </section>
+
+        <CommentFormContainer story={this.props.story} />
+        <CommentsContainer story={this.props.story} />
       </section>
     );
   }

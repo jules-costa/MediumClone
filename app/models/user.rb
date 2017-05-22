@@ -10,6 +10,10 @@ class User < ApplicationRecord
     primary_key: :id,
     foreign_key: :author_id,
     class_name: "Story"
+  has_many :comments,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: "Comment"
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

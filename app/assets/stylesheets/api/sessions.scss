@@ -41,7 +41,7 @@
   margin-top: 16px;
   margin-bottom: -6px;
   text-shadow: 0 0 2px black;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-family: 'Sintony', sans-serif;
 }
 
@@ -63,7 +63,7 @@
   font-size: 16px;
   color: $coral;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 ::placeholder {
@@ -81,7 +81,7 @@
   transition: background-color 0.3s;
   font-size: 15px;
   text-align: center;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: $darkgrey;
 }
 
@@ -95,7 +95,7 @@
   font-size: 16px;
   color: white;
   text-shadow: 0 0 2px black;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .demo-user {
