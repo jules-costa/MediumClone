@@ -6,7 +6,7 @@ import StoryDetailContainer from './stories/story_detail_container';
 import StoryFormContainer from './stories/story_form_container';
 
 import { Route } from 'react-router-dom';
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <section className="main-section">
@@ -21,8 +21,8 @@ const App = () => (
     <Route exact path="/" component={StoriesFeedContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
-    <Route path="/write" component={StoryFormContainer} />
-    <Route path="/stories/:storyId" component={StoryDetailContainer} />
+    <ProtectedRoute path="/write" component={StoryFormContainer} />
+    <ProtectedRoute path="/stories/:storyId" component={StoryDetailContainer} />
   </section>
 );
 
