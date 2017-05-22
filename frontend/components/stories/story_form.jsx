@@ -66,10 +66,13 @@ class StoryForm extends React.Component {
   render() {
     return (
       <section className="story-form-container">
-        <section className="user-info">
-          <img src={this.props.currentUser.image_url} className="author-small"></img>
-          <h5 className="author-name-new-story">{this.props.currentUser.username}</h5>
-        </section>
+        <div className="new-story-header">
+          <section className="user-info">
+            <img src={this.props.currentUser.image_url} className="author-small"></img>
+            <h5 className="author-name-new-story">{this.props.currentUser.username}</h5>
+          </section>
+          <button className="submit-story" onClick={this.handleSubmit}>Publish</button>
+        </div>
         <form className="new-story-form">
           <h4 className="story-errors">{this.renderErrors()}</h4>
           <input type="text"
@@ -105,7 +108,6 @@ class StoryForm extends React.Component {
               </div>}
             </div>
           </div>
-          <button className="submit-story" onClick={this.handleSubmit}>Publish</button>
         </form>
       </section>
     );
