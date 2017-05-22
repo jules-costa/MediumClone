@@ -52,33 +52,3 @@ h5.author-name {
 h6 {
   margin: 0;
 }
-
-.response-body {
-  padding: 20px;
-  font-size: 18px;
-  font-family: 'Rufina', serif;
-  letter-spacing: 0.5px;
-
-}
-
-.submit-comment {
-  font-family: 'Sintony', sans-serif;
-  font-size: 14px;
-  width: 20%;
-  text-align: center;
-  border-radius: 4px;
-  background-color: $lightgrey;
-  padding: 8px 0;
-}
-
-.response-form-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  box-shadow: 0 0 8px 2px $lightgrey;
-}
-
-.response-body::placeholder {
-  font-family: 'Rufina', serif;
-}

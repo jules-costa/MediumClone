@@ -19,11 +19,3 @@ class Comments extends React.Component {
 
 
 export default Comments;
-
-// {this.props.story.comments.map((comment, i) =>
-//   <li>
-//     {comment.author.image_url}
-//     {comment.author.username}
-//     {comment.body}
-//   </li>
-// )}

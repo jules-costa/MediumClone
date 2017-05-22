@@ -4,7 +4,7 @@ class CommentForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      body: '',
+      body: "",
       author_id: this.props.currentUser.id,
     };
 
@@ -14,7 +14,10 @@ class CommentForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createComment({body: this.state.body, author_id: this.state.author_id, story_id: this.props.story.id}, this.props.story.id);
+    this.props.createComment({body: this.state.body, author_id: this.state.author_id, story_id: this.props.story.id}, this.props.story.id)
+    .then(this.setState({
+      body: "",
+    }));
   }
 
   update(field) {
@@ -37,14 +40,16 @@ class CommentForm extends React.Component {
     return(
       <div>
         <h4 className="comment-errors">{this.renderErrors()}</h4>
-        <section className="response-form-container">
-          <input type="text"
-            className="response-body"
-            placeholder="Write a response..."
-            value={this.state.body}
-            onChange={this.update('body')} />
-          <button className="submit-comment" onClick={this.handleSubmit}>Publish</button>
-        </section>
+        <label className="responses">Responses
+          <section className="response-form-container">
+            <input type="text"
+              className="response-body"
+              placeholder="Write a response..."
+              value={this.state.body}
+              onChange={this.update('body')} />
+            <button className="submit-comment" onClick={this.handleSubmit}>Publish</button>
+          </section>
+        </label>
       </div>
     );
   }

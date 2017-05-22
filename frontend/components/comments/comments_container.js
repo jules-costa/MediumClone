@@ -6,10 +6,6 @@ const mapStateToProps = state => ({
   currentUser: state.currentUser
 });
 
-// const mapDispatchToProps = (dispatch) => ({
-//
-// });
-
 export default connect(
   mapStateToProps,
   null

@@ -1,0 +1,74 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 8px 2px $lightgrey;
+  padding: 12px 20px;
+}
+
+.comment-author-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.comment-author-name {
+  padding-left: 10px;
+}
+.comment-author-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+
+.comment-body {
+  font-family: 'Rufina', serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  line-height: 1.5em;
+}
+
+// FORM
+
+.response-body {
+  padding: 20px;
+  font-size: 18px;
+  font-family: 'Rufina', serif;
+  letter-spacing: 0.5px;
+}
+
+.responses {
+  font-family: 'Sintony', sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.submit-comment {
+  font-family: 'Sintony', sans-serif;
+  font-size: 14px;
+  width: 20%;
+  text-align: center;
+  border-radius: 4px;
+  background-color: $lightgrey;
+  padding: 8px 0;
+}
+
+.comment-errors {
+  margin-top: 50px;
+}
+
+.response-form-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 36px;
+  box-shadow: 0 0 8px 2px $lightgrey;
+}
+
+.response-body::placeholder {
+  font-family: 'Rufina', serif;
+}

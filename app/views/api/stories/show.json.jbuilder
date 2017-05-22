@@ -13,7 +13,8 @@
       @story.comments.each do |comment|
         json.set! comment.id do
           json.body comment.body
-          json.author comment.author_id
+          json.author_name comment.author.username
+          json.author_image comment.author.image_url
         end
       end
     end

@@ -26,25 +26,10 @@ export const clearErrors = () => ({
   type: CLEAR_ERRORS
 });
 
-// export const redirectToStoryShow = (id) => (
-//   this.props.history.push(`stories/${id}`)
-// );
-//
-// export const createStory = story => dispatch => (
-//   APIUtil.createStory(story)
-//     .then(newStory => {
-//       dispatch(receiveSingleStory(newStory));
-//       dispatch(clearErrors());
-//       dispatch(redirectToStoryShow(newStory.id));
-//   }, err => (
-//     dispatch(receiveErrors(err.responseJSON))
-//   ))
-// );
-
 export const createStory = story => dispatch => (
-  APIUtil.createStory(story).then(story => {
-    dispatch(receiveSingleStory(story));
-    return story;
+  APIUtil.createStory(story).then(newStory => {
+    dispatch(receiveSingleStory(newStory));
+    return newStory;
   }).fail(err => dispatch(receiveErrors(err.responseJSON)))
 );
 
@@ -72,6 +57,7 @@ export const destroyStory = id => dispatch => (
 export const createComment = (comment, storyId) => dispatch => (
   CommentAPIUtil.createComment(comment, storyId).then(story => {
     dispatch(receiveSingleStory(story));
+    dispatch(clearErrors());
     return story;
   }).fail(err => dispatch(receiveErrors(err.responseJSON)))
 );

@@ -13,29 +13,18 @@ const handleLogout = (logout, history) => e => {
   logout().then(user => history.push('/'));
 };
 
-const toggleWriteStory = (turnOff) => {
-  if (turnOff) {
-    return (
-      null
-    );
-  } else {
-    return (
-      <Link to="/write" className="new-story-link">Write a Story</Link>
-    );
-  }
-};
 
-const personalGreeting = (currentUser, logout, history, turnOff) => (
+const personalGreeting = (currentUser, logout, history) => (
   <div className="header-group">
     <a className="user-logo" href='/'>
       <img className="user-image-small" src={ currentUser.image_url } />
     </a>
-    <div>{toggleWriteStory(turnOff)}</div>
+    <Link to="/write" className="new-story-link">Write a Story</Link>
     <a href='' className="logout-link" onClick={ handleLogout(logout, history) }>Log Out</a>
   </div>
 );
 
-const HomeNavbar = ({ currentUser, logout, history, turnOff }) => (
+const HomeNavbar = ({ currentUser, logout, history }) => (
   currentUser && currentUser.username ? personalGreeting(currentUser, logout, history) : sessionLinks()
 );
 
