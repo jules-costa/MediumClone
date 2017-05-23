@@ -1,8 +1,6 @@
 import * as APIUtil from '../util/story_api_util';
 import * as CommentAPIUtil from '../util/comment_api_util';
 
-import { history } from 'react-router-dom';
-
 export const RECEIVE_STORY = "RECEIVE_STORY";
 export const RECEIVE_STORIES = "RECEIVE_STORIES";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
@@ -59,7 +57,6 @@ export const createComment = (comment, storyId) => dispatch => (
   CommentAPIUtil.createComment(comment, storyId).then(story => {
     dispatch(receiveSingleStory(story));
     dispatch(clearErrors());
-    // return story;
   }).fail(err => dispatch(receiveErrors(err.responseJSON)))
 );
 
