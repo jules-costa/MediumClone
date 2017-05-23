@@ -42,6 +42,7 @@ class CommentForm extends React.Component {
         <h4 className="comment-errors">{this.renderErrors()}</h4>
         <label className="responses">Responses
           <section className="response-form-container">
+            <img className="comment-author-image" src={this.props.currentUser.image_url} />
             <textarea type="text"
               className="response-body"
               placeholder="Write a response..."
