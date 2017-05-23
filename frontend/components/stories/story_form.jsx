@@ -12,9 +12,8 @@ class StoryForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: (this.props.story.title ? this.props.story.title : ""),
-      body: (this.props.story.body ? this.props.story.body : ""),
-      description: (this.props.story.description ? this.props.story.description : ""),
+      title: "",
+      body: "",
       author_id: this.props.currentUser.id,
       image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_568/v1495394471/A2BA8A2AFE2CA6634FEDF42475D479D0_20130103_120349_UTC_tz6jwc.jpg"
     };
@@ -84,7 +83,7 @@ class StoryForm extends React.Component {
           <input type="text"
             className="description"
             placeholder="description"
-            value={this.state.description}
+            value={this.state.decsription}
             onChange={this.update('description')} />
           <Dropzone
             className="drop-box"

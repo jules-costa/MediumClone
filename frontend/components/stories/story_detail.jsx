@@ -27,7 +27,6 @@ class StoryDetail extends React.Component {
     if (currentUser.id === story.author.author_id) {
       return (
         <div className="alter-story-links">
-          <Link to="/write" className="edit">Edit</Link>
           <button className="delete" onClick={this.handleDelete(story.id)}>Delete</button>
         </div>
       );
