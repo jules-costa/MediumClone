@@ -5,6 +5,7 @@
   json.image @story.image_url
   json.read_time @story.read_time
     json.set! "author" do
+      json.author_id @story.author.id
       json.author_name @story.author.username
       json.author_image @story.author.image_url
       json.author_biography @story.author.biography

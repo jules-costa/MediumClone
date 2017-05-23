@@ -11,12 +11,11 @@ import { updateComment, destroyComment } from '../../actions/story_actions';
 // };
 
 const displayOptions = (comment, currentUser) => {
-  debugger;
   if (currentUser.id === comment.author_id) {
     return (
       <div className="alter-links">
-        <Link to={`/api/comments/${comment.id}`} className="edit-comment">Edit</Link>
-        <Link to={`/api/comments/${comment.id}`} className="delete-comment">Delete</Link>
+        <Link to={`/api/comments/${comment.id}`} className="edit">Edit</Link>
+        <Link to={`/api/comments/${comment.id}`} className="delete">Delete</Link>
       </div>
     );
   }

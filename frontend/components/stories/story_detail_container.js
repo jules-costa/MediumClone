@@ -8,7 +8,8 @@ const selectStory = ({ stories }, storyId) => {
 };
 
 const mapStateToProps = (state, { match }) => ({
-  story: selectStory(state, parseInt(match.params.storyId))
+  story: selectStory(state, parseInt(match.params.storyId)),
+  currentUser: state.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
