@@ -43,7 +43,7 @@ class UserProfile extends React.Component {
 
 
   render () {
-    const { username, image_url, biography, followers, following } = this.props.userProfile;
+    const { username, image_url, biography, disciples, gurus } = this.props.userProfile;
     return (
       <section className="user-detail-container">
         <section className="user-details">
@@ -54,8 +54,8 @@ class UserProfile extends React.Component {
           <img className="user-logo-medium" src={image_url}></img>
         </section>
         <section className="follows">
-          <h5><strong>{following}</strong> Following</h5>
-          <h5><strong>{followers}</strong> Followers</h5>
+          <h5><strong>{gurus}</strong> Following</h5>
+          <h5><strong>{disciples}</strong> Followers</h5>
         </section>
         <div>
           <button className="follow-unfollow" onClick={this.handleUpdate(this.props.userProfile.id)}>{this.toggleFollowButton()}</button>
