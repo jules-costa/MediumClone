@@ -92,3 +92,15 @@
   justify-content: space-between;
   margin-top: 60px;
 }
+
+.alter-links {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  font-family: 'Sintony', sans-serif;
+  color: $grey;
+}
+
+.edit-comment {
+  padding-right: 22px;
+}
