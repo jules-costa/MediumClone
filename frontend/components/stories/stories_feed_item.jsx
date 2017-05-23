@@ -26,9 +26,13 @@ const StoryFeedItem = ({ story }) => (
         <h4 className={`item-body-${story.size}`}>{story.truncatedBody}</h4>
       </section>
       <section className="item-author">
-        <img src={story.author_image} className="item-author-img"></img>
+        <Link to={`/users/${story.author_id}`}>
+          <img src={story.author_image} className="item-author-img"></img>
+        </Link>
         <div className="item-author-name-read-time">
-          <h5 className="item-author-name">{story.author_name}</h5>
+          <Link to={`/users/${story.author_id}`}>
+            <h5 className="item-author-name">{story.author_name}</h5>
+          </Link>
           <h6 className="item-read-time">{story.read_time}</h6>
         </div>
       </section>
