@@ -20,11 +20,13 @@ const CommentItem = ({ comment, currentUser }) => (
       <h5 className="comment-body">{comment.body}</h5>
     </div>
     <div className="alter-links">
-      <Link to={`/api/comments/${comment.id}`} className="edit-comment">Edit</Link>
-      <Link to={`/api/comments/${comment.id}`} className="delete-comment">Delete</Link>
     </div>
   </section>
 );
 
 
 export default CommentItem;
+
+
+// <Link to={`/api/comments/${comment.id}`} className="edit-comment">Edit</Link>
+// <Link to={`/api/comments/${comment.id}`} className="delete-comment">Delete</Link>
