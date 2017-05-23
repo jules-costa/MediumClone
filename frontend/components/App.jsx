@@ -12,7 +12,7 @@ const App = () => (
   <section className="main-section">
     <header className="navbar">
       <a className="full-logo" href="/">
-        <img className="site-logo" src="/assets/ouija_logo.png" alt="Ouija logo" />
+        <img className="site-logo" src="http://res.cloudinary.com/jules-costa/image/upload/v1495503351/ouija_logo_a022bd.png" alt="Ouija logo" />
         <h4 className="logo-text">Ouija</h4>
       </a>
       <NavbarContainer/>
