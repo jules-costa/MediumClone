@@ -89,14 +89,14 @@ class SessionForm extends React.Component {
             </div>
           </form>
           <footer className="footer">
-            <div><a href=''>Getting started</a></div>
-            <div><a href=''>Help</a></div>
-            <div><a href=''>Status</a></div>
-            <div><a href=''>Blog</a></div>
-            <div><a href=''>Careers</a></div>
-            <div><a href=''>Privacy</a></div>
-            <div><a href=''>Terms</a></div>
-            <div><a href=''>About</a></div>
+            <div>Getting started</div>
+            <div>Help</div>
+            <div>Status</div>
+            <div>Blog</div>
+            <div>Careers</div>
+            <div>Privacy</div>
+            <div>Terms</div>
+            <div>About</div>
           </footer>
         </section>
       </div>
