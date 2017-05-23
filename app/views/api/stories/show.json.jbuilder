@@ -13,6 +13,7 @@
     json.set! "comments" do
       @story.comments.each do |comment|
         json.set! comment.id do
+          json.id comment.id
           json.body comment.body
           json.author_id comment.author.id
           json.author_name comment.author.username

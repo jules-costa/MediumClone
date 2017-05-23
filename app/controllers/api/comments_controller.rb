@@ -15,6 +15,7 @@ class Api::CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
+    debugger
     if @comment.save
       @story = @comment.story
       render "/api/stories/show"
@@ -25,6 +26,8 @@ class Api::CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
+    @comment.destroy!
+    render "api/stories/show"
   end
 
   private

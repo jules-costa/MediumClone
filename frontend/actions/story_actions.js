@@ -59,7 +59,7 @@ export const createComment = (comment, storyId) => dispatch => (
   CommentAPIUtil.createComment(comment, storyId).then(story => {
     dispatch(receiveSingleStory(story));
     dispatch(clearErrors());
-    return story;
+    // return story;
   }).fail(err => dispatch(receiveErrors(err.responseJSON)))
 );
 
@@ -73,5 +73,5 @@ export const updateComment = comment => dispatch => (
 );
 
 export const destroyComment = id => dispatch => (
-  CommentAPIUtil.destroyComment(id).then(story => dispatch(receiveSingleStory(null)))
+  CommentAPIUtil.destroyComment(id).then(story => dispatch(receiveSingleStory(story)))
 );

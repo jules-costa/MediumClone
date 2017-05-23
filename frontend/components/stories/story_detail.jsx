@@ -20,7 +20,6 @@ class StoryDetail extends React.Component {
       return (
         <div className="alter-story-links">
           <Link to={`/api/stories/${story.id}`} className="edit">Edit</Link>
-          <Link to={`/api/stories/${story.id}`} className="delete">Delete</Link>
         </div>
       );
     }
