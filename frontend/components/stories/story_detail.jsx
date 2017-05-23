@@ -20,7 +20,7 @@ class StoryDetail extends React.Component {
   }
 
   handleDelete(id) {
-    return () => this.props.destroyStory(id);
+    return () => this.props.destroyStory(id).then(data => this.props.history.push("/"));
   }
 
   displayStoryOptions(story, currentUser) {
