@@ -4,6 +4,10 @@ import CommentsContainer from '../comments/comments_container';
 import CommentFormContainer from '../comments/comment_form_container';
 
 class StoryDetail extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleDelete = this.handleDelete.bind(this);
+  }
 
   componentDidMount() {
     this.props.fetchStory(this.props.match.params.storyId);
@@ -15,11 +19,16 @@ class StoryDetail extends React.Component {
     }
   }
 
+  handleDelete(id) {
+    return () => this.props.destroyStory(id);
+  }
+
   displayStoryOptions(story, currentUser) {
     if (currentUser.id === story.author.author_id) {
       return (
         <div className="alter-story-links">
           <Link to={`/api/stories/${story.id}`} className="edit">Edit</Link>
+          <button className="delete" onClick={this.handleDelete(story.id)}>Delete</button>
         </div>
       );
     }

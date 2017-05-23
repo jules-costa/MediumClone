@@ -26,6 +26,8 @@ class Api::StoriesController < ApplicationController
 
   def destroy
     @story = Story.find(params[:id])
+    @story.destroy!
+    render :show
   end
 
   def show
