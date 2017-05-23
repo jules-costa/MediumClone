@@ -1,4 +1,5 @@
 import * as UserAPIUtil from '../util/user_api_util';
+import * as FollowAPIUtil from '../util/follow_api_util';
 
 export const RECEIVE_USER_PROFILE = "RECEIVE_USER_PROFILE";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
@@ -28,4 +29,12 @@ export const updateProfile = user => dispatch => (
   }, err => (
     dispatch(receiveErrors(err.responseJSON))
   ))
+);
+
+export const createFollow = follow => dispatch => (
+  FollowAPIUtil.createFollow(follow).then(profile => dispatch(receiveUserProfile(profile)))
+);
+
+export const destroyFollow = userId => dispatch => (
+  FollowAPIUtil.destroyFollow(userId).then(profile => dispatch(receiveUserProfile(profile)))
 );

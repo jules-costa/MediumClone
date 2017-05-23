@@ -10,33 +10,38 @@ class User < ApplicationRecord
     primary_key: :id,
     foreign_key: :author_id,
     class_name: "Story"
-    
+
   has_many :comments,
     primary_key: :id,
     foreign_key: :author_id,
     class_name: "Comment"
 
-  has_many :followings,
+  has_many :following_disciples,
     primary_key: :id,
-    foreign_key: :followee_id,
+    foreign_key: :guru_id,
     class_name: "Follow"
 
-  has_many :follows,
+  has_many :followed_gurus,
     primary_key: :id,
-    foreign_key: :follower_id,
+    foreign_key: :disciple_id,
     class_name: "Follow"
 
-  has_many :followees,
-    through: :followings,
-    source: :followee
+  has_many :disciples,
+    through: :following_disciples,
+    source: :disciple
 
-  has_many :followers,
-    through: :follows,
-    source: :follower
+  has_many :gurus,
+    through: :followed_gurus,
+    source: :guru
+
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     user && user.is_password?(password) ? user : nil
+  end
+
+  def follows?(user)
+    self.gurus.include?(user)
   end
 
   def password=(password)

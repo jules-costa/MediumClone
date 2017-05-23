@@ -12,7 +12,7 @@ class UserProfile extends React.Component {
       biography: this.props.userProfile.biography
     });
     this.handleUpdate = this.handleUpdate.bind(this);
-    // this.toggleFollowButton = this.toggleFollowButton.bind(this);
+    this.toggleFollowButton = this.toggleFollowButton.bind(this);
   }
 
   componentDidMount() {
@@ -24,17 +24,21 @@ class UserProfile extends React.Component {
       this.props.fetchProfile(nextProps.match.params.userId);
     }
   }
-  //
-  // toggleFollowButton() {
-  //   if (this.props.currentUser.follows.hasOwnProperty(this.props.userProfile.id)) {
-  //     return "Unfollow";
-  //   } else {
-  //     return "Follow";
-  //   }
-  // }
 
-  handleUpdate(user) {
-    return () => this.props.updateProfile(user);
+  toggleFollowButton() {
+    if (this.props.userProfile.follows) {
+      return "Unfollow";
+    } else {
+      return "Follow";
+    }
+  }
+
+  handleUpdate(userId) {
+    if (this.props.userProfile.follows) {
+      return () => this.props.destroyFollow(userId);
+    } else {
+      return () => this.props.createFollow({guru_id: userId});
+    }
   }
 
 
@@ -54,7 +58,7 @@ class UserProfile extends React.Component {
           <h5><strong>{followers}</strong> Followers</h5>
         </section>
         <div>
-          <button className="follow-unfollow" onClick={this.handleUpdate(this.props.userProfile)}>change</button>
+          <button className="follow-unfollow" onClick={this.handleUpdate(this.props.userProfile.id)}>{this.toggleFollowButton()}</button>
         </div>
       </section>
     );

@@ -4,9 +4,8 @@
     username: "sample_name",
     biography: "Born in NJ in 1992",
     image_url:"",
-    likes: {story_id, story_id...},
-    <!-- who this user follows -->
-    follows: {user_id, user_id...}
+    likes: boolean,
+    follows: boolean
   },
   userProfile: {
     id:
