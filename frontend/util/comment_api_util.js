@@ -6,17 +6,17 @@ export const createComment = (comment, storyId) => (
   })
 );
 
-export const updateComment = comment => (
+export const updateComment = (comment, storyId) => (
   $.ajax({
     method: 'PATCH',
-    url: `api/comments/${comment.id}`,
+    url: `api/stories/${storyId}/comments/${comment.id}`,
     data: {comment}
   })
 );
 
-export const destroyComment = id => (
+export const destroyComment = (id, storyId) => (
   $.ajax({
     method: 'DELETE',
-    url: `api/comments/${id}`
+    url: `api/stories/${storyId}/comments/${id}`
   })
 );

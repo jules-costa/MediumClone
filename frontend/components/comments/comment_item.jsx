@@ -12,14 +12,14 @@ class CommentItem extends React.Component {
       return (
         <div className="alter-links">
           <Link to={`/api/comments/${comment.id}`} className="edit">Edit</Link>
-          <button className="delete" onClick={this.handleDelete(comment.id)}>Delete</button>
+          <button className="delete" onClick={this.handleDelete(comment.id, comment.story_id)}>Delete</button>
         </div>
       );
     }
   }
 
-  handleDelete(id) {
-    return () => this.props.destroyComment(id);
+  handleDelete(id, storyId) {
+    return () => this.props.destroyComment(id, storyId);
   }
 
 

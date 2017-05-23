@@ -9,7 +9,6 @@ const StoriesReducer = (state = defaultStories, action) => {
     case RECEIVE_STORIES:
       return merge({}, action.stories);
     case RECEIVE_STORY:
-    debugger;
       const newStory = {[action.story.id]: action.story};
       return merge({}, state, newStory);
     default:
