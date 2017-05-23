@@ -17,8 +17,24 @@ class UserProfile extends React.Component {
   }
 
   render () {
+    const { username, image_url, biography, followers, following } = this.props.userProfile;
     return (
-      <h1>{this.props.userProfile.id}</h1>
+      <section className="user-detail-container">
+        <section className="user-details">
+          <div className="name-bio">
+            <h1>{username}</h1>
+            <h4 className="bio">{biography}</h4>
+          </div>
+          <img className="user-logo-medium" src={image_url}></img>
+        </section>
+        <section className="follows">
+          <h5><strong>{following}</strong> Following</h5>
+          <h5><strong>{followers}</strong> Followers</h5>
+        </section>
+        <div>
+          <button className="follow-unfollow">change</button>
+        </div>
+      </section>
     );
   }
 }

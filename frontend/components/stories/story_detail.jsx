@@ -38,10 +38,10 @@ class StoryDetail extends React.Component {
       <section className="story-show-page">
         <section className="story-author-details">
           <div className="author-logo-show">
-            {this.props.story.author ? <img src={this.props.story.author.author_image} className="author-small"></img> : ""}
+            {this.props.story.author ? <Link to={`/users/${this.props.story.author.author_id}`}><img src={this.props.story.author.author_image} className="author-small"></img></Link> : ""}
           </div>
           <div className="author-info">
-            {this.props.story.author ? <h5 className="author-name">{this.props.story.author.author_name}</h5> : ""}
+            {this.props.story.author ? <Link to={`/users/${this.props.story.author.author_id}`}><h5 className="author-name">{this.props.story.author.author_name}</h5></Link> : ""}
             {this.props.story.author ? <h6 className="author-bio">{this.props.story.author.author_biography}</h6> : ""}
             <h6>{this.props.story.read_time}</h6>
           </div>
