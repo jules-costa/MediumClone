@@ -10,6 +10,18 @@ import { updateComment, destroyComment } from '../../actions/story_actions';
 //   destroyComment(id);
 // };
 
+const displayOptions = (comment, currentUser) => {
+  debugger;
+  if (currentUser.id === comment.author_id) {
+    return (
+      <div className="alter-links">
+        <Link to={`/api/comments/${comment.id}`} className="edit-comment">Edit</Link>
+        <Link to={`/api/comments/${comment.id}`} className="delete-comment">Delete</Link>
+      </div>
+    );
+  }
+};
+
 const CommentItem = ({ comment, currentUser }) => (
   <section className="comment-container">
     <section className="comment-author-details">
@@ -19,14 +31,9 @@ const CommentItem = ({ comment, currentUser }) => (
     <div>
       <h5 className="comment-body">{comment.body}</h5>
     </div>
-    <div className="alter-links">
-    </div>
+    {displayOptions(comment, currentUser)}
   </section>
 );
 
 
 export default CommentItem;
-
-
-// <Link to={`/api/comments/${comment.id}`} className="edit-comment">Edit</Link>
-// <Link to={`/api/comments/${comment.id}`} className="delete-comment">Delete</Link>
