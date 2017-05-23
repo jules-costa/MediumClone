@@ -30,9 +30,9 @@
   * GET /api/topics
 
 ### Likes
-  * POST /api/likes/:user_id
+  * POST /api/likes/
   * DELETE /api/likes/:user_id
 
-### Followings
-  * POST /api/followings/:follower_id
-  * DELETE /api/followings/:follower_id
+### Follows
+  * POST /api/follows/
+  * DELETE /api/follows/:follower_id
