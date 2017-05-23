@@ -4,6 +4,15 @@ import { withRouter } from 'react-router-dom';
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
+    this.state=({
+      followers: 0,
+      following: 0,
+      username: this.props.userProfile.username,
+      image_url: this.props.userProfile.image_url,
+      biography: this.props.userProfile.biography
+    });
+    this.handleUpdate = this.handleUpdate.bind(this);
+    // this.toggleFollowButton = this.toggleFollowButton.bind(this);
   }
 
   componentDidMount() {
@@ -15,6 +24,19 @@ class UserProfile extends React.Component {
       this.props.fetchProfile(nextProps.match.params.userId);
     }
   }
+  //
+  // toggleFollowButton() {
+  //   if (this.props.currentUser.follows.hasOwnProperty(this.props.userProfile.id)) {
+  //     return "Unfollow";
+  //   } else {
+  //     return "Follow";
+  //   }
+  // }
+
+  handleUpdate(user) {
+    return () => this.props.updateProfile(user);
+  }
+
 
   render () {
     const { username, image_url, biography, followers, following } = this.props.userProfile;
@@ -32,7 +54,7 @@ class UserProfile extends React.Component {
           <h5><strong>{followers}</strong> Followers</h5>
         </section>
         <div>
-          <button className="follow-unfollow">change</button>
+          <button className="follow-unfollow" onClick={this.handleUpdate(this.props.userProfile)}>change</button>
         </div>
       </section>
     );
