@@ -35,11 +35,11 @@ class StoryDetail extends React.Component {
   toggleHeart() {
     if (this.props.story.liked) {
       return (
-        <i id="coral" className="fa fa-heart-o" aria-hidden="true"></i>
+        <i className="fa fa-heart" aria-hidden="true"></i>
       );
     } else {
       return (
-        <i id="white" className="fa fa-heart-o" aria-hidden="true"></i>
+        <i className="fa fa-heart-o" aria-hidden="true"></i>
       );
     }
   }

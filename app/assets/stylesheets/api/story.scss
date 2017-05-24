@@ -66,6 +66,14 @@ h6 {
   font-size: 26px;
   color: $coral;
 }
+.fa-heart {
+  font-size: 26px;
+  color: $coral;
+}
+
+#heart {
+  background-color: white;
+}
 
 #heart:hover {
   background-color: white;
@@ -75,11 +83,6 @@ h6 {
 .fa-heart-o:hover {
   background-color: white;
 }
-
-#coral {
-  background-color: $coral;
-}
-
-#white {
+.fa-heart:hover {
   background-color: white;
 }
