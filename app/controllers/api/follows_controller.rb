@@ -13,7 +13,6 @@ class Api::FollowsController < ApplicationController
   def index
     @follows = Follow.where(disciple_id: params[:id]).pluck(:guru_id)
     @stories = Story.where(author_id: @follows)
-    debugger
     render "api/stories/index"
   end
 
