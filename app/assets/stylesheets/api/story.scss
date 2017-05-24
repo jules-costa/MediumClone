@@ -1,5 +1,20 @@
 .story-show-page {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 680px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: row;
+  margin-right: 45px;
+  margin-top: 140px;
+  align-self: flex-start;
+}
+
+.main-content {
+  display: flex;
   flex-direction: column;
   width: 650px;
   margin-top: 40px;
@@ -65,10 +80,12 @@ h6 {
 .fa-heart-o {
   font-size: 26px;
   color: $coral;
+  padding-right: 14px;
 }
 .fa-heart {
   font-size: 26px;
   color: $coral;
+  padding-right: 14px;
 }
 
 #heart {

@@ -57,28 +57,31 @@ class StoryDetail extends React.Component {
   render() {
     return (
       <section className="story-show-page">
-        <section className="story-author-details">
-          <div className="author-logo-show">
-            {this.props.story.author ? <Link to={`/users/${this.props.story.author.author_id}`}><img src={this.props.story.author.author_image} className="author-small"></img></Link> : ""}
-          </div>
-          <div className="author-info">
-            {this.props.story.author ? <Link to={`/users/${this.props.story.author.author_id}`}><h5 className="author-name">{this.props.story.author.author_name}</h5></Link> : ""}
-            {this.props.story.author ? <h6 className="author-bio">{this.props.story.author.author_biography}</h6> : ""}
-            <h6>{this.props.story.read_time}</h6>
-          </div>
-        </section>
-        <section className="story-details">
-          {this.props.story.author? this.displayStoryOptions(this.props.story, this.props.currentUser) : ""}
+        <section className="sidebar">
           <button id='heart' className="white" onClick={this.handleUpdate(this.props.story.id)}>{this.toggleHeart()}</button>
           <h5>{this.props.story.likes}</h5>
-          <h1 className="story-title">{this.props.story.title}</h1>
-          <h2 className="story-description">{this.props.story.description}</h2>
-          <img src={this.props.story.image}></img>
-          <p className="body-text">{this.props.story.body}</p>
         </section>
-
-        <CommentFormContainer />
-        {this.props.story.comments ? <CommentsContainer comments={this.props.story.comments}/> : ""}
+        <section className="main-content">
+          <section className="story-author-details">
+            <div className="author-logo-show">
+              {this.props.story.author ? <Link to={`/users/${this.props.story.author.author_id}`}><img src={this.props.story.author.author_image} className="author-small"></img></Link> : ""}
+            </div>
+            <div className="author-info">
+              {this.props.story.author ? <Link to={`/users/${this.props.story.author.author_id}`}><h5 className="author-name">{this.props.story.author.author_name}</h5></Link> : ""}
+              {this.props.story.author ? <h6 className="author-bio">{this.props.story.author.author_biography}</h6> : ""}
+              <h6>{this.props.story.read_time}</h6>
+            </div>
+          </section>
+          <section className="story-details">
+            {this.props.story.author? this.displayStoryOptions(this.props.story, this.props.currentUser) : ""}
+            <h1 className="story-title">{this.props.story.title}</h1>
+            <h2 className="story-description">{this.props.story.description}</h2>
+            <img src={this.props.story.image}></img>
+            <p className="body-text">{this.props.story.body}</p>
+          </section>
+          <CommentFormContainer />
+          {this.props.story.comments ? <CommentsContainer comments={this.props.story.comments}/> : ""}
+        </section>
       </section>
     );
   }
