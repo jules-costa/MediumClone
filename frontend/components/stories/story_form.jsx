@@ -15,7 +15,7 @@ class StoryForm extends React.Component {
       title: "",
       body: "",
       author_id: this.props.currentUser.id,
-      image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_568/v1495394471/A2BA8A2AFE2CA6634FEDF42475D479D0_20130103_120349_UTC_tz6jwc.jpg"
+      image_url: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
