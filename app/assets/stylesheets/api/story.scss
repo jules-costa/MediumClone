@@ -61,24 +61,25 @@ h6 {
   margin: 0;
 }
 
-.coral {
-  background-color: $coral;
-}
-
-.white {
-  background-color: white;
-}
 
 .fa-heart-o {
   font-size: 26px;
   color: $coral;
 }
 
+#heart:hover {
+  background-color: white;
+  color: $grey;
+}
+
 .fa-heart-o:hover {
   background-color: white;
 }
 
-#heart:hover {
+#coral {
+  background-color: $coral;
+}
+
+#white {
   background-color: white;
-  color: $grey;
 }

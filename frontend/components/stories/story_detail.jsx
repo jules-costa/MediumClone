@@ -33,8 +33,15 @@ class StoryDetail extends React.Component {
   }
 
   toggleHeart() {
-    document.getElementById('heart').classList.toggle('coral');
-    document.getElementById('heart').classList.toggle('white');
+    if (this.props.story.liked) {
+      return (
+        <i id="coral" className="fa fa-heart-o" aria-hidden="true"></i>
+      );
+    } else {
+      return (
+        <i id="white" className="fa fa-heart-o" aria-hidden="true"></i>
+      );
+    }
   }
 
   displayStoryOptions(story, currentUser) {
@@ -62,7 +69,7 @@ class StoryDetail extends React.Component {
         </section>
         <section className="story-details">
           {this.props.story.author? this.displayStoryOptions(this.props.story, this.props.currentUser) : ""}
-          <button id='heart' className="white" onClick={this.handleUpdate(this.props.story.id)}><i className="fa fa-heart-o" aria-hidden="true"></i></button>
+          <button id='heart' className="white" onClick={this.handleUpdate(this.props.story.id)}>{this.toggleHeart()}</button>
           <h5>{this.props.story.likes}</h5>
           <h1 className="story-title">{this.props.story.title}</h1>
           <h2 className="story-description">{this.props.story.description}</h2>
