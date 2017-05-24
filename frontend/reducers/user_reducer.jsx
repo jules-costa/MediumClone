@@ -4,7 +4,6 @@ const UserReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_USER_PROFILE:
-    console.log(action);
       return action.user;
     default:
       return state;

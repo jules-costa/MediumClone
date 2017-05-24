@@ -17,6 +17,7 @@
 Comment.destroy_all
 Story.destroy_all
 User.destroy_all
+Follow.destroy_all
 
 user1 = User.create!(username: "Guest", password: "password", biography: "Thank you for checking out Ouija! This Medium clone was built in 10 days using Ruby on Rails, React, Redux, Javascript and HTML/CSS.", image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495413134/user-2ef10cd87167a7021991eaaf0fb688ea1fda37f520b069b2b523d3a8e399473d_jphioe.png")
 user2 = User.create!(username: "Charlotte Bronte", password: "password", biography: "Born on April 21, 1816, in Thornton, England.", image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495413047/CharlotteBronte_NewBioImage_blzqtv.jpg")
@@ -33,8 +34,38 @@ user12 = User.create!(username: "Wanda Coleman", password: "password", biography
 user13 = User.create!(username: "Marianne Moore", password: "password", biography: "Particularly fond of animals", image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495421634/mmoore_ogecaq.jpg")
 
 
-# USERS
-
+follow1 = Follow.create!(guru_id: user1.id, disciple_id: user13.id)
+follow2 = Follow.create!(guru_id: user2.id, disciple_id: user12.id)
+follow3 = Follow.create!(guru_id: user3.id, disciple_id: user11.id)
+follow4 = Follow.create!(guru_id: user4.id, disciple_id: user10.id)
+follow5 = Follow.create!(guru_id: user5.id, disciple_id: user9.id)
+follow6 = Follow.create!(guru_id: user6.id, disciple_id: user8.id)
+follow7 = Follow.create!(guru_id: user7.id, disciple_id: user8.id)
+follow8 = Follow.create!(guru_id: user8.id, disciple_id: user7.id)
+follow9 = Follow.create!(guru_id: user9.id, disciple_id: user6.id)
+follow10 = Follow.create!(guru_id: user10.id, disciple_id: user5.id)
+follow11 = Follow.create!(guru_id: user11.id, disciple_id: user4.id)
+follow12 = Follow.create!(guru_id: user12.id, disciple_id: user3.id)
+follow13 = Follow.create!(guru_id: user13.id, disciple_id: user2.id)
+follow14 = Follow.create!(guru_id: user1.id, disciple_id: user2.id)
+follow15 = Follow.create!(guru_id: user2.id, disciple_id: user1.id)
+follow16 = Follow.create!(guru_id: user5.id, disciple_id: user2.id)
+follow17 = Follow.create!(guru_id: user6.id, disciple_id: user3.id)
+follow18 = Follow.create!(guru_id: user7.id, disciple_id: user5.id)
+follow19 = Follow.create!(guru_id: user10.id, disciple_id: user6.id)
+follow20 = Follow.create!(guru_id: user11.id, disciple_id: user6.id)
+follow21 = Follow.create!(guru_id: user12.id, disciple_id: user7.id)
+follow22 = Follow.create!(guru_id: user1.id, disciple_id: user8.id)
+follow23 = Follow.create!(guru_id: user2.id, disciple_id: user9.id)
+follow24 = Follow.create!(guru_id: user3.id, disciple_id: user10.id)
+follow25 = Follow.create!(guru_id: user4.id, disciple_id: user11.id)
+follow26 = Follow.create!(guru_id: user5.id, disciple_id: user12.id)
+follow27 = Follow.create!(guru_id: user6.id, disciple_id: user13.id)
+follow28 = Follow.create!(guru_id: user7.id, disciple_id: user13.id)
+follow29 = Follow.create!(guru_id: user8.id, disciple_id: user2.id)
+follow30 = Follow.create!(guru_id: user7.id, disciple_id: user4.id)
+follow31 = Follow.create!(guru_id: user9.id, disciple_id: user3.id)
+follow32 = Follow.create!(guru_id: user2.id, disciple_id: user5.id)
 
 # GOODBYE
 story1 = Story.create!(
