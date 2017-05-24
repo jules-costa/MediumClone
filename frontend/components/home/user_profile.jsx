@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Route, Link } from 'react-router-dom';
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -33,6 +33,18 @@ class UserProfile extends React.Component {
     }
   }
 
+  userOptions() {
+    if (this.props.userProfile.id === this.props.currentUser.id) {
+      return (
+        <button className="follow-unfollow">Edit</button>
+      );
+    } else {
+      return (
+        <button className="follow-unfollow" onClick={this.handleUpdate(this.props.userProfile.id)}>{this.toggleFollowButton()}</button>
+      );
+    }
+  }
+
   handleUpdate(userId) {
     if (this.props.userProfile.follows) {
       return () => this.props.destroyFollow(userId);
@@ -57,8 +69,8 @@ class UserProfile extends React.Component {
           <h5 className="following"><strong>{gurus}</strong> Following</h5>
           <h5><strong>{disciples}</strong> Followers</h5>
         </section>
-        <div>
-          <button className="follow-unfollow" onClick={this.handleUpdate(this.props.userProfile.id)}>{this.toggleFollowButton()}</button>
+        <div className="profile-buttons">
+          {this.userOptions()}
         </div>
       </section>
     );
