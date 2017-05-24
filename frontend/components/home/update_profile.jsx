@@ -20,6 +20,10 @@ class UpdateProfile extends React.Component {
     this.update = this.update.bind(this);
   }
 
+  componentDidMount() {
+    this.textInput.focus();
+  }
+
   onImageDrop(files) {
     this.handleImageUpload(files[0]);
   }
@@ -71,6 +75,7 @@ class UpdateProfile extends React.Component {
             <section className="user-details">
               <div className="name-bio">
                 <input type="text"
+                  ref={ (input) => {this.textInput = input; }}
                   className="title user-username"
                   placeholder={this.props.userProfile.username}
                   value={this.state.username}
