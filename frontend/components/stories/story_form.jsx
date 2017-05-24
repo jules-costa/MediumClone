@@ -21,6 +21,10 @@ class StoryForm extends React.Component {
     this.update = this.update.bind(this);
   }
 
+  componentDidMount() {
+    this.textInput.focus();
+  }
+
   onImageDrop(files) {
     this.handleImageUpload(files[0]);
   }
@@ -76,6 +80,7 @@ class StoryForm extends React.Component {
         <form className="new-story-form">
           <h4 className="story-errors">{this.renderErrors()}</h4>
           <input type="text"
+            ref={ (input) => {this.textInput = input; }}
             className="title"
             placeholder="Title"
             value={this.state.title}
