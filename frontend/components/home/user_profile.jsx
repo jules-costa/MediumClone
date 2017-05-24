@@ -77,8 +77,8 @@ class UserProfile extends React.Component {
 
         <section className="recommends">
           <nav className="toggle-recommends">
-            <Link to={`/users/${this.props.currentUser.id}`}>Profile ...Likes</Link>
-            <Link to={`/users/${this.props.currentUser.id}/recommends`}>Recommends</Link>
+            <Link to={`/users/${this.props.userProfile.id}`}>Profile</Link>
+            <Link to={`/users/${this.props.userProfile.id}/recommends`}>Recommends</Link>
           </nav>
         </section>
       </section>
@@ -87,10 +87,3 @@ class UserProfile extends React.Component {
 }
 
 export default withRouter(UserProfile);
-
-
-// <section className="recommends-content">
-//   <h1>
-//     {this.props.userProfile.gurus}
-//   </h1>
-// </section>
