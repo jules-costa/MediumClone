@@ -24,7 +24,6 @@ class Api::CommentsController < ApplicationController
   end
 
   def destroy
-    debugger
     @comment = Comment.find(params[:id])
     @story = @comment.story
     @comment.destroy!

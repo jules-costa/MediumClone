@@ -25,7 +25,6 @@ class Api::StoriesController < ApplicationController
   end
 
   def destroy
-    debugger
     if params["commentId"]
       @comment = Comment.where(id: params["commentId"])
       @story = Story.find(params[:id])
