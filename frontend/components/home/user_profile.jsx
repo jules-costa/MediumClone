@@ -23,7 +23,7 @@ class UserProfile extends React.Component {
     if (this.props.match.params.userId !== nextProps.match.params.userId) {
       this.props.fetchProfile(nextProps.match.params.userId);
     }
-    if (this.props.match.path !== "/users/:userId") {
+    if (this.props.match.path !== nextProps.match.path) {
       this.props.fetchRecommendedStories(this.props.userProfile.id);
     } else {
       this.props.fetchLikedStories(this.props.userProfile.id);
