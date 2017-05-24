@@ -70,12 +70,12 @@ class UpdateProfile extends React.Component {
             <section className="user-details">
               <div className="name-bio">
                 <input type="text"
-                  className="title"
+                  className="title user-username"
                   placeholder={this.props.userProfile.username}
                   value={this.state.username}
                   onChange={this.update('username')} />
                 <input type= "text"
-                  className="description"
+                  className="description user-description"
                   placeholder="Enter a short bio"
                   value={this.state.description}
                   onChange={this.update('description')} />
@@ -90,7 +90,7 @@ class UpdateProfile extends React.Component {
                 </Dropzone>
             </section>
             <div className="profile-buttons">
-              <h1>updatebutton</h1>
+              <button className="follow-unfollow" onClick={this.handleUpdate}>Update</button>
             </div>
           </form>
         </section>
