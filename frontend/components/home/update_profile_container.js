@@ -4,7 +4,8 @@ import { updateProfile } from '../../actions/user_actions';
 
 const mapStateToProps = state => ({
   userProfile: state.userProfile,
-  currentUser: state.currentUser
+  currentUser: state.currentUser,
+  errors: state.errors
 });
 
 const mapDispatchToProps = dispatch => ({
