@@ -54,7 +54,7 @@ class UserProfile extends React.Component {
           <img className="user-logo-medium" src={image_url}></img>
         </section>
         <section className="follows">
-          <h5><strong>{gurus}</strong> Following</h5>
+          <h5 className="following"><strong>{gurus}</strong> Following</h5>
           <h5><strong>{disciples}</strong> Followers</h5>
         </section>
         <div>

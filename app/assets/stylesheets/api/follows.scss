@@ -5,7 +5,7 @@
 .user-detail-container {
   display: flex;
   flex-direction: column;
-  width: 650px;
+  width: 40%;
   margin-top: 75px;
 }
 
@@ -38,6 +38,10 @@
   justify-content: space-between;
   width: 30%;
   font-size: 12.5px;
+}
+
+.following {
+  margin-right: 20px;
 }
 
 .follow-unfollow {
