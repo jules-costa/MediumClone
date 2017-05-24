@@ -27,8 +27,10 @@ class CommentItem extends React.Component {
     return(
       <section className="comment-container">
         <section className="comment-author-details">
-          <img className="comment-author-image" src={comment.author_image}></img>
-          <h5 className="comment-author-name">{comment.author_name}</h5>
+          <Link className="comment-author-details" to={`/users/${comment.author_id}`}>
+            <img className="comment-author-image" src={comment.author_image}></img>
+            <h5 className="comment-author-name">{comment.author_name}</h5>
+          </Link>
         </section>
         <div>
           <h5 className="comment-body">{comment.body}</h5>
