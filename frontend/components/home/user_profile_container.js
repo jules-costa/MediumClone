@@ -5,7 +5,8 @@ import { fetchLikedStories, fetchRecommendedStories } from '../../actions/story_
 
 const mapStateToProps = state => ({
   userProfile: state.userProfile,
-  currentUser: state.currentUser
+  currentUser: state.currentUser,
+  stories: state.stories
 });
 
 const mapDispatchToProps = dispatch => ({

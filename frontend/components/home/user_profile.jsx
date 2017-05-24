@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Route, Link } from 'react-router-dom';
+import { withRouter, Route, Link, NavLink } from 'react-router-dom';
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -79,8 +79,8 @@ class UserProfile extends React.Component {
 
         <section className="recommends">
           <nav className="toggle-recommends">
-            <Link to={`/users/${this.props.userProfile.id}`}>Profile</Link>
-            <Link to={`/users/${this.props.userProfile.id}/recommends`}>Recommends</Link>
+            <NavLink exact to={`/users/${this.props.userProfile.id}`}>Profile</NavLink>
+            <NavLink to={`/users/${this.props.userProfile.id}/recommends`}>Recommends</NavLink>
           </nav>
         </section>
       </section>
