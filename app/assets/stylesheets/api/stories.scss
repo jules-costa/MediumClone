@@ -4,7 +4,7 @@
 
 .feed {
   display: flex;
-  width: 1016px;
+  width: 65%;
   margin-top: 25px;
   margin-left: -18px;
   flex-flow: row wrap;
@@ -16,6 +16,7 @@
   align-items: center;
   box-shadow: 0 0 8px 2px $lightgrey;
   margin-bottom: 20px;
+  min-width: 260px;
   flex-basis: 30%;
   margin-left: 18px;
   flex-grow: 1;
@@ -28,6 +29,7 @@
   box-shadow: 0 0 8px 2px $lightgrey;
   margin-bottom: 20px;
   flex-basis: 30%;
+  min-width: 260px;
   flex-grow: 1;
   margin-left: 18px;
 }
@@ -38,6 +40,7 @@
   box-shadow: 0 0 8px 2px $lightgrey;
   margin-bottom: 20px;
   flex-basis: 62%;
+  min-width: 528px;
   margin-left: 18px;
   flex-grow: 2;
 }
