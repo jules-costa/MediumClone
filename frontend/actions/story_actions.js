@@ -1,5 +1,6 @@
 import * as APIUtil from '../util/story_api_util';
 import * as CommentAPIUtil from '../util/comment_api_util';
+import * as LikeAPIUtil from '../util/like_api_util';
 
 export const RECEIVE_STORY = "RECEIVE_STORY";
 export const RECEIVE_STORIES = "RECEIVE_STORIES";
@@ -71,4 +72,12 @@ export const updateComment = (comment, storyId) => dispatch => (
 
 export const destroyComment = (id, storyId) => dispatch => (
   CommentAPIUtil.destroyComment(id).then(story => dispatch(receiveSingleStory(story)))
+);
+
+export const createLike = like => dispatch => (
+  LikeAPIUtil.createLike(like).then(story => dispatch(receiveSingleStory(story)))
+);
+
+export const destroyLike = storyId => dispatch => (
+  LikeAPIUtil.destroyLike(storyId).then(story => dispatch(receiveSingleStory(story)))
 );

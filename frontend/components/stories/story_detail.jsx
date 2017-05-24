@@ -7,6 +7,7 @@ class StoryDetail extends React.Component {
   constructor(props) {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleUpdate = this.handleUpdate.bind(this);
   }
 
   componentDidMount() {
@@ -21,6 +22,19 @@ class StoryDetail extends React.Component {
 
   handleDelete(id) {
     return () => this.props.destroyStory(id).then(data => this.props.history.push("/"));
+  }
+
+  handleUpdate(storyId) {
+    if (this.props.story.liked) {
+      return () => this.props.destroyLike(storyId);
+    } else {
+      return () => this.props.createLike({story_id: storyId});
+    }
+  }
+
+  toggleHeart() {
+    document.getElementById('heart').classList.toggle('coral');
+    document.getElementById('heart').classList.toggle('white');
   }
 
   displayStoryOptions(story, currentUser) {
@@ -48,6 +62,8 @@ class StoryDetail extends React.Component {
         </section>
         <section className="story-details">
           {this.props.story.author? this.displayStoryOptions(this.props.story, this.props.currentUser) : ""}
+          <button id='heart' className="white" onClick={this.handleUpdate(this.props.story.id)}>heart</button>
+          <h6>{this.props.story.likes}</h6>
           <h1 className="story-title">{this.props.story.title}</h1>
           <h2 className="story-description">{this.props.story.description}</h2>
           <img src={this.props.story.image}></img>

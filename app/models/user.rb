@@ -16,6 +16,15 @@ class User < ApplicationRecord
     foreign_key: :author_id,
     class_name: "Comment"
 
+  has_many :story_likes,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: "Like"
+
+  has_many :liked_stories,
+    through: :story_likes,
+    source: :story
+
   has_many :following_disciples,
     primary_key: :id,
     foreign_key: :guru_id,

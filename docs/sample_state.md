@@ -4,7 +4,6 @@
     username: "sample_name",
     biography: "Born in NJ in 1992",
     image_url:"",
-    likes: boolean,
     follows: boolean
   },
   userProfile: {
@@ -49,6 +48,8 @@ story: {
     image_url: "",
     read_time: "",
     topic_id: 1,
+    likes: 0,
+    liked: boolean,
     author {
       username: "",
       image_url: "",

@@ -4,6 +4,10 @@
   json.description @story.description
   json.image @story.image_url
   json.read_time @story.read_time
+
+  json.likes @story.likers.count
+  json.liked @story.liked?(current_user)
+
     json.set! "author" do
       json.author_id @story.author.id
       json.author_name @story.author.username
