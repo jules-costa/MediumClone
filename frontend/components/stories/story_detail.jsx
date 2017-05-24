@@ -62,8 +62,8 @@ class StoryDetail extends React.Component {
         </section>
         <section className="story-details">
           {this.props.story.author? this.displayStoryOptions(this.props.story, this.props.currentUser) : ""}
-          <button id='heart' className="white" onClick={this.handleUpdate(this.props.story.id)}>heart</button>
-          <h6>{this.props.story.likes}</h6>
+          <button id='heart' className="white" onClick={this.handleUpdate(this.props.story.id)}><i className="fa fa-heart-o" aria-hidden="true"></i></button>
+          <h5>{this.props.story.likes}</h5>
           <h1 className="story-title">{this.props.story.title}</h1>
           <h2 className="story-description">{this.props.story.description}</h2>
           <img src={this.props.story.image}></img>

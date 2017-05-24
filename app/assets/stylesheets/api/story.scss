@@ -68,3 +68,17 @@ h6 {
 .white {
   background-color: white;
 }
+
+.fa-heart-o {
+  font-size: 26px;
+  color: $coral;
+}
+
+.fa-heart-o:hover {
+  background-color: white;
+}
+
+#heart:hover {
+  background-color: white;
+  color: $grey;
+}
