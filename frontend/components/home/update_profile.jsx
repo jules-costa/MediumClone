@@ -42,9 +42,8 @@ class UpdateProfile extends React.Component {
   }
 
   handleUpdate(e) {
-    debugger;
     e.preventDefault();
-    this.props.updateProfile(this.state).then(user => this.props.history.push(`/users/${user.id}`));
+    this.props.updateProfile(this.state).then(user => this.props.history.push(`/users/${this.props.userProfile.id}`));
   }
 
   update(field) {
@@ -77,10 +76,10 @@ class UpdateProfile extends React.Component {
                   value={this.state.username}
                   onChange={this.update('username')} />
                 <input type= "text"
-                  className="description user-description"
+                  className="description user-biography"
                   placeholder="Enter a short bio"
-                  value={this.state.description}
-                  onChange={this.update('description')} />
+                  value={this.state.biography}
+                  onChange={this.update('biography')} />
               </div>
               <img className="user-logo-medium" src={this.state.image_url}></img>
                 <Dropzone
