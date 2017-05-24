@@ -11,8 +11,8 @@ class UpdateProfile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: this.props.userProfile.username,
-      biography: this.props.userProfile.biography,
+      username: "",
+      biography: "",
       image_url: this.props.userProfile.image_url
     };
     this.handleUpdate = this.handleUpdate.bind(this);
@@ -69,8 +69,16 @@ class UpdateProfile extends React.Component {
             <h4 className="story-errors">{this.renderErrors()}</h4>
             <section className="user-details">
               <div className="name-bio">
-                <h1>{username}</h1>
-                <h4 className="bio">{biography}</h4>
+                <input type="text"
+                  className="title"
+                  placeholder={this.props.userProfile.username}
+                  value={this.state.username}
+                  onChange={this.update('username')} />
+                <input type= "text"
+                  className="description"
+                  placeholder="Enter a short bio"
+                  value={this.state.description}
+                  onChange={this.update('description')} />
               </div>
               <img className="user-logo-medium" src={this.state.image_url}></img>
                 <Dropzone
@@ -80,10 +88,6 @@ class UpdateProfile extends React.Component {
                   onDrop={this.onImageDrop.bind(this)}>
                   <i className="fa fa-plus" aria-hidden="true"></i>
                 </Dropzone>
-            </section>
-            <section className="follows">
-              <h5 className="following"><strong>{gurus}</strong> Following</h5>
-              <h5><strong>{disciples}</strong> Followers</h5>
             </section>
             <div className="profile-buttons">
               <h1>updatebutton</h1>
