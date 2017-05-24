@@ -25,9 +25,17 @@ class Api::StoriesController < ApplicationController
   end
 
   def destroy
-    @story = Story.find(params[:id])
-    @story.destroy!
-    render :show
+    debugger
+    if params["commentId"]
+      @comment = Comment.where(id: params["commentId"])
+      @story = Story.find(params[:id])
+      @comment.destroy!
+      render :show
+    else
+      @story = Story.find(params[:id])
+      @story.destroy!
+      render :show
+    end
   end
 
   def show

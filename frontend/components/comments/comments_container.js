@@ -3,7 +3,7 @@ import Comments from './comments';
 import { destroyComment, updateComment } from '../../actions/story_actions';
 
 const mapStateToProps = state => ({
-  comments: state.story.comments,
+  comments: (state.story ? state.story.comments : ""),
   currentUser: state.currentUser
 });
 

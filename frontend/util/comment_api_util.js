@@ -14,9 +14,10 @@ export const updateComment = (comment, storyId) => (
   })
 );
 
-export const destroyComment = (id, storyId) => (
+export const destroyComment = (commentId, storyId) => (
   $.ajax({
     method: 'DELETE',
-    url: `api/stories/${storyId}/comments/${id}`
+    url: `api/stories/${storyId}/comments/${commentId}`,
+    data: {commentId}
   })
 );
