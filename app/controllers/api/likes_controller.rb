@@ -10,6 +10,12 @@ class Api::LikesController < ApplicationController
     end
   end
 
+  def index
+    @likes = Like.where(user_id: params[:id]).pluck(:story_id)
+    @stories = Story.where(id: @likes)
+    render "api/stories/index"      #
+  end
+
   def destroy
     @like = Like.find_by(story_id: params[:id], user_id: current_user.id)
     @story = @like.story

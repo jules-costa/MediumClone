@@ -35,3 +35,19 @@ export const destroyStory = id => (
     url: `api/stories/${id}`
   })
 );
+
+export const fetchLikedStories = id => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/likes',
+    data: {id}
+  })
+);
+
+export const fetchRecommendedStories = id => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/follows',
+    data: {id}
+  })
+);

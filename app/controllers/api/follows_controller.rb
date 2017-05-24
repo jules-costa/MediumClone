@@ -10,6 +10,12 @@ class Api::FollowsController < ApplicationController
     end
   end
 
+  def index
+    @follows = Follow.where(disciple_id: params[:id]).pluck(:guru_id)
+    @stories = Story.where(author_id: @follows)
+    render "api/stories/index"   
+  end
+
   def destroy
     @follow = Follow.find_by(guru_id: params[:id], disciple_id: current_user.id)
     @user = @follow.guru

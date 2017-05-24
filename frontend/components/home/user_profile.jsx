@@ -16,12 +16,15 @@ class UserProfile extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchProfile(this.props.match.params.userId);
+    this.props.fetchProfile(this.props.match.params.userId).then(() => this.props.fetchLikedStories(this.props.userProfile.id));
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.userId !== nextProps.match.params.userId) {
       this.props.fetchProfile(nextProps.match.params.userId);
+    }
+    if (this.props.match.params !== nextProps.match.params) {
+      this.props.fetchRecommendedStories(this.props.userProfile.id);
     }
   }
 
@@ -53,7 +56,6 @@ class UserProfile extends React.Component {
     }
   }
 
-
   render () {
     const { username, image_url, biography, disciples, gurus } = this.props.userProfile;
     return (
@@ -72,9 +74,23 @@ class UserProfile extends React.Component {
         <div className="profile-buttons">
           {this.userOptions()}
         </div>
+
+        <section className="recommends">
+          <nav className="toggle-recommends">
+            <Link to={`/users/${this.props.currentUser.id}`}>Profile ...Likes</Link>
+            <Link to={`/users/${this.props.currentUser.id}/recommends`}>Recommends</Link>
+          </nav>
+        </section>
       </section>
     );
   }
 }
 
 export default withRouter(UserProfile);
+
+
+// <section className="recommends-content">
+//   <h1>
+//     {this.props.userProfile.gurus}
+//   </h1>
+// </section>

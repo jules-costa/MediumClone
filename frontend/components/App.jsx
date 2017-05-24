@@ -29,6 +29,7 @@ const App = () => (
       <ProtectedRoute path="/users/:userId/update" component={UpdateProfileContainer} />
       <ProtectedRoute path="/users/:userId" component={UserProfileContainer} />
     </Switch>
+    <ProtectedRoute path="/users/:userId/recommends" component={UserProfileContainer} />
   </section>
 );
 

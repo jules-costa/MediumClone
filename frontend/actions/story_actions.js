@@ -54,6 +54,15 @@ export const destroyStory = id => dispatch => (
   APIUtil.destroyStory(id).then(story => dispatch(receiveSingleStory(null)))
 );
 
+export const fetchLikedStories = id => dispatch => (
+  APIUtil.fetchLikedStories(id).then(stories => dispatch(receiveAllStories(stories)))
+);
+
+export const fetchRecommendedStories = id => dispatch => (
+  APIUtil.fetchRecommendedStories(id).then(stories => dispatch(receiveAllStories(stories)))
+);
+
+
 export const createComment = (comment, storyId) => dispatch => (
   CommentAPIUtil.createComment(comment, storyId).then(story => {
     dispatch(receiveSingleStory(story));
