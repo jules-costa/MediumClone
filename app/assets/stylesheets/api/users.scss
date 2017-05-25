@@ -2,11 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.user-full-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .user-detail-container {
   display: flex;
   flex-direction: column;
   width: 40%;
   margin-top: 75px;
+  border-bottom: 1px solid $lightgrey;
+  padding-bottom: 60px;
 }
 
 .user-details {
@@ -38,6 +47,7 @@
   justify-content: space-between;
   width: 30%;
   font-size: 12.5px;
+  padding-bottom: 12px;
 }
 
 .following {
@@ -63,9 +73,12 @@
 }
 
 .recommends {
-  border-top: 1px solid $lightgrey;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 2px solid $lightgrey;
   padding-top: 16px;
-  margin-top: 75px;
+  padding-bottom: 16px;
 }
 
 .profile {
@@ -75,7 +88,7 @@
 .toggle-recommends {
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  width: 12%;
   font-family: 'Sintony', sans-serif;
   color: $grey;
   font-size: 16px;

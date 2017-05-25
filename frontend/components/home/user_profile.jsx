@@ -9,7 +9,8 @@ class UserProfile extends React.Component {
       following: 0,
       username: this.props.userProfile.username,
       image_url: this.props.userProfile.image_url,
-      biography: this.props.userProfile.biography
+      biography: this.props.userProfile.biography,
+      // likedStories: this.props.fetchLikedStories(this.props.userProfile.id)
     });
     this.handleUpdate = this.handleUpdate.bind(this);
     this.toggleFollowButton = this.toggleFollowButton.bind(this);
@@ -20,13 +21,16 @@ class UserProfile extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    console.log(nextProps.match);
     if (this.props.match.params.userId !== nextProps.match.params.userId) {
       this.props.fetchProfile(nextProps.match.params.userId);
     }
     if (this.props.match.path !== nextProps.match.path) {
-      this.props.fetchRecommendedStories(this.props.userProfile.id);
-    } else {
-      this.props.fetchLikedStories(this.props.userProfile.id);
+      if (nextProps.match.path === "/users/:userId/recommends") {
+        this.props.fetchRecommendedStories(this.props.userProfile.id);
+      } else {
+        this.props.fetchLikedStories(this.props.userProfile.id);    
+      }
     }
   }
 
@@ -61,29 +65,33 @@ class UserProfile extends React.Component {
   render () {
     const { username, image_url, biography, disciples, gurus } = this.props.userProfile;
     return (
-      <section className="user-detail-container">
-        <section className="user-details">
-          <div className="name-bio">
-            <h1>{username}</h1>
-            <h4 className="bio">{biography}</h4>
+      <div className="user-full-page">
+        <section className="user-detail-container">
+          <section className="user-details">
+            <div className="name-bio">
+              <h1>{username}</h1>
+              <h4 className="bio">{biography}</h4>
+            </div>
+            <img className="user-logo-medium" src={image_url}></img>
+          </section>
+          <section className="follows">
+            <h5 className="following"><strong>{gurus}</strong> Following</h5>
+            <h5><strong>{disciples}</strong> Followers</h5>
+          </section>
+          <div className="profile-buttons">
+            {this.userOptions()}
           </div>
-          <img className="user-logo-medium" src={image_url}></img>
         </section>
-        <section className="follows">
-          <h5 className="following"><strong>{gurus}</strong> Following</h5>
-          <h5><strong>{disciples}</strong> Followers</h5>
-        </section>
-        <div className="profile-buttons">
-          {this.userOptions()}
-        </div>
-
         <section className="recommends">
           <nav className="toggle-recommends">
             <NavLink exact to={`/users/${this.props.userProfile.id}`}>Profile</NavLink>
             <NavLink to={`/users/${this.props.userProfile.id}/recommends`}>Recommends</NavLink>
           </nav>
         </section>
-      </section>
+        <section className="mini-feed">
+
+        </section>
+      </div>
     );
   }
 }
