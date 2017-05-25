@@ -5,9 +5,10 @@
 .feed {
   display: flex;
   width: 75%;
-  margin-top: 25px;
+  margin-top: 32px;
   margin-left: -18px;
   flex-flow: row wrap;
+  justify-content: center;
 }
 
 .story-square-0 {

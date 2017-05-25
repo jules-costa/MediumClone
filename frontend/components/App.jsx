@@ -1,7 +1,6 @@
 import React from 'react';
 import SessionFormContainer from './session/session_form_container';
 import NavbarContainer from './home/navbar_container';
-import TopicsContainer from './topics/topics_container';
 import StoriesFeedContainer from './stories/stories_feed_container';
 import StoryDetailContainer from './stories/story_detail_container';
 import StoryFormContainer from './stories/story_form_container';
@@ -13,7 +12,6 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <section className="main-section">
-    <section className="double-nav">
       <header className="navbar">
         <a className="full-logo" href="/">
           <img className="site-logo" src="http://res.cloudinary.com/jules-costa/image/upload/v1495503351/ouija_logo_a022bd.png" alt="Ouija logo" />
@@ -21,8 +19,6 @@ const App = () => (
         </a>
           <NavbarContainer/>
       </header>
-      <TopicsContainer/>
-    </section>
 
     <Route exact path="/" component={StoriesFeedContainer} />
     <ProtectedRoute path="/topics/:topicId" component={StoriesFeedContainer} />

@@ -10,15 +10,22 @@
   width: 75%;
 }
 
+.feed-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .topic-list {
   display: flex;
-  width: 75%;
+  width: 50%;
   justify-content: space-around;
   font-family: 'Sintony', sans-serif;
+  color: $darkgrey;
   font-size: 14px;
   letter-spacing: 0.5px;
-  padding: 12px;
-  border-bottom: 1px solid $lightgrey;
+  padding: 20px 0;
+  border-bottom: 1px solid $grey;
 }
 
 .topic-button {
