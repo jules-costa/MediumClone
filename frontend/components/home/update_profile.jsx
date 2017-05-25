@@ -12,8 +12,8 @@ class UpdateProfile extends React.Component {
     super(props);
     this.state = {
       id: this.props.userProfile.id,
-      username: "",
-      biography: "",
+      username: this.props.userProfile.username,
+      biography: this.props.userProfile.biography,
       image_url: this.props.userProfile.image_url
     };
     this.handleUpdate = this.handleUpdate.bind(this);
@@ -47,6 +47,11 @@ class UpdateProfile extends React.Component {
 
   handleUpdate(e) {
     e.preventDefault();
+    if (this.state.username === "") {
+      this.setState({
+        username: this.props.userProfile.username
+      });
+    }
     this.props.updateProfile(this.state).then(user => this.props.history.push(`/users/${this.props.userProfile.id}`));
   }
 
