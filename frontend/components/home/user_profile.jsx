@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter, Route, Link, NavLink } from 'react-router-dom';
+import StoryFeedItem from '../stories/stories_feed_item';
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -10,7 +11,6 @@ class UserProfile extends React.Component {
       username: this.props.userProfile.username,
       image_url: this.props.userProfile.image_url,
       biography: this.props.userProfile.biography,
-      // likedStories: this.props.fetchLikedStories(this.props.userProfile.id)
     });
     this.handleUpdate = this.handleUpdate.bind(this);
     this.toggleFollowButton = this.toggleFollowButton.bind(this);
@@ -21,7 +21,6 @@ class UserProfile extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps.match);
     if (this.props.match.params.userId !== nextProps.match.params.userId) {
       this.props.fetchProfile(nextProps.match.params.userId);
     }
@@ -29,7 +28,7 @@ class UserProfile extends React.Component {
       if (nextProps.match.path === "/users/:userId/recommends") {
         this.props.fetchRecommendedStories(this.props.userProfile.id);
       } else {
-        this.props.fetchLikedStories(this.props.userProfile.id);    
+        this.props.fetchLikedStories(this.props.userProfile.id);
       }
     }
   }
@@ -90,6 +89,11 @@ class UserProfile extends React.Component {
         </section>
         <section className="mini-feed">
 
+          {Object.keys(this.props.stories).map(
+            (key, i) => <StoryFeedItem
+            key={this.props.stories[key].id}
+            story={this.props.stories[key]}
+            />)}
         </section>
       </div>
     );
