@@ -9,18 +9,18 @@
 
 # COMMENTS
 
+Topic.destroy_all
 Comment.destroy_all
 Story.destroy_all
 User.destroy_all
 Follow.destroy_all
 Like.destroy_all
-Topic.destroy_all
 
 # TOPICS
 
-goodbye = Topic.create(title: "goodbye")
-yes = Topic.create(title: "yes")
-no = Topic.create(title: "no")
+goodbye = Topic.create!(title: "goodbye")
+yes = Topic.create!(title: "yes")
+no = Topic.create!(title: "no")
 
 user1 = User.create!(username: "Guest", password: "password", biography: "Thank you for checking out Ouija! This Medium clone was built in 10 days using Ruby on Rails, React, Redux, Javascript and HTML/CSS.", image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495413134/user-2ef10cd87167a7021991eaaf0fb688ea1fda37f520b069b2b523d3a8e399473d_jphioe.png")
 user2 = User.create!(username: "Charlotte Bronte", password: "password", biography: "Born on April 21, 1816, in Thornton, England.", image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495413047/CharlotteBronte_NewBioImage_blzqtv.jpg")
@@ -77,7 +77,7 @@ story1 = Story.create!(
   author_id: user2.id,
   read_time: "20 min read",
   description: "There are hours of lonely musing, such as in evening silence come",
-  topic_id: 1,
+  topic_id: goodbye.id,
   size: 2,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495418327/jon-phillips-17576_v1skwf.jpg"
   )

@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  namespace :api do
-    get 'topics/create'
-  end
-
   namespace :api, defaults: { format: :json } do
     resources :users, only: [:new, :create, :show, :edit, :update]
     resource :session, only: [:new, :create, :destroy]
@@ -12,7 +8,7 @@ Rails.application.routes.draw do
     end
     resources :follows, only: [:create, :destroy, :index]
     resources :likes, only: [:create, :destroy, :index]
-    resources :topics, only: [:create]
+    resources :topics, only: [:create, :index]
   end
 
   root to: "static_pages#root"

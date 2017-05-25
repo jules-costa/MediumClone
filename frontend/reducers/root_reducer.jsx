@@ -3,6 +3,7 @@ import ErrorsReducer from './errors_reducer';
 import StoriesReducer from './stories_reducer';
 import StoryReducer from './story_reducer';
 import UserReducer from './user_reducer';
+import TopicsReducer from './topics_reducer';
 
 import { combineReducers } from 'redux';
 
@@ -11,7 +12,8 @@ const RootReducer = combineReducers({
   userProfile: UserReducer,
   errors: ErrorsReducer,
   stories: StoriesReducer,
-  story: StoryReducer
+  story: StoryReducer,
+  topics: TopicsReducer
 });
 
 export default RootReducer;

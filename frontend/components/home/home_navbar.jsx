@@ -26,4 +26,5 @@ const HomeNavbar = ({ currentUser, logout, history }) => (
   currentUser && currentUser.username ? personalGreeting(currentUser, logout, history) : sessionLinks()
 );
 
+
 export default withRouter(HomeNavbar);

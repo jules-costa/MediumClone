@@ -1,4 +1,8 @@
 class Api::TopicsController < ApplicationController
+  def index
+    @topics = Topic.all
+  end
+
   def create
     @topic = Topic.new(topic_params)
     if @topic.save
