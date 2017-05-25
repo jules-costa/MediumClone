@@ -13,14 +13,16 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <section className="main-section">
-    <header className="navbar">
-      <a className="full-logo" href="/">
-        <img className="site-logo" src="http://res.cloudinary.com/jules-costa/image/upload/v1495503351/ouija_logo_a022bd.png" alt="Ouija logo" />
-        <h4 className="logo-text">Ouija</h4>
-      </a>
-      <NavbarContainer/>
+    <section className="double-nav">
+      <header className="navbar">
+        <a className="full-logo" href="/">
+          <img className="site-logo" src="http://res.cloudinary.com/jules-costa/image/upload/v1495503351/ouija_logo_a022bd.png" alt="Ouija logo" />
+          <h4 className="logo-text">Ouija</h4>
+        </a>
+          <NavbarContainer/>
+      </header>
       <TopicsContainer/>
-    </header>
+    </section>
 
     <Route exact path="/" component={StoriesFeedContainer} />
     <ProtectedRoute path="/topics/:topicId" component={StoriesFeedContainer} />

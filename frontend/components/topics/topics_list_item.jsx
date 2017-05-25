@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class TopicsListItem extends React.Component {
   constructor(props) {
@@ -14,9 +14,14 @@ class TopicsListItem extends React.Component {
   render () {
     const { topic } = this.props;
     return (
-      <button onClick={this.switchTopic(topic.id)}>{topic.title}</button>
+      <button className="topic-button" onClick={this.switchTopic(topic.id)}>{topic.title}</button>
     );
   }
 }
 
 export default TopicsListItem;
+
+//
+// <div className="topic-link">
+//   <NavLink to={`/topics/${this.props.topic.id}`}>{topic.title}</NavLink>
+// </div>

@@ -70,83 +70,6 @@ Follow.create!(guru_id: user7.id, disciple_id: user4.id)
 Follow.create!(guru_id: user9.id, disciple_id: user3.id)
 Follow.create!(guru_id: user2.id, disciple_id: user5.id)
 
-# GOODBYE
-story1 = Story.create!(
-  title: "Evening Solace",
-  body: "The human heart has hidden treasures,\nIn secret kept, in silence sealed;—\nThe thoughts, the hopes, the dreams, the pleasures,\nWhose charms were broken if revealed.\nAnd days may pass in gay confusion,\nAnd nights in rosy riot fly,\nWhile, lost in Fame’s or Wealth’s illusion,\nThe memory of the Past may die.\n\nBut there are hours of lonely musing,\nSuch as in evening silence come,\nWhen, soft as birds their pinions closing,\nThe heart’s best feelings gather home.\nThen in our souls there seems to languish\nA tender grief that is not woe;\nAnd thoughts that once wrung groans of anguish\nNow cause but some mild tears to flow.\n\nAnd feelings, once as strong as passions,\nFloat softly back—a faded dream;\nOur own sharp griefs and wild sensations,\nThe tale of others’ sufferings seem.\nOh! when the heart is freshly bleeding,\nHow longs it for that time to be,\nWhen, through the mist of years receding,\nIts woes but live in reverie!\n\nAnd it can dwell on moonlight glimmer,\nOn evening shade and loneliness;\nAnd, while the sky grows dim and dimmer,\nFeel no untold and strange distress—\nOnly a deeper impulse given\nBy lonely hour and darkened room,\nTo solemn thoughts that soar to heaven\nSeeking a life and world to come.",
-  author_id: user2.id,
-  read_time: "20 min read",
-  description: "There are hours of lonely musing, such as in evening silence come",
-  topic_id: goodbye.id,
-  size: 2,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495418327/jon-phillips-17576_v1skwf.jpg"
-  )
-
-story2 = Story.create!(
-  title: "The Problem",
-  body: "I like a church; I like a cowl;\nI love a prophet of the soul;\nand on my heart monastic aisles\nFall like sweet strains, or pensive smiles;\nYet not for all his faith can see\nWould I that cowled churchman be.\n\nWhy should the vest on him alure,\nWhich I could not on me endure?\n\nNot from a vain or shallow thought\nHis awful Jove young Phidias brought;\nNever from lips of cunning fell\nThe thrilling Delphic oracle;\nOut from the heart of nature rolled\nThe burdens of the Bible old;\nthe litanies of nations came,\nLike the volcano’s tongue of flame,\nUp from the burning core below,--\nThe canticles of love and woe;\nThe hand that rounded Peter’s dome,\nAnd groined the aisles of Christian Rome,\nWrought in a sad sincerity;\nHimself from God he could not free;\nHe builded better than he knew;--\nThe conscious stone to beauty grew.\n\n Know’st thou what wove yon woodbird’s nest\nOf leaves, and feathers from her breast?\nOr how the fish outbuilt her shell,\nPainting with morn each annual cell?\nOr how the sacred pine-tree adds\nTo her old leaves new myriads?\nSuch and so grew these holy piles,\nWhilst love and terror laid the tiles.\nEarth proudly wears the Parthenon,\nAs the best gem upon her zone;\nAnd Morning opes with hast her lids,\nTo gaze upon the Pyramids;\nO’er england’s abbeys bends the sky,\nAs on its friends, with kindred eye;\nFor, out of Thought’s interior sphere,\nThese wonders rose to upper air;\nAnd nature gladly gave them place,\nAdopted them into her race,\nAnd granted them an equal date\nWith Andes and with Ararat.\n\nThese temples grew as grows the grass;\nArt might obey, but not surpass.\nThe passive master lent his hand\nTo the vast soul that o’er him planned;\nAnd the same power that reared the shrine,\nBestrode the stibes that knelt within.\nEver the fiery Pntecost\nGirds with one flame the countless host,\nTrances the heart through chanting choirs,\nAnd through the priest the mind inspired.\nThe word unto the prophet spoken\nWas writ on tables yet unbroken;\nThe word by seers or sibyls told,\nIn groves of oak, or fanes of gold,\nStill floats upon the morning wind,\nStill whispers to the willing mind.\nOne accent of the Holy Ghost\nThe heedless world hath never lost.\nI know what say the fathers wise,--\nThe Book itself before me lies,\nOld Chrysostom, best Augustine,\nAnd he who blent both in his line,\nThe younger Golden Lips or mines,\nTaylor, the Shakspeare of divines.\nHis words are music in my ear,\nI see his cowled portrait dear;\nAnd yet, for all his faith could see,\nI would not the good bishop be.",
-  author_id: user3.id,
-  read_time: "18 min read",
-  description: "His words are music in my ear, I see his cowled portrait dear",
-  topic_id: goodbye.id,
-  size: 0,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495418608/andras-kovacs-94507_jc7t2e.jpg"
-  )
-
-story3 = Story.create!(
-  title: "Night Funeral in Harlem",
-  body: "Night funeral\nIn Harlem:\n\nWhere did they get\nThem two fine cars?\n\nInsurance man, he did not pay—\nHis insurance lapsed the other day—\nYet they got a satin box\nfor his head to lay.\n\nNight funeral\nIn Harlem:\n\nWho was it sent\nThat wreath of flowers?\n\nThem flowers came\nfrom that poor boy’s friends—\nThey’ll want flowers, too,\nWhen they meet their ends.\n\nNight funeral\nin Harlem:\n\nWho preached that\nBlack boy to his grave?\n\nOld preacher man\nPreached that boy away—\nCharged Five Dollars\nHis girl friend had to pay.\n\nNight funeral\nIn Harlem:\n\nWhen it was all over\nAnd the lid shut on his head\nand the organ had done played\nand the last prayers been said\n and six pallbearers\nCarried him out for dead\nAnd off down Lenox Avenue\nThat long black hearse done sped,\nThe street light\nAt his corner\nShined just like a tear—\nThat boy that they was mournin’\nWas so dear, so dear\nTo them folks that brought the flowers,\nTo that girl who paid the preacher man—\nIt was all their tears that made\nThat poor boy’s\nFuneral grand.\n\nNight funeral\nIn Harlem.",
-  author_id: user5.id,
-  read_time: "7 min read",
-  description: "Who was it sent that wreath of flowers?",
-  topic_id: goodbye.id,
-  size: 1,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495419181/dimitar-belchev-153985_i9olrk.jpg"
-  )
-
-story4 = Story.create!(
-  title: "Let Everything Happen To You",
-  body: "As a girl I made my calves into little drinking elephants,\nI would stare at the wonder of their pumping muscles,\nthe sup of their leg-trunks. I resuscitated a bunny once\nfrom my cat’s electric teeth. I was on neighborhood watch\nto save animals, as many as I could. My damage was easy.\nMy plainspoken voice is a watercolor. I’m afraid of it\nas I’m afraid of what the world will do to color. I don’t\nthink I’ve done much. A table leans against itself\nto be a table. I hold nothing but this air. I give it off.\nI want a literature that is not made from literature, says Bhanu.\nLast night my legs ached a low-tone. I imagined the body\ngiving itself up for another system. Dandelions tickling\nout of my knee. The meniscus a household of worms.\nIt is okay to bear. My apartment hums in a Rilke sense.\nA pain blooms. I am told that it’s okay to forego details\nof what happened. I am told it doesn’t matter now.\nI want to write sentences for days. I want days to not\nbe a sentence. We put men in boxes and sail them away.\nJustice gave me an amber necklace. I tried to swallow\nas many as I could.",
-  author_id: user11.id,
-  read_time: "6 min read",
-  description: "Dandelions tickling out of my knee.",
-  topic_id: goodbye.id,
-  size: 1,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495419599/andressa-voltolini-202193_xzopok.jpg"
-  )
-
-story5 = Story.create!(
-  title: "Mastectomy",
-  body: "the fall of\nvelvet plum points and umber aureolae\n\nremember living\n\nforget cool evening air kisses the rush of\nliberation freed from the brassiere\n\nforget the cupping of his hands the pleasure\nhis eyes looking down/anticipating\n\nforget his mouth. his tongue at the nipples\nhis intense hungry nursing\n\nforget sensations which begin either\non the right or the left. go thru the body\nlinger between thighs\n\nforget the space once grasped during his ecstasy\n\nsweet sweet mama you taste so",
-  author_id: user12.id,
-  read_time: "8 min read",
-  description: "remember living",
-  topic_id: goodbye.id,
-  size: 1,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495419880/arteida-mjeshtri-151140_eahck6.jpg"
-  )
-
-story6 = Story.create!(
-  title: "The Sick Rose",
-  body: "O Rose, thou art sick:\nThe invisible worm,\nThat flies in the night\nIn the howling storm,\n\nHas found out thy bed\nOf crimson joy;\nAnd his dark secret love\nDoes thy life destroy.",
-  author_id: user9.id,
-  read_time: "4 min read",
-  description: "dark secret love",
-  topic_id: goodbye.id,
-  size: 0,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495421221/frank-mckenna-122861_ve6vc4.jpg"
-  )
-
-story7 = Story.create!(
-  title: "Under a Patched Sail",
-  body: "“Oh, we’ll drink once more\nwhen the wind’s off shore,”\nWe’ll drink from the good old jar,\nAnd then to port,\nFor the time grows short.\nCome lad—to the days that are!",
-  author_id: user13.id,
-  read_time: "1 min read",
-  description: "drink from the good old jar",
-  topic_id: goodbye.id,
-  size: 2,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495421762/tanner-mardis-29326_zdfu8w.jpg"
-  )
 
 # NO
 
@@ -227,18 +150,20 @@ story14 = Story.create!(
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495421392/thomas-smith-196864_jpubrt.jpg"
   )
 
-# YES
-
-story15 = Story.create!(
-  title: "Life",
-  body: "Life, believe, is not a dream\nSo dark as sages say;\nOft a little morning rain\nForetells a pleasant day.\nSometimes there are clouds of gloom,\nBut these are transient all;\nIf the shower will make the roses bloom,\nO why lament its fall?\nRapidly, merrily,\nLife’s sunny hours flit by,\nGratefully, cheerily\nEnjoy them as they fly!\nWhat though Death at times steps in,\nAnd calls our Best away?\nWhat though sorrow seems to win,\nO’er hope, a heavy sway?\nYet Hope again elastic springs,\nUnconquered, though she fell;\nStill buoyant are her golden wings,\nStill strong to bear us well.\nManfully, fearlessly,\nThe day of trial bear,\nFor gloriously, victoriously,\nCan courage quell despair!",
-  author_id: user2.id,
-  read_time: "6 min read",
-  description: "Oft a little morning rain foretells a pleasant day.",
-  topic_id: yes.id,
+story14 = Story.create!(
+  title: "Ennui",
+  body: "He often expressed\nA curious wish,\nTo be interchangeably\nMan and fish;\nTo nibble the bait\nOff the hook,\nSaid he,\nAnd then slip away\nLike a ghost\nIn the sea.",
+  author_id: user13.id,
+  read_time: "1 min read",
+  description: "man and fish",
+  topic_id: no.id,
   size: 1,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415150/gabriel-pangilinan-18321_op8mfn.jpg"
+  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_400/v1495734979/crystal-gard-228496_c1kpcc.jpg"
   )
+
+
+
+# YES
 
 story16 = Story.create!(
   title: "Days",
@@ -294,6 +219,106 @@ story20 = Story.create!(
   size: 1,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495420892/maria-darii-37401_b7rinc.jpg"
   )
+
+story15 = Story.create!(
+  title: "Life",
+  body: "Life, believe, is not a dream\nSo dark as sages say;\nOft a little morning rain\nForetells a pleasant day.\nSometimes there are clouds of gloom,\nBut these are transient all;\nIf the shower will make the roses bloom,\nO why lament its fall?\nRapidly, merrily,\nLife’s sunny hours flit by,\nGratefully, cheerily\nEnjoy them as they fly!\nWhat though Death at times steps in,\nAnd calls our Best away?\nWhat though sorrow seems to win,\nO’er hope, a heavy sway?\nYet Hope again elastic springs,\nUnconquered, though she fell;\nStill buoyant are her golden wings,\nStill strong to bear us well.\nManfully, fearlessly,\nThe day of trial bear,\nFor gloriously, victoriously,\nCan courage quell despair!",
+  author_id: user2.id,
+  read_time: "6 min read",
+  description: "Oft a little morning rain foretells a pleasant day.",
+  topic_id: yes.id,
+  size: 2,
+  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415150/gabriel-pangilinan-18321_op8mfn.jpg"
+  )
+
+story15 = Story.create!(
+  title: "Silence",
+  body: "My father used to say,\n“Superior people never make long visits,\nhave to be shown Longfellow’s grave\nor the glass flowers at Harvard.\nSelf-reliant like the cat—\nthat takes its prey to privacy,\nthe mouse’s limp tail hanging like a shoelace from its mouth—\nthey sometimes enjoy solitude,\nand can be robbed of speech\nby speech which has delighted them.\nThe deepest feeling always shows itself in silence;\nnot in silence, but restraint.”\nNor was he insincere in saying, “Make my house your inn.”\nInns are not residences.",
+  author_id: user13.id,
+  read_time: "2 min read",
+  description: "The deepest feeling always shows itself in silence",
+  topic_id: yes.id,
+  size: 0,
+  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415150/gabriel-pangilinan-18321_op8mfn.jpg"
+  )
+
+  # GOODBYE
+  story1 = Story.create!(
+    title: "Evening Solace",
+    body: "The human heart has hidden treasures,\nIn secret kept, in silence sealed;—\nThe thoughts, the hopes, the dreams, the pleasures,\nWhose charms were broken if revealed.\nAnd days may pass in gay confusion,\nAnd nights in rosy riot fly,\nWhile, lost in Fame’s or Wealth’s illusion,\nThe memory of the Past may die.\n\nBut there are hours of lonely musing,\nSuch as in evening silence come,\nWhen, soft as birds their pinions closing,\nThe heart’s best feelings gather home.\nThen in our souls there seems to languish\nA tender grief that is not woe;\nAnd thoughts that once wrung groans of anguish\nNow cause but some mild tears to flow.\n\nAnd feelings, once as strong as passions,\nFloat softly back—a faded dream;\nOur own sharp griefs and wild sensations,\nThe tale of others’ sufferings seem.\nOh! when the heart is freshly bleeding,\nHow longs it for that time to be,\nWhen, through the mist of years receding,\nIts woes but live in reverie!\n\nAnd it can dwell on moonlight glimmer,\nOn evening shade and loneliness;\nAnd, while the sky grows dim and dimmer,\nFeel no untold and strange distress—\nOnly a deeper impulse given\nBy lonely hour and darkened room,\nTo solemn thoughts that soar to heaven\nSeeking a life and world to come.",
+    author_id: user2.id,
+    read_time: "20 min read",
+    description: "There are hours of lonely musing, such as in evening silence come",
+    topic_id: goodbye.id,
+    size: 2,
+    image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495418327/jon-phillips-17576_v1skwf.jpg"
+    )
+
+  story2 = Story.create!(
+    title: "The Problem",
+    body: "I like a church; I like a cowl;\nI love a prophet of the soul;\nand on my heart monastic aisles\nFall like sweet strains, or pensive smiles;\nYet not for all his faith can see\nWould I that cowled churchman be.\n\nWhy should the vest on him alure,\nWhich I could not on me endure?\n\nNot from a vain or shallow thought\nHis awful Jove young Phidias brought;\nNever from lips of cunning fell\nThe thrilling Delphic oracle;\nOut from the heart of nature rolled\nThe burdens of the Bible old;\nthe litanies of nations came,\nLike the volcano’s tongue of flame,\nUp from the burning core below,--\nThe canticles of love and woe;\nThe hand that rounded Peter’s dome,\nAnd groined the aisles of Christian Rome,\nWrought in a sad sincerity;\nHimself from God he could not free;\nHe builded better than he knew;--\nThe conscious stone to beauty grew.\n\n Know’st thou what wove yon woodbird’s nest\nOf leaves, and feathers from her breast?\nOr how the fish outbuilt her shell,\nPainting with morn each annual cell?\nOr how the sacred pine-tree adds\nTo her old leaves new myriads?\nSuch and so grew these holy piles,\nWhilst love and terror laid the tiles.\nEarth proudly wears the Parthenon,\nAs the best gem upon her zone;\nAnd Morning opes with hast her lids,\nTo gaze upon the Pyramids;\nO’er england’s abbeys bends the sky,\nAs on its friends, with kindred eye;\nFor, out of Thought’s interior sphere,\nThese wonders rose to upper air;\nAnd nature gladly gave them place,\nAdopted them into her race,\nAnd granted them an equal date\nWith Andes and with Ararat.\n\nThese temples grew as grows the grass;\nArt might obey, but not surpass.\nThe passive master lent his hand\nTo the vast soul that o’er him planned;\nAnd the same power that reared the shrine,\nBestrode the stibes that knelt within.\nEver the fiery Pntecost\nGirds with one flame the countless host,\nTrances the heart through chanting choirs,\nAnd through the priest the mind inspired.\nThe word unto the prophet spoken\nWas writ on tables yet unbroken;\nThe word by seers or sibyls told,\nIn groves of oak, or fanes of gold,\nStill floats upon the morning wind,\nStill whispers to the willing mind.\nOne accent of the Holy Ghost\nThe heedless world hath never lost.\nI know what say the fathers wise,--\nThe Book itself before me lies,\nOld Chrysostom, best Augustine,\nAnd he who blent both in his line,\nThe younger Golden Lips or mines,\nTaylor, the Shakspeare of divines.\nHis words are music in my ear,\nI see his cowled portrait dear;\nAnd yet, for all his faith could see,\nI would not the good bishop be.",
+    author_id: user3.id,
+    read_time: "18 min read",
+    description: "His words are music in my ear, I see his cowled portrait dear",
+    topic_id: goodbye.id,
+    size: 0,
+    image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495418608/andras-kovacs-94507_jc7t2e.jpg"
+    )
+
+  story3 = Story.create!(
+    title: "Night Funeral in Harlem",
+    body: "Night funeral\nIn Harlem:\n\nWhere did they get\nThem two fine cars?\n\nInsurance man, he did not pay—\nHis insurance lapsed the other day—\nYet they got a satin box\nfor his head to lay.\n\nNight funeral\nIn Harlem:\n\nWho was it sent\nThat wreath of flowers?\n\nThem flowers came\nfrom that poor boy’s friends—\nThey’ll want flowers, too,\nWhen they meet their ends.\n\nNight funeral\nin Harlem:\n\nWho preached that\nBlack boy to his grave?\n\nOld preacher man\nPreached that boy away—\nCharged Five Dollars\nHis girl friend had to pay.\n\nNight funeral\nIn Harlem:\n\nWhen it was all over\nAnd the lid shut on his head\nand the organ had done played\nand the last prayers been said\n and six pallbearers\nCarried him out for dead\nAnd off down Lenox Avenue\nThat long black hearse done sped,\nThe street light\nAt his corner\nShined just like a tear—\nThat boy that they was mournin’\nWas so dear, so dear\nTo them folks that brought the flowers,\nTo that girl who paid the preacher man—\nIt was all their tears that made\nThat poor boy’s\nFuneral grand.\n\nNight funeral\nIn Harlem.",
+    author_id: user5.id,
+    read_time: "7 min read",
+    description: "Who was it sent that wreath of flowers?",
+    topic_id: goodbye.id,
+    size: 1,
+    image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495419181/dimitar-belchev-153985_i9olrk.jpg"
+    )
+
+  story4 = Story.create!(
+    title: "Let Everything Happen To You",
+    body: "As a girl I made my calves into little drinking elephants,\nI would stare at the wonder of their pumping muscles,\nthe sup of their leg-trunks. I resuscitated a bunny once\nfrom my cat’s electric teeth. I was on neighborhood watch\nto save animals, as many as I could. My damage was easy.\nMy plainspoken voice is a watercolor. I’m afraid of it\nas I’m afraid of what the world will do to color. I don’t\nthink I’ve done much. A table leans against itself\nto be a table. I hold nothing but this air. I give it off.\nI want a literature that is not made from literature, says Bhanu.\nLast night my legs ached a low-tone. I imagined the body\ngiving itself up for another system. Dandelions tickling\nout of my knee. The meniscus a household of worms.\nIt is okay to bear. My apartment hums in a Rilke sense.\nA pain blooms. I am told that it’s okay to forego details\nof what happened. I am told it doesn’t matter now.\nI want to write sentences for days. I want days to not\nbe a sentence. We put men in boxes and sail them away.\nJustice gave me an amber necklace. I tried to swallow\nas many as I could.",
+    author_id: user11.id,
+    read_time: "6 min read",
+    description: "Dandelions tickling out of my knee.",
+    topic_id: goodbye.id,
+    size: 1,
+    image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495419599/andressa-voltolini-202193_xzopok.jpg"
+    )
+
+  story5 = Story.create!(
+    title: "Mastectomy",
+    body: "the fall of\nvelvet plum points and umber aureolae\n\nremember living\n\nforget cool evening air kisses the rush of\nliberation freed from the brassiere\n\nforget the cupping of his hands the pleasure\nhis eyes looking down/anticipating\n\nforget his mouth. his tongue at the nipples\nhis intense hungry nursing\n\nforget sensations which begin either\non the right or the left. go thru the body\nlinger between thighs\n\nforget the space once grasped during his ecstasy\n\nsweet sweet mama you taste so",
+    author_id: user12.id,
+    read_time: "8 min read",
+    description: "remember living",
+    topic_id: goodbye.id,
+    size: 1,
+    image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495419880/arteida-mjeshtri-151140_eahck6.jpg"
+    )
+
+  story6 = Story.create!(
+    title: "The Sick Rose",
+    body: "O Rose, thou art sick:\nThe invisible worm,\nThat flies in the night\nIn the howling storm,\n\nHas found out thy bed\nOf crimson joy;\nAnd his dark secret love\nDoes thy life destroy.",
+    author_id: user9.id,
+    read_time: "4 min read",
+    description: "dark secret love",
+    topic_id: goodbye.id,
+    size: 0,
+    image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495421221/frank-mckenna-122861_ve6vc4.jpg"
+    )
+
+  story7 = Story.create!(
+    title: "Under a Patched Sail",
+    body: "“Oh, we’ll drink once more\nwhen the wind’s off shore,”\nWe’ll drink from the good old jar,\nAnd then to port,\nFor the time grows short.\nCome lad—to the days that are!",
+    author_id: user13.id,
+    read_time: "1 min read",
+    description: "drink from the good old jar",
+    topic_id: goodbye.id,
+    size: 2,
+    image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495421762/tanner-mardis-29326_zdfu8w.jpg"
+    )
 
 
 Comment.create!(author_id: user2.id, story_id: story20.id, body: "This poem is truly beautiful. Thank you so much for sharing.")

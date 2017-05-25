@@ -1,3 +1,31 @@
 // Place all the styles related to the Api::Topics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.double-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+}
+
+.topic-list {
+  display: flex;
+  width: 75%;
+  justify-content: space-around;
+  font-family: 'Sintony', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  padding: 12px;
+  border-bottom: 1px solid $lightgrey;
+}
+
+.topic-button {
+  background-color: white;
+}
+
+.topic-button:hover {
+  background-color: white;
+  color: $coral
+}
