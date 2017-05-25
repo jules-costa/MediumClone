@@ -1,6 +1,6 @@
 import React from 'react';
 import merge from 'lodash/merge';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
@@ -72,8 +72,10 @@ class StoryForm extends React.Component {
       <section className="story-form-container">
         <div className="new-story-header">
           <section className="user-info">
-            <img src={this.props.currentUser.image_url} className="author-small"></img>
-            <h5 className="author-name-new-story">{this.props.currentUser.username}</h5>
+            <Link className="user-info" to={`/users/${this.props.currentUser.id}`}>
+              <img src={this.props.currentUser.image_url} className="author-small"></img>
+              <h5 className="author-name-new-story">{this.props.currentUser.username}</h5>
+            </Link>
           </section>
           <button className="submit-story" onClick={this.handleSubmit}>Publish</button>
         </div>
