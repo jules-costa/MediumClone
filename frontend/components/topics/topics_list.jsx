@@ -10,7 +10,7 @@ class TopicsList extends React.Component {
   render() {
     return(
       <section className="topic-list">
-        {this.props.topics.map((topic, i) => <TopicsListItem key={topic.id} topic={topic} />)}
+        {this.props.topics.map((topic, i) => <TopicsListItem key={topic.id} topic={topic} fetchStories={this.props.fetchStories} />)}
       </section>
     );
   }
