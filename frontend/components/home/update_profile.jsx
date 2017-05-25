@@ -80,13 +80,13 @@ class UpdateProfile extends React.Component {
                   placeholder={this.props.userProfile.username}
                   value={this.state.username}
                   onChange={this.update('username')} />
-                <input type= "text"
+                <textarea type= "text"
                   className="description user-biography"
                   placeholder="Enter a short bio"
                   value={this.state.biography}
                   onChange={this.update('biography')} />
               </div>
-              <img className="user-logo-medium" src={this.state.image_url}></img>
+              <img className="user-logo-medium" value={this.state.image_url} src={this.state.image_url}></img>
                 <Dropzone
                   className="drop-box"
                   multiple={false}
