@@ -43,9 +43,11 @@ class UserProfile extends React.Component {
 
   userOptions() {
     if (this.props.userProfile.id === this.props.currentUser.id) {
-      return (
-        <Link to={`/users/${this.props.currentUser.id}/update`} className="follow-unfollow">Edit</Link>
-      );
+      if (this.props.userProfile.username !== "Guest") {
+        return (
+          <Link to={`/users/${this.props.currentUser.id}/update`} className="follow-unfollow">Edit</Link>
+        );
+      }
     } else {
       return (
         <button className="follow-unfollow" onClick={this.handleUpdate(this.props.userProfile.id)}>{this.toggleFollowButton()}</button>

@@ -1,6 +1,7 @@
 import * as UserAPIUtil from '../util/user_api_util';
 import * as FollowAPIUtil from '../util/follow_api_util';
 
+export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const RECEIVE_USER_PROFILE = "RECEIVE_USER_PROFILE";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
@@ -18,6 +19,11 @@ export const clearErrors = () => ({
   type: CLEAR_ERRORS
 });
 
+export const receiveCurrentUser = currentUser => ({
+  type: RECEIVE_CURRENT_USER,
+  currentUser
+});
+
 export const fetchProfile = id => dispatch => (
   UserAPIUtil.fetchProfile(id).then(profile => dispatch(receiveUserProfile(profile)))
 );
@@ -25,6 +31,7 @@ export const fetchProfile = id => dispatch => (
 export const updateProfile = user => dispatch => (
   UserAPIUtil.updateProfile(user).then(updatedProfile => {
     dispatch(receiveUserProfile(updatedProfile));
+    dispatch(receiveCurrentUser(updatedProfile));
     dispatch(clearErrors());
   }, err => (
     dispatch(receiveErrors(err.responseJSON))

@@ -13,7 +13,7 @@ class Comments extends React.Component {
     } else {
       return(
         <section className="comments-list">
-          {Object.keys(this.props.comments).map(
+          {Object.keys(this.props.comments).reverse().map(
             (key, i) => <CommentItem
             key={this.props.comments[key].id}
             comment={this.props.comments[key]}
