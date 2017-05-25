@@ -102,7 +102,7 @@ class StoryForm extends React.Component {
             placeholder="Tell your story..."
             value={this.state.body}
             onChange={this.update('body')} />
-          <div>
+          <div className="new-image">
             <div className="FileUpload">
             </div>
             <div>
