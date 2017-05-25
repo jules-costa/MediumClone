@@ -250,7 +250,7 @@ story15 = Story.create!(
     read_time: "20 min read",
     description: "There are hours of lonely musing, such as in evening silence come",
     topic_id: goodbye.id,
-    size: 2,
+    size: 0,
     image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495418327/jon-phillips-17576_v1skwf.jpg"
     )
 
@@ -261,7 +261,7 @@ story15 = Story.create!(
     read_time: "18 min read",
     description: "His words are music in my ear, I see his cowled portrait dear",
     topic_id: goodbye.id,
-    size: 0,
+    size: 2,
     image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495418608/andras-kovacs-94507_jc7t2e.jpg"
     )
 

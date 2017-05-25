@@ -15,7 +15,8 @@ class StoryForm extends React.Component {
       title: "",
       body: "",
       author_id: this.props.currentUser.id,
-      image_url: ""
+      image_url: "",
+      topic_id: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);

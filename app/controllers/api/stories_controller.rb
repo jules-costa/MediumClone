@@ -7,6 +7,9 @@ class Api::StoriesController < ApplicationController
     if @story.image_url == ""
       @story.image_url = "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_568/v1495394471/A2BA8A2AFE2CA6634FEDF42475D479D0_20130103_120349_UTC_tz6jwc.jpg"
     end
+    if @story.topic_id == ""
+      @story.topic_id = 1
+    end
     if @story.save
       render :show
     else
