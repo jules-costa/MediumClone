@@ -7,7 +7,12 @@ class Story < ApplicationRecord
     foreign_key: :author_id,
     class_name: "User"
 
-  has_many :comments, 
+  belongs_to :topic,
+    primary_key: :id,
+    foreign_key: :topic_id,
+    class_name: "Topic"
+
+  has_many :comments,
     primary_key: :id,
     foreign_key: :story_id,
     class_name: "Comment"

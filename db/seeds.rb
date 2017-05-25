@@ -6,11 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# TOPICS
-
-# goodbye = Topic.create(title: "goodbye")
-# yes = Topic.create(title: "yes")
-# no = Topic.create(title: "no")
 
 # COMMENTS
 
@@ -19,6 +14,13 @@ Story.destroy_all
 User.destroy_all
 Follow.destroy_all
 Like.destroy_all
+Topic.destroy_all
+
+# TOPICS
+
+goodbye = Topic.create(title: "goodbye")
+yes = Topic.create(title: "yes")
+no = Topic.create(title: "no")
 
 user1 = User.create!(username: "Guest", password: "password", biography: "Thank you for checking out Ouija! This Medium clone was built in 10 days using Ruby on Rails, React, Redux, Javascript and HTML/CSS.", image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495413134/user-2ef10cd87167a7021991eaaf0fb688ea1fda37f520b069b2b523d3a8e399473d_jphioe.png")
 user2 = User.create!(username: "Charlotte Bronte", password: "password", biography: "Born on April 21, 1816, in Thornton, England.", image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495413047/CharlotteBronte_NewBioImage_blzqtv.jpg")
@@ -86,7 +88,7 @@ story2 = Story.create!(
   author_id: user3.id,
   read_time: "18 min read",
   description: "His words are music in my ear, I see his cowled portrait dear",
-  topic_id: 1,
+  topic_id: goodbye.id,
   size: 0,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495418608/andras-kovacs-94507_jc7t2e.jpg"
   )
@@ -97,7 +99,7 @@ story3 = Story.create!(
   author_id: user5.id,
   read_time: "7 min read",
   description: "Who was it sent that wreath of flowers?",
-  topic_id: 1,
+  topic_id: goodbye.id,
   size: 1,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495419181/dimitar-belchev-153985_i9olrk.jpg"
   )
@@ -108,7 +110,7 @@ story4 = Story.create!(
   author_id: user11.id,
   read_time: "6 min read",
   description: "Dandelions tickling out of my knee.",
-  topic_id: 1,
+  topic_id: goodbye.id,
   size: 1,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495419599/andressa-voltolini-202193_xzopok.jpg"
   )
@@ -119,7 +121,7 @@ story5 = Story.create!(
   author_id: user12.id,
   read_time: "8 min read",
   description: "remember living",
-  topic_id: 1,
+  topic_id: goodbye.id,
   size: 1,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495419880/arteida-mjeshtri-151140_eahck6.jpg"
   )
@@ -130,7 +132,7 @@ story6 = Story.create!(
   author_id: user9.id,
   read_time: "4 min read",
   description: "dark secret love",
-  topic_id: 1,
+  topic_id: goodbye.id,
   size: 0,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495421221/frank-mckenna-122861_ve6vc4.jpg"
   )
@@ -141,7 +143,7 @@ story7 = Story.create!(
   author_id: user13.id,
   read_time: "1 min read",
   description: "drink from the good old jar",
-  topic_id: 1,
+  topic_id: goodbye.id,
   size: 2,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495421762/tanner-mardis-29326_zdfu8w.jpg"
   )
@@ -154,7 +156,7 @@ story8 = Story.create!(
   author_id: user7.id,
   read_time: "7 min read",
   description: "Riddled with light.",
-  topic_id: 3,
+  topic_id: no.id,
   size: 1,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495416188/roberta-doyle-205144_za6srx.jpg"
   )
@@ -165,7 +167,7 @@ story9 = Story.create!(
   author_id: user8.id,
   read_time: "15 min read",
   description: "They always knew it was you.",
-  topic_id: 3,
+  topic_id: no.id,
   size: 1,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495416772/les-anderson-203926_sxvb0y.jpg"
   )
@@ -176,7 +178,7 @@ story10 = Story.create!(
   author_id: user9.id,
   read_time: "8 min read",
   description: "And I sunned it with smiles",
-  topic_id: 3,
+  topic_id: no.id,
   size: 1,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495417180/milada-vigerova-14192_ppuxgc.jpg"
   )
@@ -187,7 +189,7 @@ story11 = Story.create!(
   author_id: user10.id,
   read_time: "11 min read",
   description: "a hundred roses in bloom.",
-  topic_id: 3,
+  topic_id: no.id,
   size: 2,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495417480/kai-oberhauser-215045_tyrd3a.jpg"
   )
@@ -198,7 +200,7 @@ story12 = Story.create!(
   author_id: user4.id,
   read_time: "10 min read",
   description: "against the breeze",
-  topic_id: 3,
+  topic_id: no.id,
   size: 0,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495417945/luke-brugger-29476_isomdm.jpg"
   )
@@ -209,7 +211,7 @@ story13 = Story.create!(
   author_id: user12.id,
   read_time: "22 min read",
   description: "you must sleep longer",
-  topic_id: 3,
+  topic_id: no.id,
   size: 1,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495420641/mats-peter-forss-12122_tzxmyn.jpg"
   )
@@ -220,7 +222,7 @@ story14 = Story.create!(
   author_id: user9.id,
   read_time: "5 min read",
   description: "weary of time",
-  topic_id: 3,
+  topic_id: no.id,
   size: 1,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495421392/thomas-smith-196864_jpubrt.jpg"
   )
@@ -233,7 +235,7 @@ story15 = Story.create!(
   author_id: user2.id,
   read_time: "6 min read",
   description: "Oft a little morning rain foretells a pleasant day.",
-  topic_id: 2,
+  topic_id: yes.id,
   size: 1,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415150/gabriel-pangilinan-18321_op8mfn.jpg"
   )
@@ -244,7 +246,7 @@ story16 = Story.create!(
   author_id: user3.id,
   read_time: "4 min read",
   description: "herbs and apples",
-  topic_id: 2,
+  topic_id: yes.id,
   size: 0,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415191/mikesh-kaos-42527_c0luqi.jpg"
   )
@@ -255,7 +257,7 @@ story17 = Story.create!(
   author_id: user4.id,
   read_time: "10 min read",
   description: "Magnified apples appear and disappear",
-  topic_id: 2,
+  topic_id: yes.id,
   size: 2,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415177/chloe-ridgway-169406_vus5yb.jpg"
   )
@@ -266,7 +268,7 @@ story18 = Story.create!(
   author_id: user5.id,
   read_time: "4 min read",
   description: "Hold fast to dreams",
-  topic_id: 2,
+  topic_id: yes.id,
   size: 1,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415169/megan-hodges-96121_tmzpzb.jpg"
   )
@@ -277,7 +279,7 @@ story19 = Story.create!(
   author_id: user6.id,
   read_time: "5 min read",
   description: "I'm not afraid...I don't fear...",
-  topic_id: 2,
+  topic_id: yes.id,
   size: 1,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415167/danka-peter-178_mp03vg.jpg"
   )
@@ -288,7 +290,7 @@ story20 = Story.create!(
   author_id: user7.id,
   read_time: "7 min read",
   description: "And my breast lies upon his breast.",
-  topic_id: 3,
+  topic_id: yes.id,
   size: 1,
   image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495420892/maria-darii-37401_b7rinc.jpg"
   )
