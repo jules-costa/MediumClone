@@ -47,11 +47,6 @@ class UpdateProfile extends React.Component {
 
   handleUpdate(e) {
     e.preventDefault();
-    if (this.state.username === "") {
-      this.setState({
-        username: this.props.userProfile.username
-      });
-    }
     this.props.updateProfile(this.state).then(user => this.props.history.push(`/users/${this.props.userProfile.id}`));
   }
 
