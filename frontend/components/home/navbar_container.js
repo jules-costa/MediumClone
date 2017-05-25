@@ -3,7 +3,7 @@ import { logout } from '../../actions/session_actions';
 import HomeNavbar from './home_navbar';
 
 const mapStateToProps = state => ({
-  currentUser: state.currentUser,
+  currentUser: state.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
