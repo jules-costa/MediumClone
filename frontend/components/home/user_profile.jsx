@@ -21,20 +21,22 @@ class UserProfile extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.match.params.userId !== nextProps.match.params.userId) {
-      this.props.fetchProfile(nextProps.match.params.userId);
+    const { match, fetchProfile, fetchRecommendedStories, fetchLikedStories, userProfile } = this.props;
+    if (match.params.userId !== nextProps.match.params.userId) {
+      fetchProfile(nextProps.match.params.userId);
     }
-    if (this.props.match.path !== nextProps.match.path) {
+    if (match.path !== nextProps.match.path) {
       if (nextProps.match.path === "/users/:userId/recommends") {
-        this.props.fetchRecommendedStories(this.props.userProfile.id);
+        fetchRecommendedStories(userProfile.id);
       } else {
-        this.props.fetchLikedStories(this.props.userProfile.id);
+        fetchLikedStories(userProfile.id);
       }
     }
   }
 
   toggleFollowButton() {
-    if (this.props.userProfile.follows) {
+    const { userProfile } = this.props;
+    if (userProfile.follows) {
       return "Unfollow";
     } else {
       return "Follow";
@@ -42,29 +44,32 @@ class UserProfile extends React.Component {
   }
 
   userOptions() {
-    if (this.props.userProfile.id === this.props.currentUser.id) {
-      if (this.props.userProfile.username !== "Guest") {
+    const { userProfile, currentUser } = this.props;
+    if (userProfile.id === currentUser.id) {
+      if (userProfile.username !== "Guest") {
         return (
-          <Link to={`/users/${this.props.currentUser.id}/update`} className="follow-unfollow">Edit</Link>
+          <Link to={`/users/${currentUser.id}/update`} className="follow-unfollow">Edit</Link>
         );
       }
     } else {
       return (
-        <button className="follow-unfollow" onClick={this.handleUpdate(this.props.userProfile.id)}>{this.toggleFollowButton()}</button>
+        <button className="follow-unfollow" onClick={this.handleUpdate(userProfile.id)}>{this.toggleFollowButton()}</button>
       );
     }
   }
 
   handleUpdate(userId) {
+    const { destroyFollow, createFollow } = this.props;
     if (this.props.userProfile.follows) {
-      return () => this.props.destroyFollow(userId);
+      return () => destroyFollow(userId);
     } else {
-      return () => this.props.createFollow({guru_id: userId});
+      return () => createFollow({guru_id: userId});
     }
   }
 
   render () {
     const { username, image_url, biography, disciples, gurus } = this.props.userProfile;
+    const { userProfile, stories } = this.props;
     return (
       <div className="user-full-page">
         <section className="user-detail-container">
@@ -85,16 +90,16 @@ class UserProfile extends React.Component {
         </section>
         <section className="recommends">
           <nav className="toggle-recommends">
-            <NavLink exact to={`/users/${this.props.userProfile.id}`}>Profile</NavLink>
-            <NavLink to={`/users/${this.props.userProfile.id}/recommends`}>Recommends</NavLink>
+            <NavLink exact to={`/users/${userProfile.id}`}>Profile</NavLink>
+            <NavLink to={`/users/${userProfile.id}/recommends`}>Recommends</NavLink>
           </nav>
         </section>
         <section className="mini-feed">
 
-          {Object.keys(this.props.stories).map(
+          {Object.keys(stories).map(
             (key, i) => <StoryFeedItem
-            key={this.props.stories[key].id}
-            story={this.props.stories[key]}
+            key={stories[key].id}
+            story={stories[key]}
             />)}
         </section>
       </div>
