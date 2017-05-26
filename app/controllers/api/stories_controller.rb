@@ -3,12 +3,9 @@ class Api::StoriesController < ApplicationController
   def create
     @story = Story.new(story_params)
     @story.read_time = read_time(@story)
-    @story.topic_id = 1
+    @story.topic_id = Topic.where(title: "yes").pluck(:id).first
     if @story.image_url == ""
       @story.image_url = "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_568/v1495394471/A2BA8A2AFE2CA6634FEDF42475D479D0_20130103_120349_UTC_tz6jwc.jpg"
-    end
-    if @story.topic_id == ""
-      @story.topic_id = 1
     end
     if @story.save
       render :show
@@ -58,7 +55,7 @@ class Api::StoriesController < ApplicationController
   private
 
   def story_params
-    params.require(:story).permit(:title, :body, :description, :image_url, :author_id)
+    params.require(:story).permit(:title, :body, :description, :image_url, :author_id, :topic_id)
   end
 
   def read_time(story)

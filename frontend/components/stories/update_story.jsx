@@ -1,5 +1,4 @@
 import React from 'react';
-import merge from 'lodash/merge';
 import { withRouter, Link } from 'react-router-dom';
 
 import Dropzone from 'react-dropzone';
@@ -8,17 +7,17 @@ import request from 'superagent';
 const CLOUDINARY_UPLOAD_PRESET = 'tio3bhpb';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/jules-costa/image/upload';
 
-class StoryForm extends React.Component {
+class UpdateStory extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "",
-      body: "",
-      author_id: this.props.currentUser.id,
-      description: "",
-      image_url: ""
+      id: this.props.story.id,
+      title: this.props.story.title,
+      description: this.props.story.description,
+      body: this.props.story.body,
+      image_url: this.props.story.image_url
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleUpdate = this.handleUpdate.bind(this);
     this.update = this.update.bind(this);
   }
 
@@ -47,9 +46,9 @@ class StoryForm extends React.Component {
     });
   }
 
-  handleSubmit(e) {
+  handleUpdate(e) {
     e.preventDefault();
-    this.props.createStory(this.state).then(data => this.props.history.push(`/stories/${data.id}`));
+    this.props.updateStory(this.state).then(story => this.props.history.push(`/stories/${this.props.story.id}`));
   }
 
   update(field) {
@@ -68,7 +67,7 @@ class StoryForm extends React.Component {
     );
   }
 
-  render() {
+  render () {
     return (
       <section className="story-form-container">
         <div className="new-story-header">
@@ -78,19 +77,19 @@ class StoryForm extends React.Component {
               <h5 className="author-name-new-story">{this.props.currentUser.username}</h5>
             </Link>
           </section>
-          <button className="submit-story" onClick={this.handleSubmit}>Publish</button>
+          <button className="submit-story" onClick={this.handleUpdate}>Update</button>
         </div>
         <form className="new-story-form">
           <h4 className="story-errors">{this.renderErrors()}</h4>
           <input type="text"
             ref={ (input) => {this.textInput = input; }}
             className="title"
-            placeholder="Title"
+            placeholder={this.props.story.title}
             value={this.state.title}
             onChange={this.update('title')} />
           <input type="text"
             className="description"
-            placeholder="description"
+            placeholder="Add a description"
             value={this.state.description}
             onChange={this.update('description')} />
           <Dropzone
@@ -102,24 +101,14 @@ class StoryForm extends React.Component {
           </Dropzone>
           <textarea type="text"
             className="body"
-            placeholder="Tell your story..."
+            placeholder={this.props.story.body}
             value={this.state.body}
             onChange={this.update('body')} />
-          <div className="new-image">
-            <div className="FileUpload">
-            </div>
-            <div>
-              {this.state.image_url === '' ? null :
-              <div>
-                <p>{this.state.image_url.name}</p>
-                <img src={this.state.image_url} />
-              </div>}
-            </div>
-          </div>
+          <img value={this.state.image_url} src={this.state.image_url} />
         </form>
       </section>
     );
   }
 }
 
-export default withRouter(StoryForm);
+export default withRouter(UpdateStory);

@@ -6,6 +6,7 @@ import StoryDetailContainer from './stories/story_detail_container';
 import StoryFormContainer from './stories/story_form_container';
 import UserProfileContainer from './home/user_profile_container';
 import UpdateProfileContainer from './home/update_profile_container';
+import UpdateStoryContainer from './stories/update_story_container';
 
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -25,7 +26,10 @@ const App = () => (
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
     <ProtectedRoute path="/write" component={StoryFormContainer} />
-    <ProtectedRoute path="/stories/:storyId" component={StoryDetailContainer} />
+    <Switch>
+      <ProtectedRoute path="/stories/:storyId/update" component={UpdateStoryContainer} />
+      <ProtectedRoute path="/stories/:storyId" component={StoryDetailContainer} />
+    </Switch>
     <Switch>
       <ProtectedRoute path="/users/:userId/update" component={UpdateProfileContainer} />
       <ProtectedRoute path="/users/:userId/recommends" component={UserProfileContainer} />
