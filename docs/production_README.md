@@ -22,7 +22,7 @@ Once in session, the user may click to "Edit" their information from their own p
 
 ### Stories, Comments, Likes & Follows
 
-The user may click on a particular story in the feed to view it in its entirety. They can click the heart to like or unlike it, scroll to the bottom of the page to read and post comments, and delete the story and or comments if they are the original author.
+The user may click on a particular story in the feed to view it in its entirety. They can click the heart to like or unlike it and scroll to the bottom of the page to read and post comments. Stories can be edited or deleted by the original author. Comments can also be destroyed by the original author.
 
 A user may click on an author's name or image (anywhere in the site) and be taken to that author's profile page. The user can see how many followers/following the author has, and click to follow or unfollow them from there. The user may also toggle between two miniature story feeds: "Profile" contains all stories that the author has liked, and "Recommends" lists all stories written by people that that particular author follows. The feeds are curated by querying the "Likes", "Follows" and "Stories" database tables via the respective controllers, and sending only applicable stories back to the React component. These mini-feeds update instantaneously when the user alters their likes and/or follows.
 
