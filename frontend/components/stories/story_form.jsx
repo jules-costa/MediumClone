@@ -78,7 +78,6 @@ class StoryForm extends React.Component {
               <h5 className="author-name-new-story">{this.props.currentUser.username}</h5>
             </Link>
           </section>
-          <button className="follow-unfollow publish" onClick={this.handleSubmit}>Publish</button>
         </div>
         <form className="new-story-form">
           <h4 className="story-errors">{this.renderErrors()}</h4>
@@ -105,13 +104,13 @@ class StoryForm extends React.Component {
             placeholder="Tell your story..."
             value={this.state.body}
             onChange={this.update('body')} />
+          <button className="follow-unfollow" onClick={this.handleSubmit}>Publish</button>
           <div className="new-image">
             <div className="FileUpload">
             </div>
             <div>
               {this.state.image_url === '' ? null :
               <div>
-                <p>{this.state.image_url.name}</p>
                 <img src={this.state.image_url} />
               </div>}
             </div>

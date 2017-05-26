@@ -70,15 +70,14 @@ class UpdateStory extends React.Component {
   render () {
     return (
       <section className="story-form-container">
-        <div className="new-story-header">
-          <section className="user-info">
-            <Link className="user-info" to={`/users/${this.props.currentUser.id}`}>
-              <img src={this.props.currentUser.image_url} className="author-small"></img>
-              <h5 className="author-name-new-story">{this.props.currentUser.username}</h5>
-            </Link>
-          </section>
-          <button className="follow-unfollow" onClick={this.handleUpdate}>Update</button>
-        </div>
+          <div className="new-story-header">
+            <section className="user-info">
+              <Link className="user-info" to={`/users/${this.props.currentUser.id}`}>
+                <img src={this.props.currentUser.image_url} className="author-small"></img>
+                <h5 className="author-name-new-story">{this.props.currentUser.username}</h5>
+              </Link>
+            </section>
+          </div>
         <form className="new-story-form">
           <h4 className="story-errors">{this.renderErrors()}</h4>
           <input type="text"
@@ -104,7 +103,8 @@ class UpdateStory extends React.Component {
             placeholder={this.props.story.body}
             value={this.state.body}
             onChange={this.update('body')} />
-          <img value={this.state.image_url} src={this.state.image_url} />
+          <button className="follow-unfollow" onClick={this.handleUpdate}>Update</button>
+          <img className="new-image" value={this.state.image_url} src={this.state.image_url} />
         </form>
       </section>
     );
