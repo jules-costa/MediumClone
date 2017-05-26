@@ -21,7 +21,8 @@ class UserProfile extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { match, fetchProfile, fetchRecommendedStories, fetchLikedStories, userProfile } = this.props;
+    const { match, fetchProfile, fetchRecommendedStories,
+      fetchLikedStories, userProfile } = this.props;
     if (match.params.userId !== nextProps.match.params.userId) {
       fetchProfile(nextProps.match.params.userId);
     }
@@ -34,6 +35,28 @@ class UserProfile extends React.Component {
     }
   }
 
+  userOptions() {
+    const { userProfile, currentUser } = this.props;
+    if (userProfile.id === currentUser.id) {
+      if (userProfile.username !== "Guest") {
+        return (
+          <Link to={`/users/${currentUser.id}/update`}
+            className="follow-unfollow">
+            Edit
+          </Link>
+        );
+      }
+    } else {
+      return (
+        <button className="follow-unfollow"
+          onClick={this.handleUpdate(userProfile.id)}>
+          {this.toggleFollowButton()}
+        </button>
+      );
+    }
+  }
+
+
   toggleFollowButton() {
     const { userProfile } = this.props;
     if (userProfile.follows) {
@@ -42,22 +65,6 @@ class UserProfile extends React.Component {
       return "Follow";
     }
   }
-
-  userOptions() {
-    const { userProfile, currentUser } = this.props;
-    if (userProfile.id === currentUser.id) {
-      if (userProfile.username !== "Guest") {
-        return (
-          <Link to={`/users/${currentUser.id}/update`} className="follow-unfollow">Edit</Link>
-        );
-      }
-    } else {
-      return (
-        <button className="follow-unfollow" onClick={this.handleUpdate(userProfile.id)}>{this.toggleFollowButton()}</button>
-      );
-    }
-  }
-
   handleUpdate(userId) {
     const { destroyFollow, createFollow } = this.props;
     if (this.props.userProfile.follows) {
