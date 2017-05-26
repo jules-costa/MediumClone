@@ -81,7 +81,7 @@ story8 = Story.create!(
   description: "Riddled with light.",
   topic_id: no.id,
   size: 1,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495416188/roberta-doyle-205144_za6srx.jpg"
+  image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495416188/roberta-doyle-205144_za6srx.jpg"
   )
 
 story9 = Story.create!(
@@ -92,7 +92,7 @@ story9 = Story.create!(
   description: "They always knew it was you.",
   topic_id: no.id,
   size: 1,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495416772/les-anderson-203926_sxvb0y.jpg"
+  image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495416772/les-anderson-203926_sxvb0y.jpg"
   )
 
 story10 = Story.create!(
@@ -103,7 +103,7 @@ story10 = Story.create!(
   description: "And I sunned it with smiles",
   topic_id: no.id,
   size: 1,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495417180/milada-vigerova-14192_ppuxgc.jpg"
+  image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495417180/milada-vigerova-14192_ppuxgc.jpg"
   )
 
 story11 = Story.create!(
@@ -114,7 +114,7 @@ story11 = Story.create!(
   description: "a hundred roses in bloom.",
   topic_id: no.id,
   size: 2,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495417480/kai-oberhauser-215045_tyrd3a.jpg"
+  image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495417480/kai-oberhauser-215045_tyrd3a.jpg"
   )
 
 story12 = Story.create!(
@@ -125,7 +125,7 @@ story12 = Story.create!(
   description: "against the breeze",
   topic_id: no.id,
   size: 0,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495417945/luke-brugger-29476_isomdm.jpg"
+  image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495417945/luke-brugger-29476_isomdm.jpg"
   )
 
 story13 = Story.create!(
@@ -136,7 +136,7 @@ story13 = Story.create!(
   description: "you must sleep longer",
   topic_id: no.id,
   size: 1,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495420641/mats-peter-forss-12122_tzxmyn.jpg"
+  image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495420641/mats-peter-forss-12122_tzxmyn.jpg"
   )
 
 story14 = Story.create!(
@@ -147,7 +147,7 @@ story14 = Story.create!(
   description: "weary of time",
   topic_id: no.id,
   size: 1,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495421392/thomas-smith-196864_jpubrt.jpg"
+  image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495421392/thomas-smith-196864_jpubrt.jpg"
   )
 
 story14 = Story.create!(
@@ -158,7 +158,7 @@ story14 = Story.create!(
   description: "man and fish",
   topic_id: no.id,
   size: 1,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_400/v1495734979/crystal-gard-228496_c1kpcc.jpg"
+  image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495734979/crystal-gard-228496_c1kpcc.jpg"
   )
 
 
@@ -173,7 +173,7 @@ story16 = Story.create!(
   description: "herbs and apples",
   topic_id: yes.id,
   size: 0,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415191/mikesh-kaos-42527_c0luqi.jpg"
+  image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415191/mikesh-kaos-42527_c0luqi.jpg"
   )
 
 story17 = Story.create!(
@@ -184,7 +184,7 @@ story17 = Story.create!(
   description: "Magnified apples appear and disappear",
   topic_id: yes.id,
   size: 2,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415177/chloe-ridgway-169406_vus5yb.jpg"
+  image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415177/chloe-ridgway-169406_vus5yb.jpg"
   )
 
 story18 = Story.create!(
@@ -195,7 +195,7 @@ story18 = Story.create!(
   description: "Hold fast to dreams",
   topic_id: yes.id,
   size: 1,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415169/megan-hodges-96121_tmzpzb.jpg"
+  image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415169/megan-hodges-96121_tmzpzb.jpg"
   )
 
 story19 = Story.create!(
@@ -206,7 +206,7 @@ story19 = Story.create!(
   description: "I'm not afraid...I don't fear...",
   topic_id: yes.id,
   size: 1,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415167/danka-peter-178_mp03vg.jpg"
+  image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415167/danka-peter-178_mp03vg.jpg"
   )
 
 story20 = Story.create!(
@@ -217,7 +217,7 @@ story20 = Story.create!(
   description: "And my breast lies upon his breast.",
   topic_id: yes.id,
   size: 1,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495420892/maria-darii-37401_b7rinc.jpg"
+  image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495420892/maria-darii-37401_b7rinc.jpg"
   )
 
 story15 = Story.create!(
@@ -228,7 +228,7 @@ story15 = Story.create!(
   description: "Oft a little morning rain foretells a pleasant day.",
   topic_id: yes.id,
   size: 2,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415150/gabriel-pangilinan-18321_op8mfn.jpg"
+  image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415150/gabriel-pangilinan-18321_op8mfn.jpg"
   )
 
 story15 = Story.create!(
@@ -239,7 +239,7 @@ story15 = Story.create!(
   description: "The deepest feeling always shows itself in silence",
   topic_id: yes.id,
   size: 0,
-  image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415150/gabriel-pangilinan-18321_op8mfn.jpg"
+  image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495415150/gabriel-pangilinan-18321_op8mfn.jpg"
   )
 
   # GOODBYE
@@ -251,7 +251,7 @@ story15 = Story.create!(
     description: "There are hours of lonely musing, such as in evening silence come",
     topic_id: goodbye.id,
     size: 0,
-    image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495418327/jon-phillips-17576_v1skwf.jpg"
+    image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495418327/jon-phillips-17576_v1skwf.jpg"
     )
 
   story2 = Story.create!(
@@ -262,7 +262,7 @@ story15 = Story.create!(
     description: "His words are music in my ear, I see his cowled portrait dear",
     topic_id: goodbye.id,
     size: 2,
-    image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495418608/andras-kovacs-94507_jc7t2e.jpg"
+    image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495418608/andras-kovacs-94507_jc7t2e.jpg"
     )
 
   story3 = Story.create!(
@@ -273,7 +273,7 @@ story15 = Story.create!(
     description: "Who was it sent that wreath of flowers?",
     topic_id: goodbye.id,
     size: 1,
-    image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495419181/dimitar-belchev-153985_i9olrk.jpg"
+    image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495419181/dimitar-belchev-153985_i9olrk.jpg"
     )
 
   story4 = Story.create!(
@@ -284,7 +284,7 @@ story15 = Story.create!(
     description: "Dandelions tickling out of my knee.",
     topic_id: goodbye.id,
     size: 1,
-    image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495419599/andressa-voltolini-202193_xzopok.jpg"
+    image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495419599/andressa-voltolini-202193_xzopok.jpg"
     )
 
   story5 = Story.create!(
@@ -295,7 +295,7 @@ story15 = Story.create!(
     description: "remember living",
     topic_id: goodbye.id,
     size: 1,
-    image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495419880/arteida-mjeshtri-151140_eahck6.jpg"
+    image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495419880/arteida-mjeshtri-151140_eahck6.jpg"
     )
 
   story6 = Story.create!(
@@ -306,7 +306,7 @@ story15 = Story.create!(
     description: "dark secret love",
     topic_id: goodbye.id,
     size: 0,
-    image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495421221/frank-mckenna-122861_ve6vc4.jpg"
+    image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495421221/frank-mckenna-122861_ve6vc4.jpg"
     )
 
   story7 = Story.create!(
@@ -317,7 +317,7 @@ story15 = Story.create!(
     description: "drink from the good old jar",
     topic_id: goodbye.id,
     size: 2,
-    image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495421762/tanner-mardis-29326_zdfu8w.jpg"
+    image_url: "https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_700/v1495421762/tanner-mardis-29326_zdfu8w.jpg"
     )
 
 

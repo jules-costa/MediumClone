@@ -89,7 +89,9 @@
 .mini-feed {
   margin-top: 50px;
   width: 35%;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
   align-items: center;
 }
