@@ -49,7 +49,7 @@ class StoryDetail extends React.Component {
       return (
         <div className="alter-story-links">
           <Link to={`/stories/${this.props.story.id}/update`} className="follow-unfollow">Edit</Link>
-          <button className="delete" onClick={this.handleDelete(story.id)}>Delete</button>
+          <button className="follow-unfollow" onClick={this.handleDelete(story.id)}>Delete</button>
         </div>
       );
     }

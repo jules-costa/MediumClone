@@ -9,13 +9,13 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin-top: 35px;
 }
 
 .user-info {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 35px;
 }
 
 .author-name-new-story {
@@ -67,20 +67,6 @@ i:hover {
   font-family: 'Sintony', sans-serif;
 }
 
-.submit-story {
-  font-family: 'Sintony', sans-serif;
-  font-size: 14px;
-  flex-basis: 20%;
-  min-width: 68px;
-  text-align: center;
-  border-radius: 4px;
-  background-color: $lightgrey;
-  padding: 8px 0;
-  margin-top: 40px;
-  align-self: center;
-  color: $darkgrey
-}
-
 .story-errors {
   color: $coral;
   font-family: 'Sintony', sans-serif;
@@ -91,4 +77,8 @@ i:hover {
 
 .new-image {
   margin-bottom: 75px;
+}
+
+a.follow-unfollow {
+  margin-right: 16px;
 }

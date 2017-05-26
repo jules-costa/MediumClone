@@ -77,7 +77,7 @@ class UpdateStory extends React.Component {
               <h5 className="author-name-new-story">{this.props.currentUser.username}</h5>
             </Link>
           </section>
-          <button className="submit-story" onClick={this.handleUpdate}>Update</button>
+          <button className="follow-unfollow" onClick={this.handleUpdate}>Update</button>
         </div>
         <form className="new-story-form">
           <h4 className="story-errors">{this.renderErrors()}</h4>

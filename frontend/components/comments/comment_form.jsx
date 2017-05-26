@@ -52,7 +52,7 @@ class CommentForm extends React.Component {
             </section>
           </label>
           <div className="publish-button">
-            <button className="submit-comment" onClick={this.handleSubmit}>Publish</button>
+            <button className="follow-unfollow" onClick={this.handleSubmit}>Publish</button>
           </div>
         </div>
       </div>

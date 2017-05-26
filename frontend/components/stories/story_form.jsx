@@ -78,7 +78,7 @@ class StoryForm extends React.Component {
               <h5 className="author-name-new-story">{this.props.currentUser.username}</h5>
             </Link>
           </section>
-          <button className="submit-story" onClick={this.handleSubmit}>Publish</button>
+          <button className="follow-unfollow publish" onClick={this.handleSubmit}>Publish</button>
         </div>
         <form className="new-story-form">
           <h4 className="story-errors">{this.renderErrors()}</h4>
