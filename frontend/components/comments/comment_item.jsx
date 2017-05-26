@@ -11,7 +11,7 @@ class CommentItem extends React.Component {
     if (currentUser.id === comment.author_id) {
       return (
         <div className="alter-links">
-          <button className="delete" onClick={this.handleDelete(comment.id, comment.story_id)}>Delete</button>
+          <button className="delete" onClick={this.handleDelete(comment.id, comment.story_id)}><i className="fa fa-trash-o" aria-hidden="true"></i></button>
         </div>
       );
     }
