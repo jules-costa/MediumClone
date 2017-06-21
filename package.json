@@ -44,6 +44,7 @@
     "webpack": "^2.5.1"
   },
   "devDependencies": {
-    "react-edit-inline": "^1.0.8"
+    "react-edit-inline": "^1.0.8",
+    "redux-logger": "^2.8.1"
   }
 }
