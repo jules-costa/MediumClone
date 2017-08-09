@@ -1,6 +1,6 @@
 # Ouija
 
-[Ouija live](http://ouija-medium.herokuapp.com/#/ "Ouija's Homepage")
+[Ouija live](http://www.ouija.life/#/ "Ouija's Homepage")
 
 Ouija is a full-stack web application inspired by Medium, a story sharing and writing platform. Ouija was built using Ruby on Rails for the backend, a PostgresSQL database, and Redux as its frontend architectural framework. Other implemented technologies include Javascript, React.js, and HTML/CSS.
 
@@ -28,7 +28,8 @@ The `read_time` is calculated in the controller by finding the total word count 
 def read_time(story)
   wordcount = story.body.split(" ").length
   "#{(wordcount / 200.0).ceil + 2} min read"
-end```
+end
+```
 
 Users may write stories and upload an image to post along with their new story. The custom-styled upload widget links to a Cloudinary account, by which all images on the site are stored and retrieved. If no image is added, the controller will append a default image prior to sending back the a response. Once the story is published, the user is redirected to their new story's show page, and they can also see their contribution in the main story feed. Clicking the Ouija logo from anywhere in the site redirects the user to the main story feed.
 
