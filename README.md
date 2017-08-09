@@ -100,7 +100,8 @@ userOptions() {
       </button>
     );
   }
-}```
+}
+```
 
 ## Plans for the Future
 
