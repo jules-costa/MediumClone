@@ -66,7 +66,7 @@ class SessionForm extends React.Component {
         <section className="hero">
           <form className="login-form-container">
             <h1 className="welcome">Ouija</h1>
-            <h2 className="stories-that-move">Stories that move with you.</h2>
+            <h2 className="stories-that-move">Poems that move with you.</h2>
             <h3 className="login-or-signup">Please {this.props.formType} or {this.navLink()}</h3>
             <h4 className="login-errors">{this.renderErrors()}</h4>
 
