@@ -45,8 +45,10 @@ class Api::StoriesController < ApplicationController
   end
 
   def index
-    if params["topicId"]
-      @stories = Story.where(topic_id: params["topicId"])
+    if params["topic"]
+      # debugger
+      # topic_id = Topic.where(title: params["topic"]).first.id
+      @stories = Story.where(topic_id: params["topic"])
     else
       @stories = Story.all
     end

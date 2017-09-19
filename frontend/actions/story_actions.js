@@ -33,8 +33,8 @@ export const createStory = story => dispatch => (
   }).fail(err => dispatch(receiveErrors(err.responseJSON)))
 );
 
-export const fetchStories = topicId => dispatch => (
-  APIUtil.fetchStories(topicId).then(stories => dispatch(receiveAllStories(stories)))
+export const fetchStories = topic => dispatch => (
+  APIUtil.fetchStories(topic).then(stories => dispatch(receiveAllStories(stories)))
 );
 
 export const fetchStory = id => dispatch => (

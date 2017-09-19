@@ -7,8 +7,8 @@ class TopicsListItem extends React.Component {
     this.switchTopic = this.switchTopic.bind(this);
   }
 
-  switchTopic(topicId) {
-    return () => this.props.fetchStories(topicId);
+  switchTopic(topic) {
+    return () => this.props.fetchStories(topic);
   }
 
   render () {

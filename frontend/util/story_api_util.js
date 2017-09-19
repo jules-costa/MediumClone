@@ -6,11 +6,11 @@ export const createStory = story => (
   })
 );
 
-export const fetchStories = (topicId) => (
+export const fetchStories = (topic) => (
   $.ajax({
     method: 'GET',
     url: 'api/stories',
-    data: {topicId}
+    data: {topic}
   })
 );
 

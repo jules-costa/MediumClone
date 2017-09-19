@@ -5,6 +5,7 @@ import TopicsContainer from '../topics/topics_container';
 
 class StoriesFeed extends React.Component {
   componentDidMount() {
+    console.log(`in stories feed ${this.props.match.params}`);
     this.props.fetchStories();
   }
 
