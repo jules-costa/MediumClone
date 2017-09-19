@@ -5,9 +5,15 @@ import TopicsContainer from '../topics/topics_container';
 
 class StoriesFeed extends React.Component {
   componentDidMount() {
-    console.log(`in stories feed ${this.props.match.params}`);
-    this.props.fetchStories();
+    this.props.fetchStories(this.props.match.params.topicId);
   }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.topicId !== nextProps.match.params.topicId) {
+      this.props.fetchStories(this.props.match.params.topicId);
+    }
+  }
+
 
   render() {
     return(

@@ -14,7 +14,7 @@ class TopicsListItem extends React.Component {
   render () {
     const { topic } = this.props;
     return (
-      <button className="topic-button" onClick={this.switchTopic(topic.id)}>{topic.title}</button>
+      <NavLink to={`/topics/${this.props.topic.id}`}>{topic.title}</NavLink>
     );
   }
 }
@@ -23,5 +23,5 @@ export default TopicsListItem;
 
 //
 // <div className="topic-link">
-//   <NavLink to={`/topics/${this.props.topic.id}`}>{topic.title}</NavLink>
 // </div>
+// <button className="topic-button" onClick={this.switchTopic(topic.id)}>{topic.title}</button>

@@ -8,7 +8,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchStories: () => dispatch(fetchStories())
+  fetchStories: (topicId) => dispatch(fetchStories(topicId))
 });
 
 export default connect(
