@@ -22,7 +22,7 @@ goodbye = Topic.create!(title: "heartbreak")
 yes = Topic.create!(title: "wanderlust")
 no = Topic.create!(title: "perspective")
 
-user1 = User.create!(username: "Guest", password: "password", biography: "Thank you for checking out Ouija! This Medium clone was built in 10 days using Ruby on Rails, React, Redux, Javascript and HTML/CSS.", image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495413134/user-2ef10cd87167a7021991eaaf0fb688ea1fda37f520b069b2b523d3a8e399473d_jphioe.png")
+user1 = User.create!(username: "Guest", password: "password", biography: "Thank you for checking out Ouija! This blogging app prototype was built in 10 days using Ruby on Rails, React.js, Redux, HTML5 and SASS.", image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495413134/user-2ef10cd87167a7021991eaaf0fb688ea1fda37f520b069b2b523d3a8e399473d_jphioe.png")
 user2 = User.create!(username: "Charlotte Bronte", password: "password", biography: "Born on April 21, 1816, in Thornton, England.", image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495413047/CharlotteBronte_NewBioImage_blzqtv.jpg")
 user3 = User.create!(username: "Ralph Waldo Emerson", password: "password", biography: "American poet, essayist, and philosopher.", image_url: "http://res.cloudinary.com/jules-costa/image/upload/v1495413382/rwemerso_bzyilt.jpg")
 user4 = User.create!(username: "Robert Frost", password: "password", biography: "Lived and taught for many years in Massachusetts and Vermont, and died in Boston on January 29, 1963.", image_url: "http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_289/v1495413574/frosttwitter_i9m7ue.jpg")
