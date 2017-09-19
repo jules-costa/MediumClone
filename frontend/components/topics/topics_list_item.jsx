@@ -20,8 +20,3 @@ class TopicsListItem extends React.Component {
 }
 
 export default TopicsListItem;
-
-//
-// <div className="topic-link">
-//   <NavLink to={`/topics/${this.props.topic.id}`}>{topic.title}</NavLink>
-// </div>

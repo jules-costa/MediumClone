@@ -32,6 +32,10 @@
   background-color: white;
 }
 
+.topic-button:focus {
+  color: $coral;
+}
+
 .topic-button:hover {
   background-color: white;
   color: $coral
