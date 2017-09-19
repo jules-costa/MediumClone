@@ -20,8 +20,3 @@ class TopicsListItem extends React.Component {
 }
 
 export default TopicsListItem;
-
-//
-// <div className="topic-link">
-// </div>
-// <button className="topic-button" onClick={this.switchTopic(topic.id)}>{topic.title}</button>
