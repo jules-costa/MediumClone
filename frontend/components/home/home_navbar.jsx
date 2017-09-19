@@ -17,7 +17,7 @@ const handleLogout = (logout, history) => e => {
 const personalGreeting = (currentUser, logout, history) => (
   <div className="header-group">
     <Link to={`/users/${currentUser.id}`} className="user-logo"><img className="user-image-small" src={ currentUser.image_url } /></Link>
-    <Link to="/write" className="new-story-link">Write a Story</Link>
+    <Link to="/write" className="new-story-link">Write a Poem</Link>
     <a href='' className="logout-link" onClick={ handleLogout(logout, history) }>Log Out</a>
   </div>
 );
