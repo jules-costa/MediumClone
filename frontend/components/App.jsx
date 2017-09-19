@@ -22,6 +22,7 @@ const App = () => (
       </header>
 
     <Route exact path="/" component={StoriesFeedContainer} />
+    <ProtectedRoute path="/topics/:topicId" component={StoriesFeedContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
     <ProtectedRoute path="/write" component={StoryFormContainer} />
