@@ -1,14 +1,14 @@
+import React from 'react';
 import { connect } from 'react-redux';
-import StoriesFeed from './stories_feed';
 import { fetchStories } from '../../actions/story_actions';
-import values from 'lodash/values';
+import StoriesFeed from '../stories/stories_feed';
 
-const mapStateToProps = (state) => ({
-  stories: values(state.stories)
+const mapStateToProps = state => ({
+  stories: state.stories
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchStories: (topicId) => dispatch(fetchStories(topicId))
+  fetchStories: (topic) => dispatch(fetchStories(topic))
 });
 
 export default connect(

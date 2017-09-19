@@ -12,6 +12,10 @@ class Api::TopicsController < ApplicationController
     end
   end
 
+  def show
+    @topic = Topic.find_by(title: params["title"])
+  end
+
   private
 
   def topic_params
